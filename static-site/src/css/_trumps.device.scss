@@ -1,0 +1,27 @@
+/*
+ * Trumps - device-specific
+ */
+
+.is-desktop:not(.viewing-splash-screen) .bg {
+  right: 15px;
+}
+
+.is-desktop header {
+  right: 15px;
+}
+
+.is-desktop nav {
+  width: calc(100vw - 15px);
+}
+
+.is-desktop .what-we-do-copy .image {
+  right: 15px;
+}
+
+.is-desktop .carousel__items li {
+  width: calc(100vw - 15px);
+}
+
+.is-desktop .image {
+  right: 15px;
+}

@@ -1,0 +1,61 @@
+/*
+ * Components - news article
+ */
+
+.news-article {
+  margin: 0 auto;
+  padding: 100px 0 30px;
+  
+  @media (min-width : 768px) {
+    padding: 190px 9px 70px 9px;
+  }
+  
+  @media (min-width : 1024px) {
+    width: calc((10 / 12) * 100%);
+    padding: 190px calc((1 / 12) * 100%) 70px 9px;
+  }
+  
+  @media (min-width : 1600px) {
+    max-width: 1600px;
+  }
+  
+  .news-article__header {
+    position: relative;
+    color: $yellow;
+  }
+  
+  .news-article__date {
+    position: relative;
+    left: 0;
+    
+    @include transition(left 300ms);
+    
+    @media (min-width : 1800px) {
+      position: absolute;
+      top: 0;
+      left: -56px;
+      margin: 0;
+      
+      @include transform(translateX(-100%));
+    }
+    
+    br {
+      display: none;
+      
+      @media (min-width : 1800px) {
+        display: block;
+      }
+    }
+  }
+  
+  .news-article__content {
+    
+    @media (min-width : 1024px) {
+      width: calc(((2 / 12) * 100%) * 3 + ((1 / 12) * 100%) * 2);
+    }
+    
+    .button {
+      margin-top: 6em;
+    }
+  }
+}
