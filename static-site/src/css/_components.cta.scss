@@ -1,0 +1,49 @@
+/*
+ * Components - cta
+ */
+
+.cta {
+  margin: 50px auto 100px;
+  
+  @media (min-width : 768px) {
+    padding: 0 9px;
+  }
+  
+  @media (min-width : 1024px) {
+    width: calc((10 / 12) * 100%);
+    margin: 0 auto;
+    padding: 0 calc((1 / 12) * 100%) 0 9px;
+  }
+  
+  @media (min-width : 1600px) {
+    max-width: 1600px;
+  }
+  
+  h1 {
+    position: relative;
+    
+    @include font_size(14, 22);
+    
+    @media (min-width : 768px) {
+
+      @include font_size(18, 22);
+    }
+  
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 22px;
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
+  }
+  
+  p {
+    
+    @media (min-width : 1024px) {
+      width: calc(((2 / 12) * 100%) * 3 + ((1 / 12) * 100%) * 2);
+    }
+  }
+}

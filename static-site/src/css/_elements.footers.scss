@@ -1,0 +1,20 @@
+/*
+ * Elements - footers
+ */
+
+footer {
+  position: relative;
+  margin: 0;
+  padding: 1em 1em 1em 56px;
+  //color: #bad0c4;
+  font-family: 'editor-light';
+  overflow: hidden;
+  
+  @media (min-width : 768px) {
+    padding: 20px 0 30px 95px;
+  }
+  
+  .page-home & {
+    color: #bad0c4;
+  }
+}

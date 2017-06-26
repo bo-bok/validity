@@ -1,0 +1,31 @@
+/*
+ * Components - hint
+ */
+
+.hint {
+  position: fixed;
+  bottom: -3em;
+  left: 56px;
+  margin: 0;
+  padding-bottom: 54px;
+  color: $yellow;
+  background: url(../img/hint.png) center bottom no-repeat;
+  opacity: 0;
+  z-index: 2;
+  
+  @include font_size(14, 14);
+  @include transition(bottom 1s, opacity 1.2s);
+  
+  &.ready {
+    bottom: -1em;
+    opacity: 1;
+  }
+  
+  &.expired {
+    bottom: 3em;
+    opacity: 0;
+  }
+    @media (max-width : 530px) {
+      display:none;
+  }
+}
