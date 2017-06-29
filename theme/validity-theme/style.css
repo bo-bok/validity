@@ -345,7 +345,7 @@ body {
 
 * {
   color: yellow;
-  background: red;
+  background: pink;
 }
 
 blockquote, q {
@@ -863,13 +863,4 @@ object {
 
 .gallery-caption {
   display: block;
-}
-
-* {
-  background: teal;
-  color: yellow;
-}
-
-.test-parapraph-sass {
-  color: orange;
 }
