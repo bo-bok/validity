@@ -4,3 +4,7 @@ outline
 # dev tools
 node_modules
 gulpfile.js
+
+# themes
+theme/old-theme
+theme/sela
