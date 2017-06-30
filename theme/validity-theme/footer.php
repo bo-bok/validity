@@ -10,6 +10,23 @@
  */
 
 ?>
+</div><!-- #content -->
+  <footer>
+    <div class="outer">
+      <div class="inner">
+        <ul class="social">
+          <li class="social__item"><a href="https://www.facebook.com/mentaldisabilityadvocacy/">Facebook</a></li>
+          <li class="social__item"><a href="https://twitter.com/MDACintl">Twitter</a></li>
+        </ul>
+        <p>UK Registered charity number 1104456</p>
+      </div>
+    </div>
+  </footer>
+</div><!-- #page -->
+
 
 
 <?php wp_footer(); ?>
+
+</body>
+</html>
