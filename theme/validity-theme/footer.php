@@ -10,7 +10,8 @@
  */
 
 ?>
-</div><!-- #content -->
+<!-- </div> -->
+<!-- #content -->
   <footer>
     <div class="outer">
       <div class="inner">
@@ -22,11 +23,8 @@
       </div>
     </div>
   </footer>
-</div><!-- #page -->
-
-
 
 <?php wp_footer(); ?>
-
+</div> <!-- closing page wrapper from header -->
 </body>
 </html>
