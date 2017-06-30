@@ -1,0 +1,51 @@
+/*
+ * Elements - headings
+ */
+
+.page-heading {
+  display: none;
+  
+  + * {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-family: 'editor-bold';
+  font-weight: normal;
+  
+  @include font_size(20, 30);
+  @include letter_spacing(0);
+  
+  @media (min-width : 768px) {
+  
+    @include font_size(32, 42);
+  }
+}
+
+h2 {
+  margin: 0;
+  font-family: 'editor-bold';
+  font-weight: normal;
+  
+  @include font_size(12, 16);
+  @include letter_spacing(0);
+}
+
+p,
+address {
+  font-style: normal;
+  
+  @include font_size(14, 22);
+  @include letter_spacing(0);
+
+  @media (min-width : 768px) {
+  
+    @include font_size(18, 30);
+  }
+  
+  br {
+    margin: 0;
+  }
+}

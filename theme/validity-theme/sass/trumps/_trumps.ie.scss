@@ -1,0 +1,190 @@
+/*
+ * Trumps - IE
+ */
+
+.browser-ie9 section,
+.browser-ie10 section {
+  overflow: hidden;
+
+  .outer {
+    overflow: hidden;
+  }
+}
+
+.browser-ie9 nav,
+.browser-ie10 nav {
+  height: auto;
+}
+
+.browser-ie9 ul.primary-navigation,
+.browser-ie10 ul.primary-navigation {
+  height: auto;
+}
+
+.browser-ie9 .news-articles,
+.browser-ie10 .news-articles {
+  overflow: hidden;
+  
+  .button {
+    clear: left;
+  }
+}
+
+.browser-ie9 .article,
+.browser-ie10 .article {
+  float: left;
+  width: 100%;
+  
+  @media (min-width : 768px) {
+     width: calc(50% - 9px);
+  }
+}
+
+.browser-ie9 .pagination,
+.browser-ie10 .pagination {
+  
+  .previous {
+    float: left;
+    padding-left: 50px;
+  }
+
+  .next {
+    float: right;
+    padding-right: 50px;
+  }
+  
+  ul {
+    float: left;
+  }
+  
+  li {
+    float: left;
+  }
+}
+
+.browser-ie9 .who-we-are-members,
+.browser-ie10 .who-we-are-members {
+  
+  .group {
+    overflow: hidden;
+  }
+
+  .member {
+    
+    @media (min-width : 768px) {
+      float: left;
+      width: 50%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.browser-ie9 .get-involved-intro,
+.browser-ie10 .get-involved-intro {
+  
+  .amount-other-container,
+  .button {
+    
+    @media (min-width : 768px) {
+      width: calc(((2 / 12) * 100%) - 1px);
+    }
+  }
+  
+  .amount-other-container .button {
+    
+    @media (min-width : 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.browser-ie9 .donation-form,
+.browser-ie10 .donation-form {
+  
+  .inner {
+    background: #081d27;
+  }
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  .container > .button {
+    
+    @media (min-width : 768px) {
+      width: calc(((2 / 12) * 100%) - 1px);
+    }
+  }
+
+  .amount-other-container label {
+    background: #081d27;
+  }
+
+  .amount-other-container input[type="button"] {
+    background: #081d27;
+  }
+  
+  .amount-other-container input[type="text"] {
+    padding-bottom: 7px;
+  }
+}
+
+.browser-ie9 .event,
+.browser-ie10 .event {
+  
+  @media (min-width : 768px) {
+    width: calc(((3 / 11) * 100%) - 1px);
+  }
+}
+
+.browser-ie9 .resources-intro form > *,
+.browser-ie10 .resources-intro form > * {
+  
+  @media (min-width : 768px) {
+    float: left;
+    width: calc(((3 / 11) * 100%) - 1px);
+  }
+}
+
+.browser-ie9 .resource,
+.browser-ie10 .resource {
+  
+  @media (min-width : 768px) {
+    width: calc(((3 / 11) * 100%) - 1px);
+  }
+}
+
+.browser-ie9 .news-intro form > *,
+.browser-ie10 .news-intro form > * {
+  
+  @media (min-width : 768px) {
+    float: left;
+    width: calc(33.3333% - 18px);
+  }
+}
+
+.browser-ie9 .dropdown,
+.browser-ie10 .dropdown {
+  
+  span {
+    display: block;
+    padding: 9px 5px 8px;
+  }
+}
+
+.legacy-browser {
+  width: 500px;
+  margin: 200px auto;
+  text-align: center;
+  
+  @include font_size(18, 28);
+  
+  &:after {
+    content: 'The browser that you are using is out of date. This website is best viewed in a modern browser such as Firefox, Chrome, Safari, or Internet Explorer 10 or higher.';
+  }
+  
+  * {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+/*
+ * Components - social
+ */
+
+.social {
+  margin-right: 56px;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  
+  @media (min-width : 768px) {
+    float: right;
+  }
+  
+  @media (min-width : 1024px) {
+    margin-top: 0;
+  }
+}
+
+.social__item {
+  
+  @media (min-width : 768px) {
+    float: left;
+    margin: 0 2em 0 0;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  a {
+    display: block; 
+    position: relative;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    
+    @include font_size(10);
+    @include letter_spacing(100);
+    
+    @media (min-width : 768px) {
+    
+      @include font_size(14);
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      &:after {
+        width: 100%;
+      }
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 1px;
+      background: #bacfc6;
+      
+      @include transition(width 300ms);
+    }
+  }
+}

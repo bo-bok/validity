@@ -1,0 +1,59 @@
+/*
+ * Elements - body
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: #{$base_font}px;
+  font-family: 'editor-regular', serif;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  
+  &.page-news {
+    color: #b9cfc6;
+  }
+  
+  &.page-who-we-are {
+    color: #bacfc6;
+  }
+  
+  &.page-take-action {
+    color: #bacfc6;
+  }
+  
+  &.page-donate {
+    color: #bacfc6;
+  }
+  
+  &.page-resources {
+    color: #bacfc6;
+  }
+  
+  &.page-events {
+    color: #bacfc6;
+  }
+  
+  &.page-our-impact {
+    color: #bacfc6;
+  }
+}
+
+* {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+* + * {
+  margin-top: 1.5em;
+}
+
+@include font_face('editor', 'light');
+@include font_face('editor', 'regular');
+@include font_face('editor', 'medium');
+@include font_face('editor', 'bold');
+@include font_face('editor', 'extrabold');

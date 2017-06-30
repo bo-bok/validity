@@ -1,0 +1,131 @@
+/*
+ * Components - event information
+ */
+
+.event-information {
+  overflow: hidden;
+  margin: 0 auto;
+  
+  @media (min-width : 768px) {
+    padding: 0 9px 0 9px;
+  }
+  
+  @media (min-width : 1024px) {
+    width: calc((11 / 12) * 100%);
+    padding: 0 9px 0 calc((1 / 12) * 100%);
+  }
+  
+  @media (min-width : 1600px) {
+    max-width: 1600px;
+  }
+  
+  h1 {
+    position: relative;
+    
+    @include font_size(14, 22);
+    
+    @media (min-width : 768px) {
+
+      @include font_size(18, 22);
+    }
+  
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 22px;
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
+  }
+  
+  p {
+    
+    @include font_size(14, 22);
+    
+    @media (min-width : 1024px) {
+      width: calc(((3 / 11) * 100%) * 2 + ((1 / 11) * 100%));
+    }
+  }
+  
+  .event-information__address {
+    
+    @include font_size(14, 22);
+    
+    @media (min-width : 1024px) {
+      float: left;
+      width: calc((3 / 11) * 100%);
+      margin-right: calc((1 / 11) * 100%);
+    }
+  }
+  
+  div {
+    
+    @media (min-width : 1024px) {
+      float: left;
+      width: calc((3 / 11) * 100%);
+    }
+  }
+  
+  .event-information__time,
+  .event-information__date {
+    color: $yellow;
+  }
+}
+
+.event-form {
+  margin: 50px auto 0;
+  
+  @media (min-width : 768px) {
+    padding: 0 9px 0 9px;
+  }
+  
+  @media (min-width : 1024px) {
+    width: calc((11 / 12) * 100%);
+    padding: 0 9px 0 calc((1 / 12) * 100%);
+  }
+  
+  @media (min-width : 1600px) {
+    max-width: 1600px;
+  }
+  
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input[type="email"] {
+    padding: 5px 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    
+    @include font_size(14, 18);
+    
+    &[data-valid="true"] {
+      border-bottom-color: #ffdd94;
+    }
+    
+    @media (min-width : 1024px) {
+      float: left;
+      width: calc((3 / 11) * 100%);
+    }
+  }
+  
+  input[type="button"] {
+    float: left;
+    clear: left;
+    
+    &[data-valid="false"] {
+      opacity: 0.3;
+      pointer-events: none;
+      cursor: default;
+    }
+    
+    @media (min-width : 768px) {
+      width: calc((2 / 12) * 100%);
+    }
+  }
+}

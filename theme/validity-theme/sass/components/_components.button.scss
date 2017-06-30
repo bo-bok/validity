@@ -1,0 +1,51 @@
+/*
+ * Components - button
+ */
+
+.has-button {
+  padding-top: calc(1em + 1.5em + 10px - 2px);
+}
+
+.button {
+  display: block;
+  padding: 5px 1em;
+  text-decoration: none;
+  text-align: center;
+  background: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  cursor: pointer;
+  background-color:rgba(0, 0, 0, 0.5);
+  
+  @include font_size(14, 16);
+  @include letter_spacing(100);
+  @include transition(color 300ms, border-color 300ms);
+  
+  &:hover {
+    text-decoration: none;
+    color: $yellow;
+    border-color: $yellow;
+  }
+  
+  @media (min-width : 768px) {
+    display: inline-block;
+  }
+}
+.button_transparent {
+  @extend .button;
+  background-color:rgba(0, 0, 0, 0.0);
+}
+
+.button__fixed {
+  display: none;
+  
+  @media (min-width : 768px) {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 100px;
+    color: $yellow;
+    border-color: $yellow;
+  }
+}
