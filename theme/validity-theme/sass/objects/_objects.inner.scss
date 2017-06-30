@@ -1,0 +1,22 @@
+/*
+ * Objects - inner
+ */
+
+.inner {
+  position: relative;
+  
+  section & {
+    //margin: 0 -9px;
+    margin: 0;
+  }
+  
+  &.transition {
+    
+    @include section_transition();
+  }
+  
+  &.fade {
+    
+    @include section_fade();
+  }
+}

@@ -40,6 +40,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Components
+  ## Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -340,12 +342,6 @@ html {
 body {
   /* background: $color__background-body;*/
   /* Fallback for when there is no custom background color defined. */
-  background: blue;
-}
-
-* {
-  color: yellow;
-  background: pink;
 }
 
 blockquote, q {
@@ -863,4 +859,50 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+footer {
+  background: url(../img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
+}
+
+@media (min-width: 768px) {
+  footer {
+    background-position: 56px 50%;
+  }
+}
+
+footer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #bacfc6;
+}
+
+@media (min-width: 768px) {
+  footer:after {
+    left: 56px;
+  }
+}
+
+footer p {
+  margin-top: calc(33px - 1em);
+  font-size: 160px;
+  font-size: 10rem;
+}
+
+@media (min-width: 768px) {
+  footer p {
+    float: left;
+    font-size: 224px;
+    font-size: 14rem;
+  }
 }

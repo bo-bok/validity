@@ -1,0 +1,160 @@
+/*
+ * Tools - mixins
+ */
+
+@mixin font_face($name, $style){
+  
+  @font-face {
+    font-family: #{$name}-#{$style};
+    src: url(../font/#{$name}/#{$style}.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /*@font-face {
+    font-family: #{$name}-#{$style};
+    src: url(../font/#{$name}/#{$style}.eot);
+    src: url(../font/#{$name}/#{$style}.eot?#iefix) format('embedded-opentype'),
+         url(../font/#{$name}/#{$style}.woff) format('woff'),
+         url(../font/#{$name}/#{$style}.ttf) format('truetype'),
+         url(../font/#{$name}/#{$style}.svg##{$name}-#{$style}) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }*/
+}
+
+@mixin font_size($font_size, $line_height : null){
+  @if $font_size != null {
+    font-size: #{1 / $base_font * $font_size}em;
+  }
+  @if $line_height != null {
+    @if $font_size != null {
+      line-height: #{1 / $font_size * $line_height}em;
+    }
+    @else{
+      line-height: #{1 / $base_font * $line_height}em;
+    }
+  }
+}
+
+@mixin letter_spacing($letter_spacing){
+  letter-spacing: #{$letter_spacing / 1000}em;
+}
+
+@mixin radius($radius:100%){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin animation($animation...){
+  animation: $animation;
+  -webkit-animation: $animation;
+}
+
+@mixin transform_origin($transform_origin){
+  transform-origin: $transform_origin;
+  -moz-transform-origin: $transform_origin;
+  -webkit-transform-origin: $transform_origin;
+}
+
+@mixin transform($transform...){
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transition($transition...){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin section_layers(){
+  pointer-events: none;
+  z-index: 1;
+  
+  @for $i from 1 to 10 {
+    .viewing-#{$i} &.section-#{$i} {
+      pointer-events: auto;
+      z-index: 2;
+    }
+  }
+}
+
+@mixin section_transition(){
+  top: 20px;
+  opacity: 0;
+  
+  @include transition(top 1s, opacity 500ms);
+  
+  .image {
+    top: -20px;
+    
+    @include transition(top 1s);
+  }
+  
+  @for $i from 1 to 10 {    
+    .viewing-#{$i} .section-#{$i} & {
+      top: 0;
+      opacity: 1;
+  
+      .image {
+        top: 0;
+      }
+    }
+  }
+}
+
+@mixin article_transition(){
+  
+  @for $i from 1 to 10 {    
+    .viewing-#{$i} .section-#{$i} & {
+  
+      &:first-child,
+      &:nth-child(2) {
+        top: 0;
+      }
+    }
+  }
+  
+  &:first-child,
+  &:nth-child(2) {
+    position: relative;
+    top: 100px;
+  }
+  
+  &:first-child {
+    
+    @include transition(top 1s 200ms);
+  }
+  
+  &:nth-child(2) {
+    
+    @include transition(top 1s);
+  }
+}
+
+@mixin section_fade(){
+  opacity: 0;
+  
+  @include transition(opacity 1s);
+  
+  @for $i from 1 to 10 {    
+    .viewing-#{$i} .section-#{$i} & {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin background_image(){
+  
+  @for $i from 0 to 65 { 
+    &.step-#{$i} {
+      background-image: url(../img/splash/#{$i}.png);
+    }
+  }
+}

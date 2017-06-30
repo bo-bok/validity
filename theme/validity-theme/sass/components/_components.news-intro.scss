@@ -1,0 +1,67 @@
+/*
+ * Components - news intro
+ */
+
+.news-intro {
+  margin: 0 auto;
+  padding: 100px 0 30px;
+  
+  @media (min-width : 768px) {
+    padding: 190px 9px 70px 9px;
+  }
+  
+  @media (min-width : 1024px) {
+    width: calc((10 / 12) * 100%);
+    padding: 190px calc((1 / 12) * 100%) 70px 9px;
+  }
+  
+  @media (min-width : 1600px) {
+    max-width: 1600px;
+  }
+  
+  p {
+    font-family: 'editor-regular';
+  
+    @media (min-width : 1024px) {
+      width: calc(((3 / 11) * 100%) * 2 + ((1 / 11) * 100%));
+    }
+  }
+  
+  h2 {
+    margin-top: 60px;
+    font-family: 'editor-regular';
+  
+    @media (min-width : 768px) {
+      width: 50%;
+    }
+  }
+  
+  form {
+    margin: 20px 0 0;
+    color: inherit;
+    
+    @media (min-width : 768px) {
+      display: flex;
+      margin: 20px -9px 0;
+    }
+    
+    > * {
+      
+      @media (min-width : 768px) {
+        margin: 0 9px;
+      }
+    }
+    
+    input {
+      padding: 10px;
+    }
+    
+    select {
+      padding: 10px;
+    }
+    
+    option {
+      margin: 0;
+    }
+  }
+}

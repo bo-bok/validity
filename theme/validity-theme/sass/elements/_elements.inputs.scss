@@ -1,0 +1,32 @@
+/*
+ * Elements - inputs
+ */
+
+input {
+  width: 100%;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  outline: none;
+  
+  @include radius(0);
+
+  &[type="button"] {
+    cursor: pointer;
+  }
+}
+
+select {
+  width: 100%;
+  background: transparent url(../img/dropdown.png) calc(100% - 10px) no-repeat;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance:none;
+  cursor: pointer;
+  
+  @include radius(0);
+}
