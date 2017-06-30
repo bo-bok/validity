@@ -18,3 +18,5 @@ get_header(); ?>
 	<p class="test-parapraph-sass">hello world</p>
 	</body>
 </html>
+
+<?php get_footer(); ?>
