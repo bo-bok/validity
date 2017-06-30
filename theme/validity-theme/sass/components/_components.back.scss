@@ -2,6 +2,8 @@
  * Components - back
  */
 
+@import '../mixins/mixins';
+
 .back {
   position: fixed;
   top: 50%;
@@ -12,18 +14,18 @@
   text-align: center;
   text-decoration: none;
   background: url(../img/arrow-left.png) center bottom no-repeat;
-  
+
   @include transform(translateY(-50%));
   @include transition(left 300ms);
-  
+
   &:hover {
     text-decoration: none;
   }
-  
+
   @media (min-width : 768px) {
     left: 20px;
   }
-  
+
   @media (min-width : 1800px) {
     left: 56px;
   }
