@@ -18,9 +18,8 @@
 get_header(); ?>
 
 <body class="page-our-impact">
-
   <div class="wrapper">
-    <?php get_sidebar(); ?> <!-- sidebar = nav -->
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
 
 
 <section class="section-1">
