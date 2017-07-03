@@ -17,6 +17,10 @@
 
 get_header(); ?>
 
+<body class="page-our-impact">
+  <div class="wrapper">
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
 <section class="section-1">
   <div class="outer full-height centered">
     <div class="inner transition">
@@ -129,4 +133,5 @@ get_header(); ?>
 
 <!-- get_sidebar(); -->
 <?php
-get_footer();
+get_footer(); ?>
+</div>

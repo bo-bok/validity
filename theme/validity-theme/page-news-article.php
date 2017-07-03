@@ -16,6 +16,11 @@
  */
 
 get_header(); ?>
+
+<body class="page-news">
+  <div class="wrapper">
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
 <section class="section-1">
   <div class="outer full-height poster" style="background-image: url(assets/img/photos/poster.jpg);"></div>
 </section>
@@ -68,4 +73,5 @@ get_header(); ?>
 
 <!-- get_sidebar(); -->
 <?php
-get_footer();
+get_footer(); ?>
+</div>

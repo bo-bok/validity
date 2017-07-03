@@ -16,6 +16,11 @@
  */
 
 get_header(); ?>
+
+<body class="page-news">
+  <div class="wrapper">
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
 <section class="section-1 section-news">
   <div class="outer">
     <div class="inner transition">
@@ -139,4 +144,5 @@ get_header(); ?>
 
 <!-- get_sidebar(); -->
 <?php
-get_footer();
+get_footer(); ?>
+</div>

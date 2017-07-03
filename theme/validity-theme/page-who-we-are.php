@@ -17,6 +17,10 @@
 
 get_header(); ?>
 
+<body class="page-who-we-are">
+  <div class="wrapper">
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
 <section class="section-1">
   <div class="outer full-height centered">
     <div class="inner transition">
@@ -234,5 +238,5 @@ get_header(); ?>
 </section>
 
 <!-- get_sidebar(); -->
-<?php
-get_footer();
+<?php get_footer(); ?>
+</div>

@@ -12,9 +12,15 @@
  * @package validity
  */
 
-get_header(); ?>
-<!DOCTYPE html>
+get_header(); ?><!DOCTYPE html>
 
+<body class="page-home">
+
+	<div class="wrapper">
+
+		<div class="bg"></div>
+
+		<?php get_sidebar(); ?> <!-- sidebar = nav -->
 
 <!-- <h1 style="color:black"> HELLO WORLD</h1>
 <h1 style="color:white"> HELLO WORLD</h1> -->
@@ -123,4 +129,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<?php get_footer();
+
+<?php get_footer(); ?>
+
+</div>
