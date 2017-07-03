@@ -119,18 +119,29 @@ add_action( 'after_setup_theme', 'validity_setup' );
 function validity_scripts() {
 	wp_enqueue_style( 'validity-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'validity_require', get_template_directory_uri() . '/js/require.js' );
+	wp_register_script( 'validity_require', get_template_directory_uri() . '/js/require.js' );
+	wp_enqueue_script('validity_require');
+
+	wp_register_script( 'validity_app', get_template_directory_uri() . '/js/app.js', 'validity_require');
+
+	wp_enqueue_script('validity_app');
+
+
+	// $my_js_dir = array(
+  //   ‘path’ => get_stylesheet_directory_uri() . '/js'
+	// );
+	// wp_localize_script( ‘the_dependent’, ‘the_variable_reference’, $my_js_dir );
 
 // without require as a dependency
-	wp_enqueue_script( 'validity_app-js', get_template_directory_uri() . '/js/app.js' );
-	wp_enqueue_script( 'validity_carousel', get_template_directory_uri() . '/js/carousel.js' );
-	wp_enqueue_script( 'validity_common', get_template_directory_uri() . '/js/common.js' );
-	wp_enqueue_script( 'validity_donation-form', get_template_directory_uri() . '/js/donation-form.js' );
-	wp_enqueue_script( 'validity_dropdown', get_template_directory_uri() . '/js/dropdown.js' );
-	wp_enqueue_script( 'validity_event-form', get_template_directory_uri() . '/js/event-form.js' );
-	wp_enqueue_script( 'validity_ie', get_template_directory_uri() . '/js/ie.js' );
-	wp_enqueue_script( 'validity_page', get_template_directory_uri() . '/js/page.js' );
-	wp_enqueue_script( 'validity_polyfill', get_template_directory_uri() . '/js/polyfill.js' );
+	// wp_enqueue_script( 'validity_app-js', get_template_directory_uri() . '/js/app.js' );
+	// wp_enqueue_script( 'validity_carousel', get_template_directory_uri() . '/js/carousel.js' );
+	// wp_enqueue_script( 'validity_common', get_template_directory_uri() . '/js/common.js' );
+	// wp_enqueue_script( 'validity_donation-form', get_template_directory_uri() . '/js/donation-form.js' );
+	// wp_enqueue_script( 'validity_dropdown', get_template_directory_uri() . '/js/dropdown.js' );
+	// wp_enqueue_script( 'validity_event-form', get_template_directory_uri() . '/js/event-form.js' );
+	// wp_enqueue_script( 'validity_ie', get_template_directory_uri() . '/js/ie.js' );
+	// wp_enqueue_script( 'validity_page', get_template_directory_uri() . '/js/page.js' );
+	// wp_enqueue_script( 'validity_polyfill', get_template_directory_uri() . '/js/polyfill.js' );
 
 
 
