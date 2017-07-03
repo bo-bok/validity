@@ -1226,7 +1226,7 @@ footer p {
   height: 40px;
   font-size: 0;
   color: transparent;
-  background: url(../img/validity.png) center no-repeat;
+  background: url(assets/img/validity.png) center no-repeat;
   background-size: 100%;
   -webkit-transition: background 1s;
   -moz-transition: background 1s;
@@ -1361,57 +1361,92 @@ nav.active {
   transition: left 1ms, background 400ms;
 }
 
-nav.active .primary-navigation__item {
+nav.active .primary-navigation li {
   left: 0;
   opacity: 1;
 }
 
-nav .primary-navigation__item {
+nav .primary-navigation li {
   position: relative;
   left: -80px;
   opacity: 0;
 }
 
-nav .primary-navigation__item:nth-child(1) {
+nav .primary-navigation li:nth-child(1) {
   -webkit-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-nav .primary-navigation__item:nth-child(2) {
+nav .primary-navigation li:nth-child(2) {
   -webkit-transition: all 500ms 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 500ms 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 500ms 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 500ms 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-nav .primary-navigation__item:nth-child(3) {
+nav .primary-navigation li:nth-child(3) {
   -webkit-transition: all 500ms 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 500ms 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 500ms 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 500ms 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-nav .primary-navigation__item:nth-child(4) {
+nav .primary-navigation li:nth-child(4) {
   -webkit-transition: all 500ms 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 500ms 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 500ms 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 500ms 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-nav .primary-navigation__item:nth-child(5) {
+nav .primary-navigation li:nth-child(5) {
   -webkit-transition: all 500ms 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 500ms 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 500ms 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 500ms 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-nav .primary-navigation__item:nth-child(6) {
+nav .primary-navigation li:nth-child(6) {
   -webkit-transition: all 500ms 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 500ms 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 500ms 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 500ms 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav .primary-navigation li:nth-child(7) {
+  -webkit-transition: all 500ms 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav .primary-navigation li:nth-child(8) {
+  -webkit-transition: all 500ms 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav .primary-navigation li:nth-child(9) {
+  -webkit-transition: all 500ms 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav .primary-navigation li:nth-child(10) {
+  -webkit-transition: all 500ms 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+nav .primary-navigation li:nth-child(10) {
+  -webkit-transition: all 500ms 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .primary-navigation {
@@ -1427,11 +1462,11 @@ nav .primary-navigation__item:nth-child(6) {
   opacity: 0.5;
 }
 
-.primary-navigation__item {
+.primary-navigation li {
   display: flex;
 }
 
-.primary-navigation__item a {
+.primary-navigation li a {
   position: relative;
   align-self: center;
   text-decoration: none;
@@ -1444,13 +1479,13 @@ nav .primary-navigation__item:nth-child(6) {
 }
 
 @media (min-width: 768px) {
-  .primary-navigation__item a {
+  .primary-navigation li a {
     font-size: 2em;
     line-height: 1.3125em;
   }
 }
 
-.primary-navigation__item a:after {
+.primary-navigation li a:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1464,11 +1499,11 @@ nav .primary-navigation__item:nth-child(6) {
   transition: left 300ms;
 }
 
-.primary-navigation__item a:hover {
+.primary-navigation li a:hover {
   text-decoration: none;
 }
 
-.primary-navigation__item a:hover:after {
+.primary-navigation li a:hover:after {
   left: -80px;
 }
 
@@ -2957,7 +2992,8 @@ section .outer {
   margin: 0;
   font-size: 0;
   color: transparent;
-  background: url(../img/toggle-navigation-1.png) center no-repeat;
+  color: white;
+  background: url(assets/img/toggle-navigation-1.png) center no-repeat;
   background-size: 100%;
   -webkit-transition: background 1s;
   -moz-transition: background 1s;
@@ -3778,4 +3814,11 @@ section .inner {
   .viewing-splash-screen .logo {
     width: 375px;
   }
+}
+
+/*--------------------------------------------------------------
+# hide wp admin bar
+--------------------------------------------------------------*/
+#wpadminbar {
+  display: none;
 }

@@ -10,8 +10,8 @@
   height: 40px;
   font-size: 0;
   color: transparent;
-  background: url(../img/validity.png) center no-repeat;
+  background: url(assets/img/validity.png) center no-repeat;
   background-size: 100%;
-  
+
   @include transition(background 1s);
 }

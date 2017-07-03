@@ -42,10 +42,22 @@ function validity_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support( 'menus' );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'validity' ),
+		'primary-menu' => esc_html__( 'Primary', 'validity' ),
 	) );
+
+	// this function makes WP recognise our menu(s)
+// function register_theme_menus() {
+//   register_nav_menus(
+//     array(
+//       'primary-menu' => __( 'Primary Menu' ),
+//     )
+//   );
+// }
+// add_action( 'init', 'register_theme_menus' );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -156,3 +168,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// remove wp header whitespace margin (32px margin-top on html)
+add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
