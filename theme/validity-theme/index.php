@@ -13,6 +13,9 @@
  */
 
 get_header(); ?>
+<!DOCTYPE html>
+
+
 <h1 style="color:black"> HELLO WORLD</h1>
 <h1 style="color:white"> HELLO WORLD</h1>
 
