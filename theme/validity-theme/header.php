@@ -35,13 +35,13 @@
     <?php wp_head(); ?>
 	</head>
 
-	<body class="page-home">
+	<!-- <body class="page-home">
 
 		<div class="wrapper">
 
-			<div class="bg"></div>
+			<div class="bg"></div> -->
 
-			<header>
+			<!-- <header>
 				<div class="outer">
 					<div class="inner">
 						<a href="index.html" class="home-link">Home</a>
@@ -49,9 +49,9 @@
 						<a href="https://cafdonate.cafonline.org/480"class="button button__fixed">Support Us</a>
 					</div>
 				</div>
-			</header>
+			</header> -->
 
-			<nav>
+			<!-- <nav>
 				<div class="outer">
 					<div class="inner">
 						<ul class="primary-navigation">
@@ -64,4 +64,4 @@
 						</ul>
 					</div>
 				</div>
-			</nav>
+			</nav> -->
