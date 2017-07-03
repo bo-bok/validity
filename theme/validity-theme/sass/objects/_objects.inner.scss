@@ -4,19 +4,22 @@
 
 .inner {
   position: relative;
-  
+
   section & {
-    //margin: 0 -9px;
+    margin: 0 -9px;
     margin: 0;
   }
-  
-  &.transition {
-    
-    @include section_transition();
-  }
-  
+
+
+  // note to self - content does not appear when this class is active
+   
+  // &.transition {
+  //
+  //   @include section_transition();
+  // }
+
   &.fade {
-    
+
     @include section_fade();
   }
 }

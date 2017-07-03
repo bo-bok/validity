@@ -290,11 +290,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0;
   -webkit-transition: margin-left 1s, opacity 1s;
   -moz-transition: margin-left 1s, opacity 1s;
   -o-transition: margin-left 1s, opacity 1s;
   transition: margin-left 1s, opacity 1s;
+  /*note*/
 }
 
 .step-1 .carousel__items li:nth-child(1),
@@ -302,7 +302,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 .step-3 .carousel__items li:nth-child(3),
 .step-4 .carousel__items li:nth-child(4) {
   opacity: 1;
+  /*note*/
   z-index: 2;
+  /*note*/
 }
 
 .carousel__items li div {
@@ -339,6 +341,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   margin: 0 56px;
   list-style: none;
   z-index: 3;
+  /*note*/
   padding-top: 10px;
 }
 
@@ -3460,105 +3463,8 @@ section .outer {
 }
 
 section .inner {
+  margin: 0 -9px;
   margin: 0;
-}
-
-.inner.transition {
-  top: 20px;
-  opacity: 0;
-  -webkit-transition: top 1s, opacity 500ms;
-  -moz-transition: top 1s, opacity 500ms;
-  -o-transition: top 1s, opacity 500ms;
-  transition: top 1s, opacity 500ms;
-}
-
-.inner.transition .image {
-  top: -20px;
-  -webkit-transition: top 1s;
-  -moz-transition: top 1s;
-  -o-transition: top 1s;
-  transition: top 1s;
-}
-
-.viewing-1 .section-1 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-1 .section-1 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-2 .section-2 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-2 .section-2 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-3 .section-3 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-3 .section-3 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-4 .section-4 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-4 .section-4 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-5 .section-5 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-5 .section-5 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-6 .section-6 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-6 .section-6 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-7 .section-7 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-7 .section-7 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-8 .section-8 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-8 .section-8 .inner.transition .image {
-  top: 0;
-}
-
-.viewing-9 .section-9 .inner.transition {
-  top: 0;
-  opacity: 1;
-}
-
-.viewing-9 .section-9 .inner.transition .image {
-  top: 0;
 }
 
 .inner.fade {
