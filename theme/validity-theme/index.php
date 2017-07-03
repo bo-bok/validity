@@ -16,15 +16,15 @@ get_header(); ?>
 <!DOCTYPE html>
 
 
-<h1 style="color:black"> HELLO WORLD</h1>
-<h1 style="color:white"> HELLO WORLD</h1>
+<!-- <h1 style="color:black"> HELLO WORLD</h1>
+<h1 style="color:white"> HELLO WORLD</h1> -->
 
-<!-- <div class="splash-screen splash-screen--step-1">
+<div class="splash-screen splash-screen--step-1">
 	<h1>Mental Disability Advocacy Centre now becomes&hellip;</h1>
 	<div>
 		<div class="logo"></div>
 	</div>
-</div> -->
+</div>
 
 <section class="section-1">
 	<div class="carousel inner transition">

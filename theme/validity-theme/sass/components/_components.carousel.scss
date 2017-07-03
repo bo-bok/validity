@@ -30,7 +30,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // opacity: 0;
+    opacity: 0;
 
     @include transition(margin-left 1s, opacity 1s); /*note*/
 

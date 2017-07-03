@@ -290,6 +290,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0;
   -webkit-transition: margin-left 1s, opacity 1s;
   -moz-transition: margin-left 1s, opacity 1s;
   -o-transition: margin-left 1s, opacity 1s;
