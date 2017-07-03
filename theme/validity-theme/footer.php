@@ -25,6 +25,5 @@
   </footer>
 
 <?php wp_footer(); ?>
-<!-- </div> closing page wrapper from header -->
 </body>
 </html>

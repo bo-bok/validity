@@ -6,7 +6,7 @@
  *
  * @package validity
  */
-?><!doctype html>
+?>
 <header>
   <div class="outer">
     <div class="inner">
