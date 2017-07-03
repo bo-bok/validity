@@ -12,48 +12,68 @@ nav {
   color: $yellow;
   background: transparent;
   z-index: 3;
-  
+
   @include transition(left 1ms 1s, background 1s 500ms);
-  
+
   &.active {
     left: 0;
     background: rgba(#071d27, 0.9);
-    
+
     @include transition(left 1ms, background 400ms);
-    
-    .primary-navigation__item {
+
+    .primary-navigation li {
       left: 0;
       opacity: 1;
     }
   }
-  
-  .primary-navigation__item {
+
+  .primary-navigation li {
     position: relative;
     left: -80px;
     opacity: 0;
-    
+
     &:nth-child(1) {
       @include transition(all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
     }
-    
+
     &:nth-child(2) {
       @include transition(all 500ms 100ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
     }
-    
+
     &:nth-child(3) {
       @include transition(all 500ms 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
     }
-    
+
     &:nth-child(4) {
       @include transition(all 500ms 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
     }
-    
+
     &:nth-child(5) {
       @include transition(all 500ms 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
     }
-    
+
     &:nth-child(6) {
       @include transition(all 500ms 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+
+    &:nth-child(7) {
+      @include transition(all 500ms 600ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+
+    &:nth-child(8) {
+      @include transition(all 500ms 700ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+
+    &:nth-child(9) {
+      @include transition(all 500ms 800ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+
+    &:nth-child(10) {
+      @include transition(all 500ms 900ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    }
+
+    &:nth-child(10) {
+      @include transition(all 500ms 1000ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
     }
   }
 }
@@ -65,31 +85,31 @@ nav {
   height: 100vh;
   padding: 0 80px;
   list-style: none;
-  
+
   &.hovered {
-    
+
     a:not(:hover) {
       opacity: 0.5;
     }
   }
 }
 
-.primary-navigation__item {
+.primary-navigation li {
   display: flex;
-  
+
   a {
     position: relative;
     align-self: center;
     text-decoration: none;
-    
+
     @include font_size(16, 22);
     @include transition(opacity 300ms);
-    
+
     @media (min-width : 768px) {
-      
+
       @include font_size(32, 42);
     }
-    
+
     &:after {
       content: '';
       position: absolute;
@@ -98,13 +118,13 @@ nav {
       width: 60px;
       height: 2px;
       background: $yellow;
-      
+
       @include transition(left 300ms);
     }
-    
+
     &:hover {
       text-decoration: none;
-      
+
       &:after {
         left: -80px;
       }

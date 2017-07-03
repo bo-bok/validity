@@ -11,8 +11,9 @@
   margin: 0;
   font-size: 0;
   color: transparent;
-  background: url(../img/toggle-navigation-1.png) center no-repeat;
+  color: white;
+  background: url(assets/img/toggle-navigation-1.png) center no-repeat;
   background-size: 100%;
-  
+
   @include transition(background 1s);
 }
