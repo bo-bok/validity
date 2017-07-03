@@ -17,6 +17,9 @@
 
 get_header(); ?>
 
+<body class="page-who-we-are">
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
 <section class="section-1">
   <div class="outer full-height centered">
     <div class="inner transition">
