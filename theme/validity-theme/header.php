@@ -16,7 +16,6 @@
 		<meta charset="utf-8">
 		<title>Validity</title>
 		<meta name="viewport" content="width=device-width initial-scale=1.0">
-		<!-- <script data-main="assets/js/app" src="assets/js/require.js"></script> -->
 		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/require.js" data-main="<?php echo get_stylesheet_directory_uri(); ?>/js/app.js"></script>
 		<script>
 			var settings = {
