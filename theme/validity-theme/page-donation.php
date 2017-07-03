@@ -16,6 +16,11 @@
  */
 
 get_header(); ?>
+
+<body class="page-donate">
+  <div class="wrapper">
+    <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
 <div class="donation-hero">
   <div style="background-image: url(assets/img/photos/poster.jpg);"></div>
 </div>
@@ -280,4 +285,5 @@ get_header(); ?>
 
 <!-- get_sidebar(); -->
 <?php
-get_footer();
+get_footer(); ?>
+</div> <!-- close wrapper ->
