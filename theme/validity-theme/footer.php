@@ -17,7 +17,7 @@
       <div class="inner">
         <ul class="social">
           <li class="social__item"><a href="https://www.facebook.com/mentaldisabilityadvocacy/">Facebook</a></li>
-          <li class="social__item"><a href="https://twitter.com/MDACintl">Twitter</a></li>
+          <li class="social__item"><a href="https://twitter.com/ValidityNGO">Twitter</a></li>
         </ul>
         <p>UK Registered charity number 1104456</p>
       </div>
