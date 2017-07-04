@@ -12,25 +12,25 @@
   color: $yellow;
   pointer-events: none;
   z-index: 3;
-  
+
   &.splash-screen--step-1 {
-    
+
     h1 {
       opacity: 1;
     }
   }
-  
+
   &.splash-screen--step-2 {
-    
+
     h1 {
       opacity: 0;
     }
-    
+
     .logo {
       opacity: 1;
     }
   }
-  
+
   h1 {
     position: absolute;
     top: 50%;
@@ -38,33 +38,33 @@
     width: 100%;
     text-align: center;
     opacity: 0;
-    
+
     @include transform(translateY(-50%));
     @include transition(opacity 1s);
-    
+
     @media (min-width : 768px) {
       left: 50%;
       max-width: 600px;
-      
+
       @include transform(translate(-50%, -50%));
     }
   }
-  
+
   div {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 600px;
-    
+
     @include transform(translate(-50%, -50%));
   }
-  
+
   .logo {
     //width: 100%;
     width: 100%;
     padding-top: #{(9 / 16) * 100%};
     opacity: 0;
-    //background-image: url('../img/splash/Logo_Final_For_Animation 2_00108.png');
+    // background-image: url('assets/img/splash/Logo_Final_For_Animation 2_00108.png');
     background-size: contain;
     background-repeat: no-repeat;
     @include transition(opacity 1s);

@@ -8,38 +8,38 @@
   overflow-y: scroll;
   background: #0e2127;
   -webkit-overflow-scrolling: touch;
-  
+
   @include transition(background 1s);
-  
+
   .viewing-2 &,
   .page-news & {
     background: #575f70;
   }
-  
+
   .viewing-3 & {
     background: #071d27;
   }
-  
+
   .page-who-we-are & {
     background: #455f57;
   }
-  
+
   .page-take-action & {
     background: #081d27;
   }
-  
+
   .page-donate & {
     background: #081d27;
   }
-  
+
   .page-resources & {
     background: #081d27;
   }
-  
+
   .page-events & {
     background: #081d27;
   }
-  
+
   .page-our-impact & {
     background: #25213a;
   }
@@ -51,13 +51,13 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../img/texture.jpg) center no-repeat;
+  background: url(assets/img/texture.jpg) center no-repeat;
   background-size: cover;
   opacity: 0;
   pointer-events: none;
-  
+
   @include transition(opacity 2s);
-  
+
   .viewing-1 & {
     opacity: 1;
   }

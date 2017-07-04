@@ -1188,7 +1188,7 @@ footer p {
   margin: 0;
   padding-bottom: 54px;
   color: #ffdc93;
-  background: url(../img/hint.png) center bottom no-repeat;
+  background: url(assets/img/hint.png) center bottom no-repeat;
   opacity: 0;
   z-index: 2;
   font-size: 0.875em;
@@ -2085,13 +2085,13 @@ nav .primary-navigation li:nth-child(10) {
 }
 
 .pagination .previous {
-  background-image: url(../img/previous.png);
+  background-image: url(assets/img/previous.png);
   background-position: left;
   text-align: right;
 }
 
 .pagination .next {
-  background-image: url(../img/next.png);
+  background-image: url(assets/img/next.png);
   background-position: right;
 }
 
@@ -2571,263 +2571,263 @@ section .outer {
 }
 
 .splash-screen .logo.step-0 {
-  background-image: url(../img/splash/0.png);
+  background-image: url(assets/img/splash/0.png);
 }
 
 .splash-screen .logo.step-1 {
-  background-image: url(../img/splash/1.png);
+  background-image: url(assets/img/splash/1.png);
 }
 
 .splash-screen .logo.step-2 {
-  background-image: url(../img/splash/2.png);
+  background-image: url(assets/img/splash/2.png);
 }
 
 .splash-screen .logo.step-3 {
-  background-image: url(../img/splash/3.png);
+  background-image: url(assets/img/splash/3.png);
 }
 
 .splash-screen .logo.step-4 {
-  background-image: url(../img/splash/4.png);
+  background-image: url(assets/img/splash/4.png);
 }
 
 .splash-screen .logo.step-5 {
-  background-image: url(../img/splash/5.png);
+  background-image: url(assets/img/splash/5.png);
 }
 
 .splash-screen .logo.step-6 {
-  background-image: url(../img/splash/6.png);
+  background-image: url(assets/img/splash/6.png);
 }
 
 .splash-screen .logo.step-7 {
-  background-image: url(../img/splash/7.png);
+  background-image: url(assets/img/splash/7.png);
 }
 
 .splash-screen .logo.step-8 {
-  background-image: url(../img/splash/8.png);
+  background-image: url(assets/img/splash/8.png);
 }
 
 .splash-screen .logo.step-9 {
-  background-image: url(../img/splash/9.png);
+  background-image: url(assets/img/splash/9.png);
 }
 
 .splash-screen .logo.step-10 {
-  background-image: url(../img/splash/10.png);
+  background-image: url(assets/img/splash/10.png);
 }
 
 .splash-screen .logo.step-11 {
-  background-image: url(../img/splash/11.png);
+  background-image: url(assets/img/splash/11.png);
 }
 
 .splash-screen .logo.step-12 {
-  background-image: url(../img/splash/12.png);
+  background-image: url(assets/img/splash/12.png);
 }
 
 .splash-screen .logo.step-13 {
-  background-image: url(../img/splash/13.png);
+  background-image: url(assets/img/splash/13.png);
 }
 
 .splash-screen .logo.step-14 {
-  background-image: url(../img/splash/14.png);
+  background-image: url(assets/img/splash/14.png);
 }
 
 .splash-screen .logo.step-15 {
-  background-image: url(../img/splash/15.png);
+  background-image: url(assets/img/splash/15.png);
 }
 
 .splash-screen .logo.step-16 {
-  background-image: url(../img/splash/16.png);
+  background-image: url(assets/img/splash/16.png);
 }
 
 .splash-screen .logo.step-17 {
-  background-image: url(../img/splash/17.png);
+  background-image: url(assets/img/splash/17.png);
 }
 
 .splash-screen .logo.step-18 {
-  background-image: url(../img/splash/18.png);
+  background-image: url(assets/img/splash/18.png);
 }
 
 .splash-screen .logo.step-19 {
-  background-image: url(../img/splash/19.png);
+  background-image: url(assets/img/splash/19.png);
 }
 
 .splash-screen .logo.step-20 {
-  background-image: url(../img/splash/20.png);
+  background-image: url(assets/img/splash/20.png);
 }
 
 .splash-screen .logo.step-21 {
-  background-image: url(../img/splash/21.png);
+  background-image: url(assets/img/splash/21.png);
 }
 
 .splash-screen .logo.step-22 {
-  background-image: url(../img/splash/22.png);
+  background-image: url(assets/img/splash/22.png);
 }
 
 .splash-screen .logo.step-23 {
-  background-image: url(../img/splash/23.png);
+  background-image: url(assets/img/splash/23.png);
 }
 
 .splash-screen .logo.step-24 {
-  background-image: url(../img/splash/24.png);
+  background-image: url(assets/img/splash/24.png);
 }
 
 .splash-screen .logo.step-25 {
-  background-image: url(../img/splash/25.png);
+  background-image: url(assets/img/splash/25.png);
 }
 
 .splash-screen .logo.step-26 {
-  background-image: url(../img/splash/26.png);
+  background-image: url(assets/img/splash/26.png);
 }
 
 .splash-screen .logo.step-27 {
-  background-image: url(../img/splash/27.png);
+  background-image: url(assets/img/splash/27.png);
 }
 
 .splash-screen .logo.step-28 {
-  background-image: url(../img/splash/28.png);
+  background-image: url(assets/img/splash/28.png);
 }
 
 .splash-screen .logo.step-29 {
-  background-image: url(../img/splash/29.png);
+  background-image: url(assets/img/splash/29.png);
 }
 
 .splash-screen .logo.step-30 {
-  background-image: url(../img/splash/30.png);
+  background-image: url(assets/img/splash/30.png);
 }
 
 .splash-screen .logo.step-31 {
-  background-image: url(../img/splash/31.png);
+  background-image: url(assets/img/splash/31.png);
 }
 
 .splash-screen .logo.step-32 {
-  background-image: url(../img/splash/32.png);
+  background-image: url(assets/img/splash/32.png);
 }
 
 .splash-screen .logo.step-33 {
-  background-image: url(../img/splash/33.png);
+  background-image: url(assets/img/splash/33.png);
 }
 
 .splash-screen .logo.step-34 {
-  background-image: url(../img/splash/34.png);
+  background-image: url(assets/img/splash/34.png);
 }
 
 .splash-screen .logo.step-35 {
-  background-image: url(../img/splash/35.png);
+  background-image: url(assets/img/splash/35.png);
 }
 
 .splash-screen .logo.step-36 {
-  background-image: url(../img/splash/36.png);
+  background-image: url(assets/img/splash/36.png);
 }
 
 .splash-screen .logo.step-37 {
-  background-image: url(../img/splash/37.png);
+  background-image: url(assets/img/splash/37.png);
 }
 
 .splash-screen .logo.step-38 {
-  background-image: url(../img/splash/38.png);
+  background-image: url(assets/img/splash/38.png);
 }
 
 .splash-screen .logo.step-39 {
-  background-image: url(../img/splash/39.png);
+  background-image: url(assets/img/splash/39.png);
 }
 
 .splash-screen .logo.step-40 {
-  background-image: url(../img/splash/40.png);
+  background-image: url(assets/img/splash/40.png);
 }
 
 .splash-screen .logo.step-41 {
-  background-image: url(../img/splash/41.png);
+  background-image: url(assets/img/splash/41.png);
 }
 
 .splash-screen .logo.step-42 {
-  background-image: url(../img/splash/42.png);
+  background-image: url(assets/img/splash/42.png);
 }
 
 .splash-screen .logo.step-43 {
-  background-image: url(../img/splash/43.png);
+  background-image: url(assets/img/splash/43.png);
 }
 
 .splash-screen .logo.step-44 {
-  background-image: url(../img/splash/44.png);
+  background-image: url(assets/img/splash/44.png);
 }
 
 .splash-screen .logo.step-45 {
-  background-image: url(../img/splash/45.png);
+  background-image: url(assets/img/splash/45.png);
 }
 
 .splash-screen .logo.step-46 {
-  background-image: url(../img/splash/46.png);
+  background-image: url(assets/img/splash/46.png);
 }
 
 .splash-screen .logo.step-47 {
-  background-image: url(../img/splash/47.png);
+  background-image: url(assets/img/splash/47.png);
 }
 
 .splash-screen .logo.step-48 {
-  background-image: url(../img/splash/48.png);
+  background-image: url(assets/img/splash/48.png);
 }
 
 .splash-screen .logo.step-49 {
-  background-image: url(../img/splash/49.png);
+  background-image: url(assets/img/splash/49.png);
 }
 
 .splash-screen .logo.step-50 {
-  background-image: url(../img/splash/50.png);
+  background-image: url(assets/img/splash/50.png);
 }
 
 .splash-screen .logo.step-51 {
-  background-image: url(../img/splash/51.png);
+  background-image: url(assets/img/splash/51.png);
 }
 
 .splash-screen .logo.step-52 {
-  background-image: url(../img/splash/52.png);
+  background-image: url(assets/img/splash/52.png);
 }
 
 .splash-screen .logo.step-53 {
-  background-image: url(../img/splash/53.png);
+  background-image: url(assets/img/splash/53.png);
 }
 
 .splash-screen .logo.step-54 {
-  background-image: url(../img/splash/54.png);
+  background-image: url(assets/img/splash/54.png);
 }
 
 .splash-screen .logo.step-55 {
-  background-image: url(../img/splash/55.png);
+  background-image: url(assets/img/splash/55.png);
 }
 
 .splash-screen .logo.step-56 {
-  background-image: url(../img/splash/56.png);
+  background-image: url(assets/img/splash/56.png);
 }
 
 .splash-screen .logo.step-57 {
-  background-image: url(../img/splash/57.png);
+  background-image: url(assets/img/splash/57.png);
 }
 
 .splash-screen .logo.step-58 {
-  background-image: url(../img/splash/58.png);
+  background-image: url(assets/img/splash/58.png);
 }
 
 .splash-screen .logo.step-59 {
-  background-image: url(../img/splash/59.png);
+  background-image: url(assets/img/splash/59.png);
 }
 
 .splash-screen .logo.step-60 {
-  background-image: url(../img/splash/60.png);
+  background-image: url(assets/img/splash/60.png);
 }
 
 .splash-screen .logo.step-61 {
-  background-image: url(../img/splash/61.png);
+  background-image: url(assets/img/splash/61.png);
 }
 
 .splash-screen .logo.step-62 {
-  background-image: url(../img/splash/62.png);
+  background-image: url(assets/img/splash/62.png);
 }
 
 .splash-screen .logo.step-63 {
-  background-image: url(../img/splash/63.png);
+  background-image: url(assets/img/splash/63.png);
 }
 
 .splash-screen .logo.step-64 {
-  background-image: url(../img/splash/64.png);
+  background-image: url(assets/img/splash/64.png);
 }
 
 /*
@@ -3105,7 +3105,7 @@ section .outer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../img/texture.jpg) center no-repeat;
+  background: url(assets/img/texture.jpg) center no-repeat;
   background-size: cover;
   opacity: 0;
   pointer-events: none;
@@ -3177,14 +3177,14 @@ body.page-our-impact {
 
 @font-face {
   font-family: editor-light;
-  src: url(../font/editor/light.ttf) format("truetype");
+  src: url(assets/font/editor/light.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /*@font-face {
     font-family: editor-light;
-    src: url(../font/editor/light.eot);
+    src: url(assets/font/editor/light.eot);
     src: url(../font/editor/light.eot?#iefix) format('embedded-opentype'),
          url(../font/editor/light.woff) format('woff'),
          url(../font/editor/light.ttf) format('truetype'),
@@ -3194,14 +3194,14 @@ body.page-our-impact {
   }*/
 @font-face {
   font-family: editor-regular;
-  src: url(../font/editor/regular.ttf) format("truetype");
+  src: url(assets/font/editor/regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /*@font-face {
     font-family: editor-regular;
-    src: url(../font/editor/regular.eot);
+    src: url(assets/font/editor/regular.eot);
     src: url(../font/editor/regular.eot?#iefix) format('embedded-opentype'),
          url(../font/editor/regular.woff) format('woff'),
          url(../font/editor/regular.ttf) format('truetype'),
@@ -3211,14 +3211,14 @@ body.page-our-impact {
   }*/
 @font-face {
   font-family: editor-medium;
-  src: url(../font/editor/medium.ttf) format("truetype");
+  src: url(assets/font/editor/medium.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /*@font-face {
     font-family: editor-medium;
-    src: url(../font/editor/medium.eot);
+    src: url(assets/font/editor/medium.eot);
     src: url(../font/editor/medium.eot?#iefix) format('embedded-opentype'),
          url(../font/editor/medium.woff) format('woff'),
          url(../font/editor/medium.ttf) format('truetype'),
@@ -3228,14 +3228,14 @@ body.page-our-impact {
   }*/
 @font-face {
   font-family: editor-bold;
-  src: url(../font/editor/bold.ttf) format("truetype");
+  src: url(assets/font/editor/bold.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /*@font-face {
     font-family: editor-bold;
-    src: url(../font/editor/bold.eot);
+    src: url(assets/font/editor/bold.eot);
     src: url(../font/editor/bold.eot?#iefix) format('embedded-opentype'),
          url(../font/editor/bold.woff) format('woff'),
          url(../font/editor/bold.ttf) format('truetype'),
@@ -3245,14 +3245,14 @@ body.page-our-impact {
   }*/
 @font-face {
   font-family: editor-extrabold;
-  src: url(../font/editor/extrabold.ttf) format("truetype");
+  src: url(assets/font/editor/extrabold.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /*@font-face {
     font-family: editor-extrabold;
-    src: url(../font/editor/extrabold.eot);
+    src: url(assets/font/editor/extrabold.eot);
     src: url(../font/editor/extrabold.eot?#iefix) format('embedded-opentype'),
          url(../font/editor/extrabold.woff) format('woff'),
          url(../font/editor/extrabold.ttf) format('truetype'),

@@ -7,75 +7,75 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 25px auto;
-  
+
   @media (min-width : 768px) {
     width: 100%;
     margin: 100px auto 50px;
   }
-  
+
   @media (min-width : 1024px) {
     width: calc(0.666667 * 100% + 280px + 20px);
   }
-  
+
   &.pagination--event {
-  
+
     .previous,
     .next {
-      
+
       @media (min-width : 480px) {
         flex-basis: 160px
       }
     }
   }
-    
+
   a {
     display: block;
     margin: 10px;
     padding: 10px;
     font-size: 0;
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: none;
     }
-    
+
     @media (min-width : 480px) {
-    
+
       @include font_size(14, 22);
     }
   }
-  
+
   .previous,
   .next {
     background-repeat: no-repeat;
-    
+
     @media (min-width : 480px) {
       flex-basis: 140px;
     }
   }
-  
+
   .previous {
-    background-image: url(../img/previous.png);
+    background-image: url(assets/img/previous.png);
     background-position: left;
     text-align: right;
   }
-  
+
   .next {
-    background-image: url(../img/next.png);
+    background-image: url(assets/img/next.png);
     background-position: right;
   }
-  
+
   .disabled {
     pointer-events: none;
     cursor: default;
     opacity: 0.2;
   }
-  
+
   .current {
     pointer-events: none;
     cursor: default;
   }
-  
+
   ul {
     display: flex;
     flex-direction: row;
@@ -84,15 +84,15 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    
+
     li {
       display: none;
       margin: 0;
-      
+
       a:not(.current) {
         opacity: 0.2;
       }
-      
+
       @media (min-width : 768px) {
         display: block;
       }
