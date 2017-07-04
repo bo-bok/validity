@@ -7,18 +7,18 @@
 
   @font-face {
     font-family: #{$name}-#{$style};
-    src: url(assets/font/#{$name}/#{$style}.ttf) format('truetype');
+    src: url(/assets/font/#{$name}/#{$style}.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 
   /*@font-face {
     font-family: #{$name}-#{$style};
-    src: url(assets/font/#{$name}/#{$style}.eot);
-    src: url(../font/#{$name}/#{$style}.eot?#iefix) format('embedded-opentype'),
-         url(../font/#{$name}/#{$style}.woff) format('woff'),
-         url(../font/#{$name}/#{$style}.ttf) format('truetype'),
-         url(../font/#{$name}/#{$style}.svg##{$name}-#{$style}) format('svg');
+    src: url(/assets/font/#{$name}/#{$style}.eot);
+    src: url(/assets/font/#{$name}/#{$style}.eot?#iefix) format('embedded-opentype'),
+         url(/assets/font/#{$name}/#{$style}.woff) format('woff'),
+         url(/assets/font/#{$name}/#{$style}.ttf) format('truetype'),
+         url(/assets/font/#{$name}/#{$style}.svg##{$name}-#{$style}) format('svg');
     font-weight: normal;
     font-style: normal;
   }*/
@@ -155,7 +155,7 @@
 
   @for $i from 0 to 65 {
     &.step-#{$i} {
-      background-image: url(assets/img/splash/#{$i}.png);
+      background-image: url(/assets/img/splash/#{$i}.png);
     }
   }
 }
