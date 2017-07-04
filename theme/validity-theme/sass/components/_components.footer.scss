@@ -3,12 +3,12 @@
  */
 
 footer {
-  background: url(../img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
-  
+  background: url(/assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
+
   @media (min-width : 768px) {
     background-position: 56px 50%;
   }
-  
+
   &:after {
     content: '';
     position: absolute;
@@ -17,20 +17,20 @@ footer {
     left: 0;
     height: 1px;
     background: #bacfc6;
-    
+
     @media (min-width : 768px) {
       left: 56px;
     }
   }
-  
+
   p {
     margin-top: calc(33px - 1em);
-    
+
     @include font_size(10);
-    
+
     @media (min-width : 768px) {
       float: left;
-    
+
       @include font_size(14);
     }
   }

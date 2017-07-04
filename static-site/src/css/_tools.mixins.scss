@@ -3,14 +3,14 @@
  */
 
 @mixin font_face($name, $style){
-  
+
   @font-face {
     font-family: #{$name}-#{$style};
     src: url(../font/#{$name}/#{$style}.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-  
+
   /*@font-face {
     font-family: #{$name}-#{$style};
     src: url(../font/#{$name}/#{$style}.eot);
@@ -76,7 +76,7 @@
 @mixin section_layers(){
   pointer-events: none;
   z-index: 1;
-  
+
   @for $i from 1 to 10 {
     .viewing-#{$i} &.section-#{$i} {
       pointer-events: auto;
@@ -88,20 +88,20 @@
 @mixin section_transition(){
   top: 20px;
   opacity: 0;
-  
+
   @include transition(top 1s, opacity 500ms);
-  
+
   .image {
     top: -20px;
-    
+
     @include transition(top 1s);
   }
-  
-  @for $i from 1 to 10 {    
+
+  @for $i from 1 to 10 {
     .viewing-#{$i} .section-#{$i} & {
       top: 0;
       opacity: 1;
-  
+
       .image {
         top: 0;
       }
@@ -110,40 +110,40 @@
 }
 
 @mixin article_transition(){
-  
-  @for $i from 1 to 10 {    
+
+  @for $i from 1 to 10 {
     .viewing-#{$i} .section-#{$i} & {
-  
+
       &:first-child,
       &:nth-child(2) {
         top: 0;
       }
     }
   }
-  
+
   &:first-child,
   &:nth-child(2) {
     position: relative;
     top: 100px;
   }
-  
+
   &:first-child {
-    
+
     @include transition(top 1s 200ms);
   }
-  
+
   &:nth-child(2) {
-    
+
     @include transition(top 1s);
   }
 }
 
 @mixin section_fade(){
   opacity: 0;
-  
+
   @include transition(opacity 1s);
-  
-  @for $i from 1 to 10 {    
+
+  @for $i from 1 to 10 {
     .viewing-#{$i} .section-#{$i} & {
       opacity: 1;
     }
@@ -151,8 +151,8 @@
 }
 
 @mixin background_image(){
-  
-  @for $i from 0 to 65 { 
+
+  @for $i from 0 to 65 {
     &.step-#{$i} {
       background-image: url(../img/splash/#{$i}.png);
     }
