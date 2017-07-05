@@ -53,79 +53,47 @@ get_header(); ?>
       </div>
 
       <div class="news-articles">
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/photos/1.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 1</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x3.7" style="background-image: url(assets/img/photos/2.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 2 (with a longer title)</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x2.5" style="background-image: url(assets/img/photos/3.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 3</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/photos/4.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 4</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/photos/1.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 1</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x3.7" style="background-image: url(assets/img/photos/2.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 2 (with a longer title)</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x2.5" style="background-image: url(assets/img/photos/3.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 3</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/photos/4.jpg);"></a>
-          <h1 class="article__category">
-            <a href="im-a-person.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="news-article.html">Article 4</a>
-          </p>
-        </div>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+          <?php
+          $args = array (
+            'cat' => array(1,4),
+            'posts_per_page' => -1, //showposts is deprecated
+            'orderby' => 'date' //You can specify more filters to get the data
+            'post_count' => '8';
+          );
+
+          $cat_posts = new WP_query($args);
+
+          if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post(); ?>
+
+          <div class="article">
+            <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+            <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
+            <h1 class="article__category">
+                <?php
+                 foreach((get_the_category()) as $category) {
+                 echo $category->cat_name . ' ';
+                 }
+                 ?>
+            </h1>
+            <p class="article__title">
+              <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+                <?php the_title();?>
+              </a>
+            </p>
+          </div>
+
+          <?php
+          endwhile; endif;
+          ?>
+
+
+      <?php endwhile; else : ?>
+      <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <?php endif; ?>
       </div>
+
 
       <div class="pagination">
         <a href="#" class="previous disabled">Previous Page</a>
@@ -138,11 +106,11 @@ get_header(); ?>
         <a href="#" class="next">Next Page</a>
       </div>
 
+
     </div>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
 <?php
 get_footer(); ?>
 </div>
