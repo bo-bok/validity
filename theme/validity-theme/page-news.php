@@ -60,6 +60,7 @@ get_header(); ?>
             'cat' => array(1,4),
             'posts_per_page' => -1, //showposts is deprecated
             'orderby' => 'date' //You can specify more filters to get the data
+            'post_count' => '8';
           );
 
           $cat_posts = new WP_query($args);
@@ -67,18 +68,19 @@ get_header(); ?>
           if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post(); ?>
 
           <div class="article">
-            <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/photos/1.jpg);"></a>
+            <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+            <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
             <h1 class="article__category">
-              <!-- <a href="im-a-person.html"> -->
                 <?php
                  foreach((get_the_category()) as $category) {
                  echo $category->cat_name . ' ';
                  }
                  ?>
-               <!-- </a> -->
             </h1>
             <p class="article__title">
-              <a href="news-article.html"><?php the_title(); ?></a>
+              <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+                <?php the_title();?>
+              </a>
             </p>
           </div>
 
@@ -93,7 +95,6 @@ get_header(); ?>
       </div>
 
 
-
       <div class="pagination">
         <a href="#" class="previous disabled">Previous Page</a>
         <ul>
@@ -105,11 +106,11 @@ get_header(); ?>
         <a href="#" class="next">Next Page</a>
       </div>
 
+
     </div>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
 <?php
 get_footer(); ?>
 </div>
