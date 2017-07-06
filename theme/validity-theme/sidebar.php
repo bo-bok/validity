@@ -10,7 +10,7 @@
 <header>
   <div class="outer">
     <div class="inner">
-      <a href="index.html" class="home-link">Home</a>
+      <a href="<?php echo esc_url(home_url("/"))?>" class="home-link">Home</a>
       <a href="#" class="toggle-navigation">Navigation</a>
       <a href="index.php/donation" class="button button__fixed">Support Us</a>
     </div>
