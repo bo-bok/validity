@@ -41,19 +41,19 @@ get_header(); ?><!DOCTYPE html>
 							<p>We use the law to advance the rights of people with mental health issues &amp; intellectual disabilities worldwide</p>
 						</div>
 					</li>
-					<li style="background-image: url(assets/img/category/person.jpg);">
+					<li style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/person.jpg);">
 						<div>
 							<h1>I'm a person</h1>
 							<p>Calling for an end to brutal systems of guardianship</p>
 						</div>
 					</li>
-					<li style="background-image: url(assets/img/category/schools.jpg);">
+					<li style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/schools.jpg);">
 						<div>
 							<h1>Schools for All</h1>
 							<p>Making sure no child is denied inclusive education</p>
 						</div>
 					</li>
-					<li style="background-image: url(assets/img/category/my_home.jpg);">
+					<li style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);">
 						<div>
 							<h1>My Home, My Choice</h1>
 							<p>Reducing abuse in institutions and increasing community living</p>
@@ -61,9 +61,9 @@ get_header(); ?><!DOCTYPE html>
 					</li>
 			</ul>
 			<ul class="carousel__navigation">
-				<li data-position="2"><a href="im-a-person.html" class="button">I'm a person</a></li>
-				<li data-position="3"><a href="schools-for-all.html" class="button">Schools for all</a></li>
-				<li data-position="4"><a href="my-home-my-choice.html" class="button">My home, my choice</a></li>
+				<li data-position="2"><a href="index.php/im-a-person" class="button">I'm a person</a></li>
+				<li data-position="3"><a href="index.php/schools-for-all" class="button">Schools for all</a></li>
+				<li data-position="4"><a href="index.php/my-home-my-choice" class="button">My home, my choice</a></li>
 			</ul>
 			<p class="footnote">* Formerly Mental Disability Advocacy Centre</p>
 	</div>
@@ -123,7 +123,7 @@ get_header(); ?><!DOCTYPE html>
 		<div class="inner transition has-button">
 			<div class="cta">
 				<p>We challenge laws to give people the rights they are entitled to. We fight to make their voices valid. With firm roots in local communities, we are changing the way entire nations treat mental disability. We fearlessly represent people through the courts.</p>
-				<a href="/index.php?page_id=8" class="button">Donate</a>
+				<a href="index.php/donation" class="button">Donate</a>
 			</div>
 		</div>
 	</div>

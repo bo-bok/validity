@@ -32,7 +32,7 @@ get_header(); ?>
           <p>That is why we select test cases to challenge guardianship and urge state structures to put in place support for people to author their own lives. By campaigning with grassroots NGOs we enable governments to think in a different way.</p>
         </div>
       </div>
-      <div class="image" style="background-image: url(assets/img/category/person.jpg);"></div>
+      <div class="image" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/person.jpg);"></div>
     </div>
   </div>
 </section>
@@ -93,11 +93,11 @@ get_header(); ?>
       <div class="campaigns">
         <p>We support the global disability rights movement in their priority areas where law can play a valuable role in achieving structural change. We work on two other campaigns <span>see these below:</span></p>
         <div class="campaigns-list">
-          <div class="campaigns-list__item" style="background-image: url(assets/img/category/my_home.jpg);">
-            <a href="my-home-my-choice.html" class="button">My home, my choice</a>
+          <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);">
+            <a href="index.php/my-home-my-choice" class="button">My home, my choice</a>
           </div>
-          <div class="campaigns-list__item" style="background-image: url(assets/img/category/schools.jpg);">
-            <a href="schools-for-all.html" class="button">Schools for all</a>
+          <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/schools.jpg);">
+            <a href="index.php/schools-for-all" class="button">Schools for all</a>
           </div>
         </div>
       </div>

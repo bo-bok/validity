@@ -230,7 +230,7 @@ get_header(); ?>
         <p>Validity is supported by several institutional donors, including Open Society Foundations (our founder, which established us in 2002), The UN Voluntary Fund for Victims of Torture, The European Commission, Several individuals in the UK and US support Validity through philanthropic gifts, for which we are very grateful.</p>
         <p>Validity does not accept funds from pharmaceutical companies.</p>
         <p>Would you like to help validity continue to support people across the globe?<br /> Any donation is hugely appreciated.</p>
-        <a href="/index.php?page_id=8"class="button_transparent">Donate</a>
+        <a href="index.php/donation" class="button_transparent">Donate</a>
       </div>
 
     </div>

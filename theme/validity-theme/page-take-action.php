@@ -24,7 +24,7 @@ get_header(); ?>
         <div class="container has-button">
           <h1 class="page-heading">Take Action</h1>
           <p>You can support our dynamic community of professionals and volunteers to increase the impact we have. Together, we can fearlessly represent people through the courts, challenge laws to give people the rights they are entitled to and make their voices valid.</p>
-          <a href="/index.php?page_id=8" class="button_transparent">Donate</a>
+          <a href="index.php/donation" class="button_transparent">Donate</a>
           <!-- <a href="subscribe.html" class="button">Subscribe</a> -->
         </div>
       </div>
