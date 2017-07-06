@@ -58,7 +58,7 @@ get_header(); ?>
           <?php
           $args = array (
             'category_name' => 'campaigns',
-            'posts_per_page' => -1, //showposts is deprecated
+            'posts_per_page' => 8, //showposts is deprecated
             'orderby' => 'date' //You can specify more filters to get the data
             // 'post_count' => '8';
           );
