@@ -43,43 +43,45 @@ get_header(); ?>
     <div class="inner transition">
 
       <div class="news-articles">
+        <?php
+        $args = array (
+          'category_name' => 'my-home-my-choice',
+          'posts_per_page' => 4, //showposts is deprecated
+          'orderby' => 'date' //You can specify more filters to get the data
+        );
+          $cat_posts = new WP_query($args);
+
+          if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
+        ?>
+
         <div class="article">
-          <a href="articles/rusi-stanev.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/RUSI-STANEV.jpg);"></a>
+
+          <?php
+            $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+          ?>
+
+          <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
+
           <h1 class="article__category">
-            <a href="articles/rusi-stanev.html">My home, my choice</a>
+              <?php
+                foreach((get_the_category()) as $category) {
+                  echo $category->cat_name . ' ';
+                }
+              ?>
           </h1>
+
           <p class="article__title">
-            <a href="articles/rusi-stanev.html">A tribute to Rusi Stanev</a>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+              <?php the_title();?>
+            </a>
           </p>
+
         </div>
-        <div class="article">
-          <a href="articles/duped-detained-drugged.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/2.-DUPED,-DETAINED-AND-DRUGGED.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/duped-detained-drugged.html">My home, my choice</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/duped-detained-drugged.html">Duped, detained, and drugged</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="articles/EU-court-finds-restraints-inhuman.html" class="article__image" data-layout="3x3.7" style="background-image: url(assets/img/article-preview/3.-EUROPEAN-COURT-FINDS.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/EU-court-finds-restraints-inhuman.html">My home, my choice</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/EU-court-finds-restraints-inhuman.html">European Court Finds Use of Restraints Constitutes Inhuman
-and Degrading Treatment</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="articles/czech-court-disability-support.html" class="article__image" data-layout="3x2.5" style="background-image: url(assets/img//article-preview/czech-court-tells.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/czech-court-disability-support.html">My home, my choice</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/czech-court-disability-support.html">Czech court tells young man he’s entitled to disability support</a>
-          </p>
-        </div>
+
+        <?php
+          endwhile; endif;
+        ?>
+
       </div>
 
     </div>

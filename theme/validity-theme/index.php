@@ -74,45 +74,45 @@ get_header(); ?><!DOCTYPE html>
 		<div class="inner transition">
 
 			<div class="news-articles">
-				<div class="article">
-					<a href="articles/russia-landmark-judgement.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/Kotcherovs.jpg);"></a>
-					<h1 class="article__category">
-						<a href="im-a-person.html">I'm a person</a>
-					</h1>
-					<p class="article__title">
-						<a href="articles/russia-landmark-judgement.html">Russia: Landmark judgment on parenting rights for persons with disabilities
-</a>
-					</p>
-				</div>
-				<div class="article">
-					<a href="articles/legal-capacity-kenya.html" class="article__image" data-layout="3x3.7" style="background-image: url(assets/img/article-preview/kenya.jpg);"></a>
-					<h1 class="article__category">
-						<a href="im-a-person.html">I'm a person</a>
-					</h1>
-					<p class="article__title">
-						<a href="articles/legal-capacity-kenya.html">Legal capacity in Kenya</a>
-					</p>
-				</div>
-				<div class="article">
-					<a href="articles/slovakia-denial-education.html" class="article__image" data-layout="3x2.5" style="background-image: url(assets/img/article-preview/SLOVAKIA-SUPREME-COURT.jpg);"></a>
-					<h1 class="article__category">
-						<a href="schools-for-all.html">Schools for all</a>
-					</h1>
-					<p class="article__title">
-						<a href="articles/slovakia-denial-education.html">Slovakia: supreme court rules that denial of inclusive education to children with disabilities can amount to discrimination
-</a>
-					</p>
-				</div>
-				<div class="article">
-					<a href="articles/rusi-stanev.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/RUSI-STANEV.jpg);"></a>
-					<h1 class="article__category">
-						<a href="my-home-my-choice.html">My home, my choice</a>
-					</h1>
-					<p class="article__title">
-						<a href="articles/rusi-stanev.html">A tribute to Rusi Stanev</a>
-					</p>
-				</div>
-			</div>
+        <?php
+        $args = array (
+					'category_name' => 'campaigns',
+          'posts_per_page' => 4, //showposts is deprecated
+          'orderby' => 'date' //You can specify more filters to get the data
+        );
+        	$cat_posts = new WP_query($args);
+
+        	if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
+				?>
+
+	      <div class="article">
+
+	        <?php
+						$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+					?>
+
+	        <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
+
+	        <h1 class="article__category">
+	            <?php
+	           		foreach((get_the_category()) as $category) {
+	           			echo $category->cat_name . ' ';
+	             	}
+	            ?>
+	        </h1>
+
+	        <p class="article__title">
+	          <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+	            <?php the_title();?>
+	          </a>
+	        </p>
+
+	      </div>
+
+      	<?php
+      		endwhile; endif;
+      	?>
+    	</div>
 
 		</div>
 	</div>
@@ -123,7 +123,7 @@ get_header(); ?><!DOCTYPE html>
 		<div class="inner transition has-button">
 			<div class="cta">
 				<p>We challenge laws to give people the rights they are entitled to. We fight to make their voices valid. With firm roots in local communities, we are changing the way entire nations treat mental disability. We fearlessly represent people through the courts.</p>
-				<a href="/index.php?page_id=8"class="button">Donate</a>
+				<a href="/index.php?page_id=8" class="button">Donate</a>
 			</div>
 		</div>
 	</div>
