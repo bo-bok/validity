@@ -123,7 +123,7 @@ get_header(); ?><!DOCTYPE html>
 		<div class="inner transition has-button">
 			<div class="cta">
 				<p>We challenge laws to give people the rights they are entitled to. We fight to make their voices valid. With firm roots in local communities, we are changing the way entire nations treat mental disability. We fearlessly represent people through the courts.</p>
-				<a href="/index.php?page_id=8" class="button">Donate</a>
+				<a href="index.php/donation" class="button">Donate</a>
 			</div>
 		</div>
 	</div>
