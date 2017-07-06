@@ -57,10 +57,10 @@ get_header(); ?>
 
           <?php
           $args = array (
-            'cat' => array(1,4),
+            'category_name' => 'campaigns',
             'posts_per_page' => -1, //showposts is deprecated
             'orderby' => 'date' //You can specify more filters to get the data
-            'post_count' => '8';
+            // 'post_count' => '8';
           );
 
           $cat_posts = new WP_query($args);

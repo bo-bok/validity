@@ -42,42 +42,46 @@ get_header(); ?>
     <div class="inner transition">
 
       <div class="news-articles">
+
+        <?php
+        $args = array (
+          'category_name' => 'im-a-person',
+          'posts_per_page' => 4, //showposts is deprecated
+          'orderby' => 'date' //You can specify more filters to get the data
+        );
+          $cat_posts = new WP_query($args);
+
+          if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
+        ?>
+
         <div class="article">
-          <a href="articles/compensation-is-milestone.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/compensation-milestone.jpg);"></a>
+
+          <?php
+            $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+          ?>
+
+          <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
+
           <h1 class="article__category">
-            <a href="articles/compensation-is-milestone.html">I'm a person</a>
+              <?php
+                foreach((get_the_category()) as $category) {
+                  echo $category->cat_name . ' ';
+                }
+              ?>
           </h1>
+
           <p class="article__title">
-            <a href="articles/compensation-is-milestone.html">Compensation is "milestone for global human rights"</a>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+              <?php the_title();?>
+            </a>
           </p>
+
         </div>
-        <div class="article">
-          <a href="articles/kafka-story-line.html" class="article__image" data-layout="3x3.7" style="background-image: url(assets/img/article-preview/2.-KAFKA-STORY-LINE.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/kafka-story-line.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/kafka-story-line.html">Kafka story-line at the European Court of Human Rights</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="articles/russia-volated-rights.html" class="article__image" data-layout="3x2.5" style="background-image: url(assets/img/article-preview/1.-RUSSIA-VIOLATED-RIGHTS.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/russia-volated-rights.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/russia-volated-rights.html">Russia violated rights of man with mental health issues</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="articles/legal-capacity-kenya.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/kenya.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/legal-capacity-kenya.html">I'm a person</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/legal-capacity-kenya.html">Legal Capacity in Kenya</a>
-          </p>
-        </div>
+
+        <?php
+          endwhile; endif;
+        ?>
+
       </div>
 
     </div>

@@ -43,26 +43,45 @@ get_header(); ?>
     <div class="inner transition">
 
       <div class="news-articles">
-        <div class="article">
-          <a href="articles/bulgaria-right-education.html" class="article__image" data-layout="3x3.7" style="background-image: url(assets/img/article-preview/bulgaria-right-education.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/bulgaria-right-education.html">Schools for all</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/bulgaria-right-education.html">Bulgaria: right to education</a>
-          </p>
-        </div>
-        <div class="article">
-          <a href="articles/slovakia-denial-education.html" class="article__image" data-layout="3x4" style="background-image: url(assets/img/article-preview/SLOVAKIA-SUPREME-COURT.jpg);"></a>
-          <h1 class="article__category">
-            <a href="articles/slovakia-denial-education.html">Schools for all</a>
-          </h1>
-          <p class="article__title">
-            <a href="articles/slovakia-denial-education.html">Slovakia: supreme court rules that denial of inclusive education to children with disabilities can amount to discrimination</a>
-          </p>
-        </div>
+        <?php
+        $args = array (
+          'category_name' => 'schools-for-all',
+          'posts_per_page' => 4, //showposts is deprecated
+          'orderby' => 'date' //You can specify more filters to get the data
+        );
+        	$cat_posts = new WP_query($args);
 
-      </div>
+        	if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
+				?>
+
+	      <div class="article">
+
+	        <?php
+						$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+					?>
+
+	        <a href="news-article.html" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
+
+	        <h1 class="article__category">
+	            <?php
+	           		foreach((get_the_category()) as $category) {
+	           			echo $category->cat_name . ' ';
+	             	}
+	            ?>
+	        </h1>
+
+	        <p class="article__title">
+	          <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+	            <?php the_title();?>
+	          </a>
+	        </p>
+
+	      </div>
+
+      	<?php
+      		endwhile; endif;
+      	?>
+    	</div>
 
     </div>
   </div>

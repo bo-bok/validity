@@ -76,7 +76,7 @@ get_header(); ?><!DOCTYPE html>
 			<div class="news-articles">
         <?php
         $args = array (
-          'cat' => array(1,4),
+					'category_name' => 'campaigns',
           'posts_per_page' => 4, //showposts is deprecated
           'orderby' => 'date' //You can specify more filters to get the data
         );
@@ -109,11 +109,10 @@ get_header(); ?><!DOCTYPE html>
 
 	      </div>
 
-      <?php
-      endwhile; endif;
-      ?>
-    </div>
-
+      	<?php
+      		endwhile; endif;
+      	?>
+    	</div>
 
 		</div>
 	</div>
@@ -124,7 +123,7 @@ get_header(); ?><!DOCTYPE html>
 		<div class="inner transition has-button">
 			<div class="cta">
 				<p>We challenge laws to give people the rights they are entitled to. We fight to make their voices valid. With firm roots in local communities, we are changing the way entire nations treat mental disability. We fearlessly represent people through the courts.</p>
-				<a href="/index.php?page_id=8"class="button">Donate</a>
+				<a href="/index.php?page_id=8" class="button">Donate</a>
 			</div>
 		</div>
 	</div>
