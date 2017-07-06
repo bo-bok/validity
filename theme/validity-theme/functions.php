@@ -138,6 +138,17 @@ function validity_scripts() {
 
 	wp_enqueue_script('validity_app');
 
+	if ( is_page( 'resources' ) || is_page( 'take-action' ) ) {
+		wp_register_script( 'hide-hint', get_template_directory_uri() . '/js/hide-hint.js', 'validity_require');
+		wp_enqueue_script('hide-hint');
+	}
+
+
+	// if (is_page('/') || is_page('donation') || is_page('im-a-person')) {
+	// 	wp_register_script( 'display-hint', get_template_directory_uri() . '/js/display-hint.js', 'validity_require');
+	// 	wp_enqueue_script('display-hint');
+	// };
+
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	// 	wp_enqueue_script( 'comment-reply' );
 	// }
