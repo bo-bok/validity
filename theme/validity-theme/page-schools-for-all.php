@@ -32,7 +32,7 @@ get_header(); ?>
           <p>That’s why we are working with families to educate them about their rights, and give them the legal help they need to secure educational inclusion for their disabled children.</p>
         </div>
       </div>
-                <div class="image" style="background-image: url(assets/img/category/schools.jpg);"></div>
+                <div class="image" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/schools.jpg);"></div>
     </div>
 
   </div>

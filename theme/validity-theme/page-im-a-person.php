@@ -32,7 +32,7 @@ get_header(); ?>
           <p>That is why we select test cases to challenge guardianship and urge state structures to put in place support for people to author their own lives. By campaigning with grassroots NGOs we enable governments to think in a different way.</p>
         </div>
       </div>
-      <div class="image" style="background-image: url(assets/img/category/person.jpg);"></div>
+      <div class="image" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/person.jpg);"></div>
     </div>
   </div>
 </section>

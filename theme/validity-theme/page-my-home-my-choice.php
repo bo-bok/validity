@@ -32,7 +32,7 @@ get_header(); ?>
           <p>Thats why we will work in eight countries to call for governments to ensure that people can live in safe and inclusive communities.</p>
         </div>
       </div>
-        <div class="image" style="background-image: url(assets/img/category/my_home.jpg);"></div>
+        <div class="image" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);"></div>
     </div>
 
   </div>
