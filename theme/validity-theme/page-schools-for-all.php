@@ -92,11 +92,11 @@ get_header(); ?>
       <div class="campaigns">
         <p>We support the global disability rights movement in their priority areas where law can play a valuable role in achieving structural change. We work on two other campaigns <span>see these below:</span></p>
         <div class="campaigns-list">
-          <div class="campaigns-list__item" style="background-image: url(assets/img/category/my_home.jpg);">
-            <a href="my-home-my-choice.html" class="button">My home, my choice</a>
+          <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);">
+            <a href="index.php/my-home-my-choice" class="button">My home, my choice</a>
           </div>
-          <div class="campaigns-list__item" style="background-image: url(assets/img/category/person.jpg);">
-            <a href="im-a-person.html" class="button">I'm a person</a>
+          <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/person.jpg);">
+            <a href="index.php/im-a-person" class="button">I'm a person</a>
           </div>
         </div>
       </div>
