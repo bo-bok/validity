@@ -21,269 +21,65 @@ get_header(); ?>
   <div class="wrapper">
     <?php get_sidebar(); ?> <!-- sidebar = nav -->
 
-<div class="donation-hero">
-  <div style="background-image: url(assets/img/photos/poster.jpg);"></div>
+<section class="section-1">
+  <div class="outer">
+    <div class="inner">
+
+      <div class="donate-intro">
+        <div class="container">
+          <h1 class="page-heading">Donate</h1>
+          <p>By supporting Validity you will help us use the law to advance the rights of people around the world. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-2">
+  <div class="outer">
+    <div class="inner">
+    <div class="donate">
+      <div class="donate__content">
+      <h1 class="page-heading">Why donate to Validity?</h1>
+      <p>We have changed the lives of many individuals who would otherwise have been forgotten. We are the only charity using the law to advance the rights of people with mental health issues and intellectual disabilities worldwide. By focusing our efforts on test cases we have helped to redefine archaic laws to benefit thousands of people, not just our clients.</p>
+
+      <p>Our core funding, including our fundraising, administration, and governance, is covered by the Open Society Foundations, meaning that 100% of your donation goes directly to our human rights work.
+
+      As a small charity every donation makes a real difference to the work that we undertake.
+
+      If you would like to know more, or are interested in making a philanthropic gift, please contact Antony Butcher, Development Officer, on antony@validity.ngo</p>
+
+      <p>Other ways to donate:
+
+      Send a cheque payable to ‘Validity UK’ and post it to:
+        PO Box 68543
+        London SW15 9FP
+        UNITED KINGDOM
+      </p>
+    </div>
 </div>
+  </div>
+</div>
+</section>
 
-<form class="donation-form">
+<section class="section-3">
+  <div class="outer">
+    <div class="inner">
 
-  <section class="section-1">
-    <div class="outer">
-      <div class="inner fade">
+    <div class="donate">
 
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="current-stage" data-stage="1">1</li>
-              <li class="has-option" data-stage="2">2</li>
-              <li data-stage="4">4</li>
-              <li data-stage="5">5</li>
-              <li data-stage="6">6</li>
-              <li data-stage="7">7</li>
-            </ul>
-            <p>Together we can make a real difference.<br /> How often would you like to donate?</p>
-            <legend>Method</legend>
-            <input type="radio" name="method" id="method-one-off" value="one-off" />
-            <label class="button" for="method-one-off">One-off</label>
-            <input type="radio" name="method" id="method-monthly" value="monthly" />
-            <label class="button" for="method-monthly">Monthly</label>
-          </div>
-        </fieldset>
-
-      </div>
+      <div id="CAFDonateWidgetContainer"></div>
     </div>
-  </section>
+  </div>
+  </div>
+</section>
 
-  <section class="section-2">
-    <div class="outer">
-      <div class="inner fade">
 
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="valid-stage" data-stage="1">1</li>
-              <li class="has-option current-stage" data-stage="2">2</li>
-              <li data-stage="4">4</li>
-              <li data-stage="5">5</li>
-              <li data-stage="6">6</li>
-              <li data-stage="7">7</li>
-            </ul>
-            <p>Together we can make a real difference.<br /> How much would you like to donate?</p>
-            <legend>Amount</legend>
-            <input type="radio" name="amount" id="amount-one-off-5" value="one-off-5" />
-            <label class="button" for="amount-one-off-5">&pound;5</label>
-            <input type="radio" name="amount" id="amount-one-off-10" value="one-off-10" />
-            <label class="button" for="amount-one-off-10">&pound;10</label>
-            <input type="radio" name="amount" id="amount-one-off-15" value="one-off-15" />
-            <label class="button" for="amount-one-off-15">&pound;15</label>
-            <input type="radio" name="amount" id="amount-one-off-20" value="one-off-20" />
-            <label class="button" for="amount-one-off-20">&pound;20</label>
-            <input type="radio" name="amount" id="amount-one-off-25" value="one-off-25" />
-            <label class="button" for="amount-one-off-25">&pound;25</label>
-            <input type="radio" name="amount" id="amount-one-off-50" value="one-off-50" />
-            <label class="button" for="amount-one-off-50">&pound;50</label>
-            <input type="radio" name="amount" id="amount-one-off-100" value="one-off-100" />
-            <label class="button" for="amount-one-off-100">&pound;100</label>
-            <div class="amount-other-container">
-              <input type="text" name="amount-one-off-other-value" class="amount-other-value" />
-              <input type="button" name="amount-one-off-other-value-confirm" class="amount-other-value-confirm" value="Confirm" />
-              <input type="radio" name="amount" id="amount-one-off-other" value="one-off-other" />
-              <label class="button" for="amount-one-off-other">Other</label>
-            </div>
-          </div>
-        </fieldset>
+<script type="text/javascript">
+var caf_BeneficiaryCampaignId=480;
+document.write(unescape('%3Cscript id="CAFDonateWidgetLoader_script" src="https://cafdonate.cafonline.org/js/CAF.DonateWidgetLoader_script.js" type="text/javascript"%3E%3C/script%3E'));
+</script>
 
-      </div>
-    </div>
-  </section>
-
-  <section class="section-3">
-    <div class="outer">
-      <div class="inner fade">
-
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="valid-stage" data-stage="1">1</li>
-              <li class="has-option current-stage" data-stage="2">2</li>
-              <li data-stage="4">4</li>
-              <li data-stage="5">5</li>
-              <li data-stage="6">6</li>
-              <li data-stage="7">7</li>
-            </ul>
-            <p>Together we can make a real difference.<br /> How much would you like to donate?</p>
-            <legend>Amount</legend>
-            <input type="radio" name="amount" id="amount-monthly-10" value="monthly-10" />
-            <label class="button" for="amount-monthly-10">&pound;10</label>
-            <input type="radio" name="amount" id="amount-monthly-20" value="monthly-20" />
-            <label class="button" for="amount-monthly-20">&pound;20</label>
-            <input type="radio" name="amount" id="amount-monthly-50" value="monthly-50" />
-            <label class="button" for="amount-monthly-50">&pound;50</label>
-            <input type="radio" name="amount" id="amount-monthly-100" value="monthly-100" />
-            <label class="button" for="amount-monthly-100">&pound;100</label>
-            <input type="radio" name="amount" id="amount-monthly-250" value="monthly-250" />
-            <label class="button" for="amount-monthly-250">&pound;250</label>
-            <input type="radio" name="amount" id="amount-monthly-500" value="monthly-500" />
-            <label class="button" for="amount-monthly-500">&pound;500</label>
-            <input type="radio" name="amount" id="amount-monthly-1000" value="monthly-1000" />
-            <label class="button" for="amount-monthly-1000">&pound;1000</label>
-            <div class="amount-other-container">
-              <input type="text" name="amount-monthly-other-value" class="amount-other-value" />
-              <input type="button" name="amount-monthly-other-value-confirm" class="amount-other-value-confirm" value="Confirm" />
-              <input type="radio" name="amount" id="amount-monthly-other" value="monthly-other" />
-              <label class="button" for="amount-monthly-other">Other</label>
-            </div>
-          </div>
-        </fieldset>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-4">
-    <div class="outer">
-      <div class="inner fade">
-
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="valid-stage" data-stage="1">1</li>
-              <li class="has-option valid-stage" data-stage="2">2</li>
-              <li class="current-stage" data-stage="4">4</li>
-              <li data-stage="5">5</li>
-              <li data-stage="6">6</li>
-              <li data-stage="7">7</li>
-            </ul>
-            <p>Thank you for taking the time, we just need you to put in some details and then you will have helped support so many.</p>
-            <legend>Would you like to add Gift Aid?</legend>
-            <input type="radio" name="gift-aid" id="gift-aid-yes" value="yes" />
-            <label class="button" for="gift-aid-yes">Yes</label>
-            <input type="radio" name="gift-aid" id="gift-aid-no" value="no" />
-            <label class="button" for="gift-aid-no">No</label>
-          </div>
-        </fieldset>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-5">
-    <div class="outer">
-      <div class="inner fade">
-
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="valid-stage" data-stage="1">1</li>
-              <li class="has-option valid-stage" data-stage="2">2</li>
-              <li class="valid-stage" data-stage="4">4</li>
-              <li class="current-stage" data-stage="5">5</li>
-              <li data-stage="6">6</li>
-              <li data-stage="7">7</li>
-            </ul>
-            <p>Thank you for taking the time, we just need you to put in some details and then you will have helped support so many.</p>
-            <legend>Details</legend>
-            <input type="email" name="email" placeholder="Email Adddress" required />
-            <input type="button" class="button" name="email-confirm" value="Next" />
-          </div>
-        </fieldset>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-6">
-    <div class="outer">
-      <div class="inner fade">
-
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="valid-stage" data-stage="1">1</li>
-              <li class="has-option valid-stage" data-stage="2">2</li>
-              <li class="valid-stage" data-stage="4">4</li>
-              <li class="valid-stage" data-stage="5">5</li>
-              <li class="current-stage" data-stage="6">6</li>
-              <li data-stage="7">7</li>
-            </ul>
-            <p>Thank you for taking the time, we just need you to put in some details and then you will have helped support so many.</p>
-            <legend>Details</legend>
-            <input type="text" name="postcode" placeholder="Postcode" required />
-            <input type="button" class="button" name="postcode-confirm" value="Next" />
-          </div>
-        </fieldset>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-7">
-    <div class="outer">
-      <div class="inner fade">
-
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress">
-              <li class="valid-stage" data-stage="1">1</li>
-              <li class="has-option valid-stage" data-stage="2">2</li>
-              <li class="valid-stage" data-stage="4">4</li>
-              <li class="valid-stage" data-stage="5">5</li>
-              <li class="valid-stage" data-stage="6">6</li>
-              <li class="current-stage" data-stage="7">7</li>
-            </ul>
-            <p>Thank you for taking the time, we just need you to put in some details and then you will have helped support so many.</p>
-            <legend>Payment details</legend>
-            <label>
-              <span>Card number</span>
-              <input type="text" class="card-data" name="card-number" required />
-            </label>
-            <label>
-              <span>Expiration month</span>
-              <input type="text" class="card-data" name="card-expiration-month" required />
-            </label>
-            <label>
-              <span>Expiration year</span>
-              <input type="text" class="card-data" name="card-expiration-year" required />
-            </label>
-            <label>
-              <span>CVV number <span class="footnote">* The 3 digit number on the back of your card</span></span>
-              <input type="text" class="card-data" name="card-cvv" required />
-            </label>
-            <input type="button" class="button" name="donate-confirm" value="Donate" />
-            <p class="disclaimer">By clicking Donate, you agree to our terms and conditions and Privacy Policy</p>
-          </div>
-        </fieldset>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-8">
-    <div class="outer">
-      <div class="inner fade">
-
-        <fieldset>
-          <div class="container">
-            <ul class="donation-progress"></ul>
-            <p>You have donated. We thank you so much for your support, you are now a patron of validity.</p>
-            <legend>Receipt</legend>
-            <p>You have donated <span>&pound;250 to validity.ngo</span>, <span>12/11/17</span></p>
-            <p>This is a one-off payment from your <span>bank account ****6331</span></p>
-            <p>Payments for this subscription will appear on your bank statement as:</p>
-            <p class="bank-reference">GOCARDLESS.COM, ref: GOODGYM-6N3BX4QADG</p>
-            <p>Not sure why you're receiving this email? Please contact the merchant, Validity.</p>
-            <p>GoCardless is regulated by the Financial Conduct Authority as an Authorised Payment Institution.</p>
-            <p>GoCardless Ltd, 338-346 Goswell Road, London, EC1V 7LQ, 020 7183 8674</p>
-          </div>
-        </fieldset>
-
-      </div>
-    </div>
-  </section>
-
-</form>
-
-<!-- get_sidebar(); -->
 <?php
 get_footer(); ?>
-</div> <!-- close wrapper ->
+</div>
