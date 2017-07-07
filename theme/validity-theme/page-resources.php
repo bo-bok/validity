@@ -30,7 +30,8 @@ get_header(); ?>
         <h1 class="page-heading">Resources</h1>
         <p>We want to share our resources with anyone that is going to help with the fight to end descrimination against mental health.</p>
         <h2>Resources</h2>
-        <form>
+        <?php get_search_form(); ?>
+        <!-- <form>
           <input type="text" placeholder="Search" />
           <div class="dropdown">
             <span>Filter 1</span>
@@ -48,49 +49,20 @@ get_header(); ?>
               <a href="#">Option 2 c</a>
             </div>
           </div>
-        </form>
+        </form> -->
       </div>
 
-      <div class="resources">
+      <!-- <div class="resources">
         <a href="#" class="resource">
           <h1 class="resource__title">Article 1</h1>
           <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-        <a href="#" class="resource">
-          <h1 class="resource__title">Article 1</h1>
-          <p class="resource__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </a>
-      </div>
+      </div> -->
 
     </div>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
 <?php
 get_footer(); ?>
 </div>
