@@ -185,3 +185,13 @@ add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
 	remove_action('wp_head', '_admin_bar_bump_cb');
 }
+
+
+function searchfilter($query) {
+  if ($query->is_search && !is_admin() ) {
+      $query->set('post_type',array('post'));
+  }
+return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
