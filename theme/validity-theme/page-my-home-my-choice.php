@@ -28,8 +28,12 @@ get_header(); ?>
       <div class="our-impact-copy">
         <div class="text">
           <h1>My home, my choice</h1>
-          <p>Reducing abuse in institutions and increasing community living. For Centuries people with mental disabilites have been left in institutions, supposidly in their own best interests. Segregation has left people isolated, exploited and abused. In Europe alone, we estimate two million people are segregated just because they have a disability.</p>
-          <p>Thats why we will work in eight countries to call for governments to ensure that people can live in safe and inclusive communities.</p>
+          <?php $pageContent = new WP_Query(array(
+              'post_type' => 'campaigns'
+            )); ?>
+            <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+          <?php the_field('my_home_my_choice_description') ?>
+        <?php endwhile; ?>
         </div>
       </div>
         <div class="image" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);"></div>
@@ -91,7 +95,14 @@ get_header(); ?>
     <div class="inner transition">
 
       <div class="campaigns">
-        <p>We support the global disability rights movement in their priority areas where law can play a valuable role in achieving structural change. We work on two other campaigns <span>see these below:</span></p>
+        <div class="campaigns">
+          <?php $pageContent = new WP_Query(array(
+              'post_type' => 'campaigns'
+            )); ?>
+            <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+          <?php the_field('other_campaigns_blurb') ?>
+        <?php endwhile; ?>
+
         <div class="campaigns-list">
           <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/schools.jpg);">
             <a href="index.php/schools-for-all" class="button">Schools for all</a>

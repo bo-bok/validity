@@ -28,8 +28,14 @@ get_header(); ?>
       <div class="our-impact-copy">
         <div class="text">
           <h1>I'm a person</h1>
-          <p>Calling for an end to brutal systems of guardianship. People with mental health issues or intellectual disabilities are often labelled by the law as incompetent, and put under guardianship. Courts strip their rights to marry, have a family, vote, own a house, sign an employment contract or even decide their own medical treatment. People in in this Kafkaesque situation have no means of accessing justice.</p>
-          <p>That is why we select test cases to challenge guardianship and urge state structures to put in place support for people to author their own lives. By campaigning with grassroots NGOs we enable governments to think in a different way.</p>
+
+          <?php $pageContent = new WP_Query(array(
+              'post_type' => 'campaigns'
+            )); ?>
+
+            <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+              <?php the_field('im_a_person_description') ?>
+            <?php endwhile; ?>
         </div>
       </div>
       <div class="image" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/person.jpg);"></div>
@@ -91,7 +97,13 @@ get_header(); ?>
     <div class="inner transition">
 
       <div class="campaigns">
-        <p>We support the global disability rights movement in their priority areas where law can play a valuable role in achieving structural change. We work on two other campaigns <span>see these below:</span></p>
+        <?php $pageContent = new WP_Query(array(
+            'post_type' => 'campaigns'
+          )); ?>
+          <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+        <?php the_field('other_campaigns_blurb') ?>
+      <?php endwhile; ?>
+
         <div class="campaigns-list">
           <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);">
             <a href="index.php/my-home-my-choice" class="button">My home, my choice</a>
@@ -133,6 +145,7 @@ get_header(); ?>
     </div>
   </div>
 </section>
+
 
 
 <!-- get_sidebar(); -->

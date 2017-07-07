@@ -69,7 +69,6 @@ get_header(); ?>
 	             	}
 	            ?>
 	        </h1>
-
 	        <p class="article__title">
 	          <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
 	            <?php the_title();?>
@@ -90,7 +89,14 @@ get_header(); ?>
     <div class="inner transition">
 
       <div class="campaigns">
-        <p>We support the global disability rights movement in their priority areas where law can play a valuable role in achieving structural change. We work on two other campaigns <span>see these below:</span></p>
+        <div class="campaigns">
+          <?php $pageContent = new WP_Query(array(
+              'post_type' => 'campaigns'
+            )); ?>
+            <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+          <?php the_field('other_campaigns_blurb') ?>
+        <?php endwhile; ?>
+
         <div class="campaigns-list">
           <div class="campaigns-list__item" style="background-image: url(<?= get_template_directory_uri()?>/assets/img/category/my_home.jpg);">
             <a href="index.php/my-home-my-choice" class="button">My home, my choice</a>
