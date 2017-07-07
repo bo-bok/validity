@@ -179,32 +179,6 @@ get_header(); ?>
           <?php endwhile; ?>
 
           </div>
-
-
-          <!-- <div class="member">
-            <h1 class="member__title"><span>Brand Union</span></h1>
-            <p class="member__excerpt"></p>
-          </div>
-          <div class="member">
-            <h1 class="member__title"><span>DLA Piper</span></h1>
-            <p class="member__excerpt"></p>
-          </div>
-          <div class="member">
-            <h1 class="member__title"><span>Linklaters</span></h1>
-            <p class="member__excerpt"></p>
-          </div>
-          <div class="member">
-            <h1 class="member__title"><span>Massive Music</span></h1>
-            <p class="member__excerpt"></p>
-          </div>
-          <div class="member">
-            <h1 class="member__title"><span>Billie Hood</span></h1>
-            <p class="member__excerpt"></p>
-          </div>
-          <div class="member">
-            <h1 class="member__title"><span>Kaitlin Stober</span></h1>
-            <p class="member__excerpt"></p>
-          </div> -->
         </div>
 
       </div>
@@ -217,11 +191,20 @@ get_header(); ?>
   <div class="outer full-height centered with-footer">
     <div class="inner transition has-button">
 
+      <?php $take_action = new WP_Query(array(
+          'post_type' => 'who_we_are',
+          'orderby' => 'menu_order'
+        )); ?>
+
       <div class="cta">
         <h1>Taking Action</h1>
-        <p>Validity is supported by several institutional donors, including Open Society Foundations (our founder, which established us in 2002), The UN Voluntary Fund for Victims of Torture, The European Commission, Several individuals in the UK and US support Validity through philanthropic gifts, for which we are very grateful.</p>
-        <p>Validity does not accept funds from pharmaceutical companies.</p>
-        <p>Would you like to help validity continue to support people across the globe?<br /> Any donation is hugely appreciated.</p>
+
+        <?php while($take_action->have_posts() ) : $take_action->the_post(); ?>
+          <p><?php the_field('take_action_cta'); ?></p>
+
+
+      <?php endwhile; ?>
+
         <a href="index.php/donation" class="button_transparent">Donate</a>
       </div>
 
