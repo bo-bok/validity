@@ -230,14 +230,12 @@ define([
 				}
 			} else {
 				// kill splash screen as they've been here before
-				
 				var splashScreen = document.getElementsByClassName('splash-screen')[0];
 				var logo = document.getElementsByClassName('logo')[0];
 				splashScreen.className = splashScreen.className.replace(/\bsplash-screen--step-1\b/, '');
 				splashScreen.className = splashScreen.className.replace(/\bsplash-screen--step-2\b/, '');
 				body[0].className = body[0].className.replace(/\bviewing-splash-screen\b/, '');
 				//alert("you've been here before!!");
-				
 			}
 
 		};
