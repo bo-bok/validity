@@ -123,21 +123,20 @@ get_header(); ?>
       <div class="strategies">
         <h1>We use four strategies to achieve the goals of these campaigns:</h1>
         <div class="strategies-list">
-          <div class="strategies-list__item">
-            <h2>Building solidarity</h2>
-            <p>We support local lawyers and NGOs by delivering training and strengthening their capacity, and help victims of human rights abuse tell their story nationally and internationally.</p>
-          </div>
-          <div class="strategies-list__item">
-            <h2>Promoting inclusion</h2>
-            <p>We work with local, national and international bodies to ensure a human rights based approach in law and policy reform.</p>
-          </div>
-          <div class="strategies-list__item">
-            <h2>Securing justice</h2>
-            <p>We take test cases through the courts to redefine the law.</p>
-          </div>
-          <div class="strategies-list__item">
-            <h2>And listening</h2>
-            <p>We are sensitive to the needs and agenda of people in grassroots organisations, so that we can tailor our interventions appropriately.</p>
+          <div class="strategies-list">
+            <?php $strategies = new WP_Query(array(
+                'post_type' => 'our_strategies',
+                'orderby' => 'menu_order'
+              )); ?>
+
+              <?php while($strategies->have_posts() ) : $strategies->the_post(); ?>
+
+            <div class="strategies-list__item">
+              <h2><?php the_field('strategy_name'); ?></h2>
+              <p><?php the_field('strategy_description'); ?></p>
+            </div>
+          <?php endwhile; ?>
+
           </div>
         </div>
       </div>
@@ -147,8 +146,6 @@ get_header(); ?>
 </section>
 
 
-
-<!-- get_sidebar(); -->
 <?php
 get_footer(); ?>
 </div>
