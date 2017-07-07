@@ -1,35 +1,35 @@
-/*
- * Trumps - splash screen
- */
-
-.viewing-splash-screen {
-  
-  .wrapper {
-    overflow: hidden;
-  }
-  
-  header {
-    opacity: 0;
-    
-    @include transition(none);
-  }
-  
-  section {
-    opacity: 0;
-    
-    @include transition(none);
-  }
-  
-  .hint {
-    opacity: 0;
-  }
-  
-  .splash-screen {
-    pointer-events: auto;
-  }
-  @media screen and (max-width:400px){
-     .logo{
-       width:375px;
-     }
-  }
-}
+// /*
+//  * Trumps - splash screen
+//  */
+//
+// .viewing-splash-screen {
+//
+//   .wrapper {
+//     overflow: hidden;
+//   }
+//
+//   header {
+//     opacity: 0;
+//
+//     @include transition(none);
+//   }
+//
+//   section {
+//     opacity: 0;
+//
+//     @include transition(none);
+//   }
+//
+//   .hint {
+//     opacity: 0;
+//   }
+//
+//   .splash-screen {
+//     pointer-events: auto;
+//   }
+//   @media screen and (max-width:400px){
+//      .logo{
+//        width:375px;
+//      }
+//   }
+// }
