@@ -122,7 +122,14 @@ get_header(); ?><!DOCTYPE html>
 	<div class="outer full-height centered with-footer">
 		<div class="inner transition has-button">
 			<div class="cta">
-				<p>We challenge laws to give people the rights they are entitled to. We fight to make their voices valid. With firm roots in local communities, we are changing the way entire nations treat mental disability. We fearlessly represent people through the courts.</p>
+			<?php $donationSection = new WP_Query(array(
+				  'post_type' => 'homepage_donate'
+				)); ?>
+
+				<?php while($donationSection->have_posts() ) : $donationSection->the_post(); ?>
+					<p><?php the_content();?></p>
+				<?php endwhile; ?>
+
 				<a href="index.php/donation" class="button">Donate</a>
 			</div>
 		</div>
