@@ -8,12 +8,12 @@
   color: rgb(110, 135, 138);
 
   @media (min-width : 768px) {
-    padding: 190px 9px 70px 9px;
+    padding: 190px 9px 50px 9px;
   }
 
   @media (min-width : 1024px) {
     width: calc((10 / 12) * 100%);
-    padding: 190px calc((1 / 12) * 100%) 70px 9px;
+    padding: 190px calc((1 / 12) * 100%) 50px 9px;
   }
 
   @media (min-width : 1600px) {
