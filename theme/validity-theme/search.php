@@ -24,13 +24,7 @@ get_header(); ?>
         <?php get_search_form(); ?>
       </div>
 
-	    <?php
-	    if ( have_posts() ) : ?>
-          <?php
-  					/* translators: %s: search query. */
-  					printf( esc_html__( 'Search Results for: %s', 'validity' ), '<span>' . get_search_query() . '</span>' );
-  				?>
-
+	    <?php if ( have_posts() ) : ?>
         <div class="resources">
         <?php while ( have_posts() ) : the_post(); ?>
 
@@ -40,8 +34,8 @@ get_header(); ?>
             <p class="resource__excerpt"><?php the_excerpt(); ?></p>
           </a>
 
-			<?php endwhile; ?>
-    </div>
+			     <?php endwhile; ?>
+        </div>
 
 			   <?php the_posts_navigation(); ?>
 

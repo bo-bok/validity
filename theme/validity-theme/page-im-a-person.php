@@ -123,7 +123,6 @@ get_header(); ?>
       <div class="strategies">
         <h1>We use four strategies to achieve the goals of these campaigns:</h1>
         <div class="strategies-list">
-          <div class="strategies-list">
             <?php $strategies = new WP_Query(array(
                 'post_type' => 'our_strategies',
                 'orderby' => 'menu_order'
@@ -137,11 +136,12 @@ get_header(); ?>
             </div>
           <?php endwhile; ?>
 
-          </div>
         </div>
       </div>
 
     </div>
+  </div>
+
   </div>
 </section>
 

@@ -3,6 +3,9 @@
  */
 
 @import '../mixins/mixins';
+button:focus {
+    outline: 0;
+  }
 
 .back {
   position: fixed;
@@ -14,12 +17,13 @@
   text-align: center;
   text-decoration: none;
   background: url(assets/img/arrow-left.png) center bottom no-repeat;
-
+  border: none;
   @include transform(translateY(-50%));
   @include transition(left 300ms);
 
   &:hover {
     text-decoration: none;
+    border: none;
   }
 
   @media (min-width : 768px) {

@@ -55,6 +55,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*
  * Settings - Global
  */
+button:focus {
+  outline: 0;
+}
+
 .back {
   position: fixed;
   top: 50%;
@@ -65,6 +69,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   text-align: center;
   text-decoration: none;
   background: url(assets/img/arrow-left.png) center bottom no-repeat;
+  border: none;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -78,6 +83,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 .back:hover {
   text-decoration: none;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -500,6 +506,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   }
 }
 
+.donate .donate__content {
+  color: #6e878a;
+}
+
 @media (min-width: 1024px) {
   .donate .donate__content {
     width: calc(((2 / 12) * 100%) * 3 + ((1 / 12) * 100%) * 2);
@@ -508,6 +518,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 .donate .donate__content .button, .donate .donate__content .button_transparent {
   margin-top: 6em;
+}
+
+.CAFDonateWidgetContainer {
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
 /*
@@ -2561,18 +2576,19 @@ section .outer {
 .donate-intro {
   margin: 0 auto;
   padding: 100px 0 30px;
+  color: #6e878a;
 }
 
 @media (min-width: 768px) {
   .donate-intro {
-    padding: 190px 9px 70px 9px;
+    padding: 190px 9px 50px 9px;
   }
 }
 
 @media (min-width: 1024px) {
   .donate-intro {
     width: calc((10 / 12) * 100%);
-    padding: 190px calc((1 / 12) * 100%) 70px 9px;
+    padding: 190px calc((1 / 12) * 100%) 50px 9px;
   }
 }
 

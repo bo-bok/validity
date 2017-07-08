@@ -49,7 +49,7 @@
    }
 
    .donate__content {
-
+     color: rgb(110, 135, 138);
      @media (min-width : 1024px) {
        width: calc(((2 / 12) * 100%) * 3 + ((1 / 12) * 100%) * 2);
      }
@@ -59,3 +59,8 @@
      }
    }
  }
+
+.CAFDonateWidgetContainer {
+  padding-bottom: 3rem;
+  text-align: center;
+}

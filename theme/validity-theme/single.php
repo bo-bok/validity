@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+
 <body class="page-news">
   <div class="wrapper">
   <?php get_sidebar(); ?> <!-- sidebar = nav -->
@@ -42,17 +43,17 @@ get_header(); ?>
 
           <div class="news-article__content">
             <?php the_content() ?>
-
-            <a href="news.html" class="button">See similar stories</a>
           </div>
 
-          <a href="news.html" class="back">Back</a>
+          <!-- <div onclick="goBack()" class="back">Go Back</div> -->
 
         </div>
 
       </div>
     </div>
   </section>
+
+
 
 
 
@@ -66,8 +67,17 @@ get_header(); ?>
 
       <div class="cta">
         <h1>Taking Action</h1>
-        <p>Would you like to help validity continue to support people across the globe?<br /> Any donation is hugely appreciated.</p>
-        <a href="https://cafdonate.cafonline.org/480"class="button">Donate</a>
+        <?php $pageContent = new WP_Query(array(
+            'post_type' => 'article_page_donate'
+          )); ?>
+
+          <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+
+            <?php the_field('donate_description'); ?>
+        <?php endwhile; ?>
+
+
+        <a href="index.php/donation" sclass="button">Donate</a>
       </div>
 
     </div>
