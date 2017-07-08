@@ -90,11 +90,18 @@ get_header(); ?>
           <div class="member">
             <?php $trustees = new WP_Query(array(
                 'post_type' => 'trustees',
-                'orderby' => 'menu_order'
+                'meta_key'	=> 'trustee_lastname',
+	              'orderby'		=> 'meta_value',
+                'order' => 'ASC'
               )); ?>
 
               <?php while($trustees->have_posts() ) : $trustees->the_post(); ?>
-            <h1 class="member__title"><span><?php the_field('trustee_name'); ?></span><?php the_field('trustee_role'); ?></h1>
+            <h1 class="member__title">
+              <span>
+                <?php the_field('trustee_firstname')?>  <?php the_field('trustee_lastname'); ?>
+              </span>
+              <?php the_field('trustee_role'); ?>
+            </h1>
             <p class="member__excerpt"><?php the_field('trustee_description'); ?></p>
           <?php endwhile; ?>
           </div>
@@ -119,12 +126,15 @@ get_header(); ?>
           <div class="member">
             <?php $teamMember = new WP_Query(array(
                 'post_type' => 'our_team',
-                'orderby' => 'menu_order'
+                'meta_key'	=> 'team_member_lastname',
+                'orderby'		=> 'meta_value',
+                'order' => 'ASC'
               )); ?>
 
               <?php while($teamMember->have_posts() ) : $teamMember->the_post(); ?>
             <h1 class="member__title"><span>
-              <?php the_field('team_member_name'); ?>
+              <?php the_field('team_member_firstname'); ?> .
+              <?php the_field('team_member_lastname'); ?>
             </span>
             <?php the_field('team_member_role'); ?>
              </h1>
@@ -168,7 +178,8 @@ get_header(); ?>
           <div class="member">
             <?php $partners = new WP_Query(array(
                 'post_type' => 'our_partners',
-                'orderby' => 'menu_order'
+                'orderby' => 'title',
+                'order' => 'ASC'
               )); ?>
 
               <?php while($partners->have_posts() ) : $partners->the_post(); ?>
