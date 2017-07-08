@@ -115,6 +115,7 @@ get_header(); ?>
 
     </div>
   </div>
+</div>
 
   <div class="outer has-padding">
     <div class="inner transition">
@@ -122,7 +123,6 @@ get_header(); ?>
       <div class="strategies">
         <h1>We use four strategies to achieve the goals of these campaigns:</h1>
         <div class="strategies-list">
-          <div class="strategies-list">
             <?php $strategies = new WP_Query(array(
                 'post_type' => 'our_strategies',
                 'orderby' => 'menu_order'

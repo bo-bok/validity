@@ -109,6 +109,7 @@ get_header(); ?>
 
     </div>
   </div>
+</div>
 
   <div class="outer has-padding">
     <div class="inner transition">
