@@ -155,30 +155,6 @@ function validity_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'validity_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Additional features to allow styling of the templates.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
 
 // remove wp header whitespace margin (32px margin-top on html)
 add_action('get_header', 'remove_admin_login_header');
