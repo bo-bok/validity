@@ -154,10 +154,11 @@ get_header(); ?>
 
         <div class="group">
           <div class="overview">
+            <h1 class="group-heading">Our partners</h1>
+
             <!-- fetch partners introduction text -->
             <?php while($partners_intro->have_posts() ) : $partners_intro->the_post(); ?>
 
-            <h1 class="group-heading">Our partners</h1>
 
             <p><?php the_field('partners_introduction'); ?></p>
           <?php endwhile; ?>
