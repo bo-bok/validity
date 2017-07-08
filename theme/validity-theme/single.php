@@ -77,7 +77,7 @@ get_header(); ?>
         <?php endwhile; ?>
 
 
-        <a href="index.php/donation" sclass="button">Donate</a>
+        <a href="index.php/donation" class="button">Donate</a>
       </div>
 
     </div>
