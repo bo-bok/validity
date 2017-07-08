@@ -43,8 +43,6 @@ get_header(); ?>
 
           <div class="news-article__content">
             <?php the_content() ?>
-
-            <a href="news.html" class="button">See similar stories</a>
           </div>
 
           <button onclick="goBack()" class="back">Go Back</button>
