@@ -23,6 +23,8 @@
 					animate 	: true,
 					showHint	: true
 				};
+
+				function goBack() { window.history.back() };
 		</script>
 
     <?php wp_head(); ?>

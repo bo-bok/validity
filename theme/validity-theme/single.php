@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+
 <body class="page-news">
   <div class="wrapper">
   <?php get_sidebar(); ?> <!-- sidebar = nav -->
@@ -46,13 +47,16 @@ get_header(); ?>
             <a href="news.html" class="button">See similar stories</a>
           </div>
 
-          <a href="news.html" class="back">Back</a>
+          <button onclick="goBack()" class="back">Go Back</button>
+
 
         </div>
 
       </div>
     </div>
   </section>
+
+
 
 
 
