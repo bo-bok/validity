@@ -506,6 +506,10 @@ button:focus {
   }
 }
 
+.donate .donate__content {
+  color: #6e878a;
+}
+
 @media (min-width: 1024px) {
   .donate .donate__content {
     width: calc(((2 / 12) * 100%) * 3 + ((1 / 12) * 100%) * 2);
@@ -2567,6 +2571,7 @@ section .outer {
 .donate-intro {
   margin: 0 auto;
   padding: 100px 0 30px;
+  color: #6e878a;
 }
 
 @media (min-width: 768px) {
