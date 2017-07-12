@@ -32,7 +32,7 @@ get_header(); ?>
       <div class="donate-intro">
         <div class="container">
           <h1 class="page-heading">Donate</h1>
-          <?php while($donateContent->have_posts() ) : $donateContent->the_post(); ?>
+          <?php while ($donateContent->have_posts()) : $donateContent->the_post(); ?>
             <?php the_field('donate_intro');?>
           <?php endwhile; ?>
 
@@ -48,7 +48,7 @@ get_header(); ?>
     <div class="donate">
       <div class="donate__content">
       <h1 class="page-heading">Why donate to Validity?</h1>
-      <?php while($donateContent->have_posts() ) : $donateContent->the_post(); ?>
+      <?php while ($donateContent->have_posts()) : $donateContent->the_post(); ?>
         <?php the_field('donate_description'); ?>
         <div id="CAFDonateWidgetContainer" class="CAFDonateWidgetContainer"></div>
         <?php the_field('other_ways_to_donate'); ?>

@@ -53,10 +53,10 @@ get_header(); ?>
       </div>
 
       <div class="news-articles">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
           <?php
-          $args = array (
+          $args = array(
             'category_name' => 'campaigns',
             'posts_per_page' => 8, //showposts is deprecated
             'orderby' => 'date' //You can specify more filters to get the data
@@ -68,12 +68,12 @@ get_header(); ?>
           if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post(); ?>
 
           <div class="article">
-            <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+            <?php $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
             <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
             <h1 class="article__category">
                 <?php
-                 foreach((get_the_category()) as $category) {
-                 echo $category->cat_name . ' ';
+                 foreach ((get_the_category()) as $category) {
+                     echo $category->cat_name . ' ';
                  }
                  ?>
             </h1>
@@ -90,7 +90,7 @@ get_header(); ?>
 
 
       <?php endwhile; else : ?>
-      <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
       </div>
 

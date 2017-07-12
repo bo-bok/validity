@@ -68,30 +68,30 @@ get_header(); ?><!DOCTYPE html>
 
 			<div class="news-articles">
         <?php
-        $args = array (
-					'category_name' => 'campaigns',
+        $args = array(
+                    'category_name' => 'campaigns',
           'posts_per_page' => 4, //showposts is deprecated
           'orderby' => 'date' //You can specify more filters to get the data
         );
-        	$cat_posts = new WP_query($args);
+            $cat_posts = new WP_query($args);
 
-        	if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
-				?>
+            if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
+                ?>
 
 	      <div class="article">
 
 	        <?php
-						$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-					?>
+                        $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+                    ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
 
 
 	        <h1 class="article__category">
 	            <?php
-	           		foreach((get_the_category()) as $category) {
-	           			echo $category->cat_name . ' ';
-	             	}
-	            ?>
+                       foreach ((get_the_category()) as $category) {
+                           echo $category->cat_name . ' ';
+                       }
+                ?>
 	        </h1>
 
 	        <p class="article__title">
@@ -103,8 +103,8 @@ get_header(); ?><!DOCTYPE html>
 	      </div>
 
       	<?php
-      		endwhile; endif;
-      	?>
+              endwhile; endif;
+          ?>
     	</div>
 
 		</div>
@@ -115,12 +115,12 @@ get_header(); ?><!DOCTYPE html>
 	<div class="outer full-height centered with-footer">
 		<div class="inner transition has-button">
 			<div class="cta">
-			<?php $donationSection = new WP_Query(array(
-				  'post_type' => 'homepage_donate'
-				)); ?>
+			<?php $donateCTA = new WP_Query(array(
+                  'post_type' => 'donation_ctas'
+                )); ?>
 
-				<?php while($donationSection->have_posts() ) : $donationSection->the_post(); ?>
-					<p><?php the_content();?></p>
+				<?php while ($donateCTA->have_posts()) : $donateCTA->the_post(); ?>
+					<p><?php the_field('homepage_donation_cta');?></p>
 				<?php endwhile; ?>
 
 				<a href="index.php/donation" class="button">Donate</a>

@@ -33,7 +33,7 @@ get_header(); ?>
             )); ?>
 
             <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
-              <?php the_content();?>
+              <?php the_field('description');?>
             <?php endwhile; ?>
 
           <a href="#honorary-president" class="button_transparent anchor">Honorary President</a>
@@ -89,7 +89,7 @@ get_header(); ?>
           </div>
           <div class="member">
             <?php $trustees = new WP_Query(array(
-                'post_type' => 'trustees',
+                'post_type' => 'our_trustees',
                 'meta_key'	=> 'trustee_lastname',
 	              'orderby'		=> 'meta_value',
                 'order' => 'ASC'
@@ -203,16 +203,15 @@ get_header(); ?>
   <div class="outer full-height centered with-footer">
     <div class="inner transition has-button">
 
-      <?php $take_action = new WP_Query(array(
-          'post_type' => 'who_we_are',
-          'orderby' => 'menu_order'
-        )); ?>
+      <?php $donateCTA = new WP_Query(array(
+          'post_type' => 'donation_ctas'
+      )); ?>
 
       <div class="cta">
         <h1>Taking Action</h1>
 
-        <?php while($take_action->have_posts() ) : $take_action->the_post(); ?>
-          <p><?php the_field('take_action_cta'); ?></p>
+        <?php while($donateCTA->have_posts() ) : $donateCTA->the_post(); ?>
+          <p><?php the_field('who_we_are_page_donation_cta'); ?></p>
 
 
       <?php endwhile; ?>
