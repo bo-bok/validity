@@ -32,7 +32,7 @@ get_header(); ?>
               'post_type' => 'who_we_are'
             )); ?>
 
-            <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+            <?php while ($pageContent->have_posts()) : $pageContent->the_post(); ?>
               <?php the_field('description');?>
             <?php endwhile; ?>
 
@@ -62,7 +62,7 @@ get_header(); ?>
                 'post_type' => 'who_we_are'
               )); ?>
 
-              <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+              <?php while ($pageContent->have_posts()) : $pageContent->the_post(); ?>
             <h1 class="member__title"><span><?php the_field('honorary_president_name')?></span></h1>
             <p class="member__excerpt">
               <?php the_field('honorary_president_description') ?></p>
@@ -87,24 +87,24 @@ get_header(); ?>
           <div class="overview">
             <h1 class="group-heading">Trustees</h1>
           </div>
-          <div class="member">
-            <?php $trustees = new WP_Query(array(
-                'post_type' => 'our_trustees',
-                'meta_key'	=> 'trustee_lastname',
-	              'orderby'		=> 'meta_value',
-                'order' => 'ASC'
-              )); ?>
+          <?php $trustees = new WP_Query(array(
+              'post_type' => 'our_trustees',
+              'meta_key'    => 'trustee_lastname',
+                'orderby'        => 'meta_value',
+              'order' => 'ASC'
+            )); ?>
 
-              <?php while($trustees->have_posts() ) : $trustees->the_post(); ?>
-            <h1 class="member__title">
-              <span>
-                <?php the_field('trustee_firstname')?>  <?php the_field('trustee_lastname'); ?>
-              </span>
-              <?php the_field('trustee_role'); ?>
-            </h1>
-            <p class="member__excerpt"><?php the_field('trustee_description'); ?></p>
+          <?php while ($trustees->have_posts()) : $trustees->the_post(); ?>
+            <div class="member">
+              <h1 class="member__title">
+                <span>
+                  <?php the_field('trustee_firstname')?>  <?php the_field('trustee_lastname'); ?>
+                </span>
+                <?php the_field('trustee_role'); ?>
+              </h1>
+              <p class="member__excerpt"><?php the_field('trustee_description'); ?></p>
+              </div>
           <?php endwhile; ?>
-          </div>
 
         </div>
       </div>
@@ -123,29 +123,29 @@ get_header(); ?>
           <div class="overview">
             <h1 class="group-heading">Our team</h1>
           </div>
-          <div class="member">
-            <?php $teamMember = new WP_Query(array(
-                'post_type' => 'our_team',
-                'meta_key'	=> 'team_member_lastname',
-                'orderby'		=> 'meta_value',
-                'order' => 'ASC'
-              )); ?>
+          <?php $teamMember = new WP_Query(array(
+              'post_type' => 'our_team',
+              'meta_key'    => 'team_member_lastname',
+              'orderby'        => 'meta_value',
+              'order' => 'ASC'
+            )); ?>
 
-              <?php while($teamMember->have_posts() ) : $teamMember->the_post(); ?>
-            <h1 class="member__title"><span>
-              <?php the_field('team_member_firstname'); ?> .
-              <?php the_field('team_member_lastname'); ?>
-            </span>
-            <?php the_field('team_member_role'); ?>
-             </h1>
-            <p class="member__excerpt">
-              <?php the_field('team_member_description'); ?>
-            </p>
-          <?php endwhile; ?>
+            <?php while ($teamMember->have_posts()) : $teamMember->the_post(); ?>
+              <div class="member">
+                <h1 class="member__title">
+                <span>
+                  <?php the_field('team_member_firstname'); ?> 
+                  <?php the_field('team_member_lastname'); ?>
+                </span>
+                  <?php the_field('team_member_role'); ?>
+                </h1>
+                <p class="member__excerpt">
+                  <?php the_field('team_member_description'); ?>
+                </p>
+              </div>
+            <?php endwhile; ?>
           </div>
         </div>
-
-      </div>
 
     </div>
   </div>
@@ -167,7 +167,7 @@ get_header(); ?>
             <h1 class="group-heading">Our partners</h1>
 
             <!-- fetch partners introduction text -->
-            <?php while($partners_intro->have_posts() ) : $partners_intro->the_post(); ?>
+            <?php while ($partners_intro->have_posts()) : $partners_intro->the_post(); ?>
 
 
             <p><?php the_field('partners_introduction'); ?></p>
@@ -175,24 +175,24 @@ get_header(); ?>
           </div>
 
           <!-- fetch inidividual partners -->
-          <div class="member">
-            <?php $partners = new WP_Query(array(
-                'post_type' => 'our_partners',
-                'orderby' => 'title',
-                'order' => 'ASC'
-              )); ?>
+          <?php $partners = new WP_Query(array(
+              'post_type' => 'our_partners',
+              'orderby' => 'title',
+              'order' => 'ASC'
+            )); ?>
 
-              <?php while($partners->have_posts() ) : $partners->the_post(); ?>
-
-            <h1 class="member__title"><span><?php the_field('partner_name'); ?></span></h1>
-            <p class="member__excerpt">
-              <?php the_field('partner_description'); ?>
-            </p>
+          <?php while ($partners->have_posts()) : $partners->the_post(); ?>
+            <div class="member">
+              <h1 class="member__title">
+                <span><?php the_field('partner_name'); ?></span>
+              </h1>
+              <p class="member__excerpt">
+                <?php the_field('partner_description'); ?>
+              </p>
+            </div>
           <?php endwhile; ?>
 
-          </div>
         </div>
-
       </div>
 
     </div>
@@ -210,7 +210,7 @@ get_header(); ?>
       <div class="cta">
         <h1>Taking Action</h1>
 
-        <?php while($donateCTA->have_posts() ) : $donateCTA->the_post(); ?>
+        <?php while ($donateCTA->have_posts()) : $donateCTA->the_post(); ?>
           <p><?php the_field('who_we_are_page_donation_cta'); ?></p>
 
 
