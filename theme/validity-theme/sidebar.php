@@ -27,7 +27,7 @@
           'theme_location' => 'primary-menu', //tells wp where menu lives
           'menu_class' => 'primary-navigation'
         );
-        wp_nav_menu( $defaults );
+        wp_nav_menu($defaults);
       ?>
    </div>
  </div>

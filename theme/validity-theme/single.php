@@ -67,13 +67,13 @@ get_header(); ?>
 
       <div class="cta">
         <h1>Taking Action</h1>
-        <?php $pageContent = new WP_Query(array(
-            'post_type' => 'article_page_donate'
+        <?php $donateCTA = new WP_Query(array(
+            'post_type' => 'donation_ctas'
           )); ?>
 
-          <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+          <?php while($donateCTA->have_posts() ) : $donateCTA->the_post(); ?>
 
-            <?php the_field('donate_description'); ?>
+            <?php the_field('article_page_donation_cta'); ?>
         <?php endwhile; ?>
 
 

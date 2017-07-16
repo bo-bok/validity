@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
+
   @media (min-width : 768px) {
     width: 100%;
     padding: 0 9px;
@@ -19,13 +19,13 @@
 }
 
 h1.group-heading {
-  
+
   @include font_size(16, 22);
 }
 
 .overview {
   flex-basis: 100%;
-  
+
   @media (min-width : 1024px) {
     margin-left: calc((1 / 12) * 100%;
   }
@@ -35,25 +35,26 @@ h1.group-heading {
   flex-grow: 1;
   width: calc(100% - 3em);
   margin: 30px 0;
-  
+
   @media (min-width : 1024px) {
     width: calc((4 / 12) * 100%);
     max-width: 50%;
     margin: 30px 9px;
     padding-left: calc((1 / 12) * 100%;
-  
+    
+
     &:nth-child(2n + 1) {
       margin-top: 80px;
       margin-right: 0;
     }
-    
+
     &:nth-child(2n) {
       margin-left: 0;
     }
   }
-  
+
   &:hover {
-    
+
     .member__title {
       color: #ffdd94;
     }
@@ -64,14 +65,14 @@ h1.group-heading {
   position: relative;
   margin-top: 1.5em;
   font-family: 'editor-regular';
-  
+
   @include font_size(14, 22);
-  
+
   @media (min-width : 768px) {
-  
+
     @include font_size(16, 22);
   }
-  
+
   &:after {
     content: '';
     position: absolute;
@@ -81,7 +82,7 @@ h1.group-heading {
     border-top-style: solid;
     border-top-width: 1px;
   }
-  
+
   span {
     display: block;
     font-family: 'editor-bold';
@@ -89,9 +90,9 @@ h1.group-heading {
 }
 
 .member__excerpt {
-  
+
   @media (min-width : 768px) {
-  
+
     @include font_size(16, 22);
   }
 }

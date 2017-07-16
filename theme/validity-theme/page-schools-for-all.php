@@ -44,30 +44,30 @@ get_header(); ?>
 
       <div class="news-articles">
         <?php
-        $args = array (
+        $args = array(
           'category_name' => 'schools-for-all',
           'posts_per_page' => 4, //showposts is deprecated
           'orderby' => 'date' //You can specify more filters to get the data
         );
-        	$cat_posts = new WP_query($args);
+            $cat_posts = new WP_query($args);
 
-        	if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
-				?>
+            if ($cat_posts->have_posts()) : while ($cat_posts->have_posts()) : $cat_posts->the_post();
+                ?>
 
 	      <div class="article">
 
 	        <?php
-						$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-					?>
+                        $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+                    ?>
 
 	        <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
 
 	        <h1 class="article__category">
 	            <?php
-	           		foreach((get_the_category()) as $category) {
-	           			echo $category->cat_name . ' ';
-	             	}
-	            ?>
+                       foreach ((get_the_category()) as $category) {
+                           echo $category->cat_name . ' ';
+                       }
+                ?>
 	        </h1>
 	        <p class="article__title">
 	          <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
@@ -78,8 +78,8 @@ get_header(); ?>
 	      </div>
 
       	<?php
-      		endwhile; endif;
-      	?>
+              endwhile; endif;
+          ?>
     	</div>
 
     </div>
@@ -93,7 +93,7 @@ get_header(); ?>
           <?php $pageContent = new WP_Query(array(
               'post_type' => 'campaigns'
             )); ?>
-            <?php while($pageContent->have_posts() ) : $pageContent->the_post(); ?>
+            <?php while ($pageContent->have_posts()) : $pageContent->the_post(); ?>
           <?php the_field('other_campaigns_blurb') ?>
         <?php endwhile; ?>
 
@@ -123,7 +123,7 @@ get_header(); ?>
               'orderby' => 'menu_order'
             )); ?>
 
-            <?php while($strategies->have_posts() ) : $strategies->the_post(); ?>
+            <?php while ($strategies->have_posts()) : $strategies->the_post(); ?>
 
           <div class="strategies-list__item">
             <h2><?php the_field('strategy_name'); ?></h2>

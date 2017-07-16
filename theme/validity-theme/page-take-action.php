@@ -23,12 +23,12 @@ get_header(); ?>
       <div class="take-action-intro">
         <div class="container has-button">
           <h1 class="page-heading">Take Action</h1>
-          <?php $takeaction_donate = new WP_Query(array(
-              'post_type' => 'takeaction_donate'
+          <?php $donateCTA = new WP_Query(array(
+              'post_type' => 'donation_ctas'
             )); ?>
 
-            <?php while($takeaction_donate->have_posts() ) : $takeaction_donate->the_post(); ?>
-              <p><?php the_content();?></p>
+            <?php while($donateCTA->have_posts() ) : $donateCTA->the_post(); ?>
+              <p><?php the_field('take_action_page_donation_cta');?></p>
             <?php endwhile; ?>
 
 
