@@ -134,7 +134,7 @@ get_header(); ?>
               <div class="member">
                 <h1 class="member__title">
                 <span>
-                  <?php the_field('team_member_firstname'); ?> 
+                  <?php the_field('team_member_firstname'); ?>
                   <?php the_field('team_member_lastname'); ?>
                 </span>
                   <?php the_field('team_member_role'); ?>
@@ -223,6 +223,5 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
 <?php get_footer(); ?>
 </div>
