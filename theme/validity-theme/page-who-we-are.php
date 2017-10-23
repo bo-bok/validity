@@ -223,5 +223,26 @@ get_header(); ?>
   </div>
 </section>
 
+
+<section class="section-6"> <!-- section 7 -->
+  <div class="outer full-height centered with-footer">
+    <div class="inner transition">
+      <?php $individual_profile = new WP_Query(array(
+        'post_type' => 'profile'
+      )); ?>
+      <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
+      <a href="<?php get_permalink(); ?>">
+        <div><?php the_field('first_name'); ?></div>
+        <div><?php the_field('last_name'); ?></div>
+      </a>
+
+        <button>Back to staff page</button>
+      <?php endwhile; ?>
+      </div>
+  </div>
+</section>
+
+
+
 <?php get_footer(); ?>
 </div>

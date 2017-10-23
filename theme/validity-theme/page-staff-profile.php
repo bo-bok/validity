@@ -21,19 +21,22 @@ get_header(); ?>
   <div class="wrapper">
     <?php get_sidebar(); ?> <!-- sidebar = nav -->
 
-    <section>
-      <p>Jessica Salmon</p>
-      <div>
-        <p>hi</p>
-        <p>hi</p>
-        <p>hi</p>
-      </div>
-
-      <div>Location and contact details</div>
-      <div>Follow him/her on Twitter [optional] @jessicasalmon</div>
-
-      <button>Back to staff page</button>
-
+      <section class="section-1">
+        <div class="outer full-height centered with-footer">
+          <div class="inner transition">
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
+            )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
+              <div><?php the_field('first_name'); ?></div>
+              <div><?php the_field('last_name'); ?></div>
+              <div><?php the_field('description'); ?></div>
+              <div><?php the_field('location'); ?></div>
+              <div><?php the_field('twitter'); ?></div>
+              <button>Back to staff page</button>
+            <?php endwhile; ?>
+            </div>
+        </div>
     </section>
     </div>
 </body>
