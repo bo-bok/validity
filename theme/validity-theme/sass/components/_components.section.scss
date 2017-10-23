@@ -62,39 +62,6 @@ section {
   }
 }
 
-.section-contact {
-  color: #b9cfc6;
-  width: 75%;
-
-  &-intro {
-    padding-bottom: 2rem;
-  }
-  &-address {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    .address {
-      margin: 0 0 1rem 0;
-      &-info {
-        margin: 0;
-      }
-    }
-  }
-}
-
-@media (min-width:767px) {
-  .section-contact {
-    &-address {
-      flex-direction: row;
-
-      .address {
-        margin: 0;
-      }
-    }
-  }
-}
-
 .page-home .section-3 {
   color: #b9cfc6;
 }

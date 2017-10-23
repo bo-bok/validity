@@ -25,29 +25,28 @@ get_header(); ?>
       <div class="outer full-height centered with-footer">
         <div class="inner transition">
 
+          <?php $address = new WP_Query(array(
+            'post_type' => 'contact_us',
+            'order' => 'ASC',
+            'orderby' => 'ID'
+          ))?>
 
       <div class="section-contact">
         <p class="section-contact-intro">We are based in London and Budapest <br />
         Feel free to contact us:</p>
           <main class="section-contact-address">
-            <div class="address">
-              <p class="address-info">Regus EMKE</p>
-              <p class="address-info">Rákóczi út 42.</p>
-              <p class="address-info">Budapest</p>
-              <p class="address-info">1072 Hungary</p>
-              <p class="address-info">tel: +361 327 4247</p>
-              <p class="address-info">fax: +361 267 9100</p>
-              <p class="address-info">email: mdac@mdac.org</p>
-            </div>
-            <div class="address">
-              <p class="address-info">Regus EMKE</p>
-              <p class="address-info">Rákóczi út 42.</p>
-              <p class="address-info">Budapest</p>
-              <p class="address-info">1072 Hungary</p>
-              <p class="address-info">tel: +361 327 4247</p>
-              <p class="address-info">fax: +361 267 9100</p>
-              <p class="address-info">email: mdac@mdac.org</p>
-            </div>
+            <?php while ($address->have_posts()) : $address->the_post();?>
+              <div class="address-container">
+                <p class="address-info"><?php the_field('address_line_1') ?></p>
+                <p class="address-info"><?php the_field('address_line_2') ?></p>
+                <p class="address-info"><?php the_field('city') ?></p>
+                <p class="address-info"><?php the_field('postcode_/_zipcode') ?></p>
+                <p class="address-info"><?php the_field('country') ?></p>
+                <p class="address-info"><?php the_field('telephone') ?></p>
+                <p class="address-info"><?php the_field('fax') ?></p>
+                <p class="address-info"><?php the_field('email') ?></p>
+              </div>
+            <?php endwhile; ?>
           </main>
       </div>
 

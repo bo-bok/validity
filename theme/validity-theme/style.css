@@ -1717,39 +1717,6 @@ section .outer {
   }
 }
 
-.section-contact {
-  color: #b9cfc6;
-  width: 75%;
-}
-
-.section-contact-intro {
-  padding-bottom: 2rem;
-}
-
-.section-contact-address {
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.section-contact-address .address {
-  margin: 0 0 1rem 0;
-}
-
-.section-contact-address .address-info {
-  margin: 0;
-}
-
-@media (min-width: 767px) {
-  .section-contact-address {
-    flex-direction: row;
-  }
-  .section-contact-address .address {
-    margin: 0;
-  }
-}
-
 .page-home .section-3 {
   color: #b9cfc6;
 }
@@ -2356,6 +2323,39 @@ section .outer {
 /*
  * Components - contact
  */
+.section-contact {
+  color: #b9cfc6;
+  width: 75%;
+}
+
+.section-contact-intro {
+  padding-bottom: 2rem;
+}
+
+.section-contact-address {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section-contact-address .address-container {
+  margin: 0 0 1rem 0;
+}
+
+.section-contact-address .address-info {
+  margin: 0;
+}
+
+@media (min-width: 767px) {
+  .section-contact-address {
+    flex-direction: row;
+  }
+  .section-contact-address .address-container {
+    margin: 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
