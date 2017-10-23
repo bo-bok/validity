@@ -1,5 +1,6 @@
 # project brief etc
 outline
+.DS_Store
 
 # dev tools
 node_modules
