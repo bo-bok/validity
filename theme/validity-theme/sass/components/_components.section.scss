@@ -6,7 +6,7 @@ section {
   position: relative;
   margin: 0;
   overflow: hidden;
-  
+
   @include section_layers();
   @include transition(opacity 1s);
 
@@ -16,48 +16,83 @@ section {
 }
 
 .page-what-we-do {
-  
+
   section,
   section > .outer {
     overflow: visible;
   }
 }
 
+.page-contact .section-1 {
+  color: #fff;
+  // text-align: center;
+}
+
+
 .page-home .section-1 {
   color: $yellow;
   text-align: center;
-  
+
   p {
-    
+
     @media (min-width : 768px) {
-      
+
       @include font_size(20, 30);
     }
   }
-  
+
   .footnote {
     position: absolute;
     bottom: 1em;
     left: 50%;
     font-weight: bold;
     z-index: 3;
-    
+
     @include transform(translateX(-50%));
     @include font_size(12, 24);
-    
+
     @media (min-width : 768px) {
-      
+
       @include font_size(16, 32);
     }
     @media (max-width : 530px) {
-      
+
       display:none;
     }
   }
 }
 
-.section-news {
+.section-contact {
   color: #b9cfc6;
+  width: 75%;
+
+  &-intro {
+    padding-bottom: 2rem;
+  }
+  &-address {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .address {
+      margin: 0 0 1rem 0;
+      &-info {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width:767px) {
+  .section-contact {
+    &-address {
+      flex-direction: row;
+
+      .address {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .page-home .section-3 {
