@@ -1673,6 +1673,10 @@ section .outer {
   overflow: visible;
 }
 
+.page-contact .section-1 {
+  color: #fff;
+}
+
 .page-home .section-1 {
   color: #ffdc93;
   text-align: center;
@@ -1711,10 +1715,6 @@ section .outer {
   .page-home .section-1 .footnote {
     display: none;
   }
-}
-
-.section-news {
-  color: #b9cfc6;
 }
 
 .page-home .section-3 {
@@ -2066,6 +2066,10 @@ section .outer {
   background: #25213a;
 }
 
+.page-contact .wrapper {
+  background: #081d27;
+}
+
 .bg {
   position: fixed;
   top: 0;
@@ -2317,6 +2321,42 @@ section .outer {
     height: 100vh;
     margin: 0;
     pointer-events: none;
+  }
+}
+
+/*
+ * Components - contact
+ */
+.section-contact {
+  color: #b9cfc6;
+  width: 75%;
+}
+
+.section-contact-intro {
+  padding-bottom: 2rem;
+}
+
+.section-contact-address {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section-contact-address .address-container {
+  margin: 0 0 1rem 0;
+}
+
+.section-contact-address .address-info {
+  margin: 0;
+}
+
+@media (min-width: 767px) {
+  .section-contact-address {
+    flex-direction: row;
+  }
+  .section-contact-address .address-container {
+    margin: 0;
   }
 }
 

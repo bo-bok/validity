@@ -1,0 +1,37 @@
+/*
+ * Components - contact
+ */
+
+
+ .section-contact {
+   color: #b9cfc6;
+   width: 75%;
+
+   &-intro {
+     padding-bottom: 2rem;
+   }
+   &-address {
+     margin: 0;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     .address-container {
+       margin: 0 0 1rem 0;
+     }
+     .address-info {
+       margin: 0;
+     }
+   }
+ }
+
+ @media (min-width:767px) {
+   .section-contact {
+     &-address {
+       flex-direction: row;
+
+       .address-container {
+         margin: 0;
+       }
+     }
+   }
+ }

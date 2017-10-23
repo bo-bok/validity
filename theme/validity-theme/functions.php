@@ -79,7 +79,7 @@ function validity_scripts()
     wp_enqueue_script('validity_app');
 
         // hides 'learn more' prompt on the pages which only occupy one screen (aka don't have scrollable content)
-    if (is_page('resources') || is_page('take-action')) {
+    if (is_page('resources') || is_page('take-action') || is_page('contact')) {
         wp_register_script('hide-hint', get_template_directory_uri() . '/js/hide-hint.js', 'validity_require');
         wp_enqueue_script('hide-hint');
     }
