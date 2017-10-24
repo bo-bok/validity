@@ -218,28 +218,27 @@ get_header(); ?>
 
         <a href="index.php/donation" class="button_transparent">Donate</a>
       </div>
-
     </div>
   </div>
 </section>
 
 
 <section class="section-6"> <!-- section 7 -->
-  <div class="outer full-height centered with-footer">
-    <div class="inner transition">
+  <!-- <div class="outer full-height centered with-footer"> -->
+    <!-- <div class="inner transition"> -->
       <?php $individual_profile = new WP_Query(array(
         'post_type' => 'profile'
       )); ?>
       <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
-      <a href="<?php get_permalink(); ?>">
-        <div><?php the_field('first_name'); ?></div>
-        <div><?php the_field('last_name'); ?></div>
+      <a href="<?php the_permalink() ?>">
+        <?php the_field('first_name'); ?>
+        <?php the_field('last_name'); ?>
       </a>
 
         <button>Back to staff page</button>
       <?php endwhile; ?>
-      </div>
-  </div>
+      <!-- </div> -->
+  <!-- </div> -->
 </section>
 
 
