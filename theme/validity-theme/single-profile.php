@@ -10,81 +10,40 @@
 get_header(); ?>
 
 
-<body class="page-news">
+<body class="page-staff-profile">
   <div class="wrapper">
   <?php get_sidebar(); ?> <!-- sidebar = nav -->
 
 
 
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-
-  <section class="section-1">
-    <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-    <div class="outer full-height poster" style="background-image: url('<?php echo $backgroundImg[0]; ?>')"></div>
-  </section>
-
-
   <section class="section-2">
-    <div class="outer">
+    <div class="outer full-height centered" id="honorary-president">
       <div class="inner transition">
 
-        <div class="news-article">
-          <div class="news-article__header">
-            <h1>
-              HELOOOO
-              <?php the_title(); ?>
+        <div class="who-we-are-members">
 
-            </h1>
-            <span class="news-article__date">
-              <?php echo the_date( 'F jS' ); ?>
-              <br />
-              <?php echo get_the_date( 'Y' ); ?>
-            </span>
+          <?php $partners_intro = new WP_Query(array(
+              'post_type' => 'who_we_are',
+              'orderby' => 'menu_order'
+            )); ?>
+
+          <div class="group">
+            <div class="overview">
+              <h1 class="group-heading">
+                <?php the_field('first_name') ?>
+                <?php the_field('last_name') ?>
+              </h1>
+
+              <p><?php the_field('description') ?></p>
+              <p><?php the_field('location') ?></p>
+              <p><?php the_field('twitter') ?></p>
+
           </div>
-
-          <div class="news-article__content">
-            <?php the_content() ?>
-          </div>
-
-          <!-- <div onclick="goBack()" class="back">Go Back</div> -->
-
         </div>
 
       </div>
     </div>
   </section>
-
-
-
-
-
-<?php endwhile; else : ?>
-<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
-
-<section class="section-3">
-  <div class="outer full-height centered with-footer">
-    <div class="inner transition has-button">
-
-      <div class="cta">
-        <h1>Taking Action</h1>
-        <?php $donateCTA = new WP_Query(array(
-            'post_type' => 'donation_ctas'
-          )); ?>
-
-          <?php while($donateCTA->have_posts() ) : $donateCTA->the_post(); ?>
-
-            <?php the_field('article_page_donation_cta'); ?>
-        <?php endwhile; ?>
-
-
-        <a href="index.php/donation" class="button">Donate</a>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <?php
 get_footer(); ?>
