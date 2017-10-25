@@ -47,62 +47,8 @@ get_header(); ?>
   </div>
 </section>
 
-
-
-
-<section class="section-1">
-  <div class="outer full-height centered" id="partners">
-    <div class="inner transition">
-
-      <div class="who-we-are-members">
-
-        <?php $partners_intro = new WP_Query(array(
-            'post_type' => 'who_we_are',
-            'orderby' => 'menu_order'
-          )); ?>
-
-        <div class="group">
-          <div class="overview">
-            <h1 class="group-heading">Our partners</h1>
-
-            <!-- fetch partners introduction text -->
-            <?php $individual_profile = new WP_Query(array(
-              'post_type' => 'profile'
-            )); ?>
-            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
-
-              <?php if (get_field('role') == 'partner'): ?>
-
-                <div class="member">
-                  <h1 class="member__title">
-                  <span>
-                    <?php the_field('brand_name'); ?>
-                  </span>
-                    <?php the_field('role'); ?>
-                  </h1>
-                  <p class="member__excerpt">
-                    <?php the_field('description'); ?>
-                  </p>
-                </div>
-
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_field('first_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                </a>
-              <?php endif; ?>
-            <?php endwhile; ?>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <section class="section-2">
-  <div class="outer full-height centered" id="partners">
+  <div class="outer full-height centered" id="honorary-president">
     <div class="inner transition">
 
       <div class="who-we-are-members">
@@ -114,59 +60,7 @@ get_header(); ?>
 
         <div class="group">
           <div class="overview">
-            <h1 class="group-heading">Our trustee</h1>
-
-            <!-- fetch partners introduction text -->
-            <?php $individual_profile = new WP_Query(array(
-              'post_type' => 'profile'
-            )); ?>
-            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
-
-              <?php if (get_field('role') == 'trustee'): ?>
-
-                <div class="member">
-                  <h1 class="member__title">
-                  <span>
-                    <?php the_field('first_name'); ?>
-                    <?php the_field('last_name'); ?>
-                  </span>
-                    <?php the_field('role'); ?>
-                  </h1>
-                  <p class="member__excerpt">
-                    <?php the_field('description'); ?>
-                  </p>
-                </div>
-
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_field('first_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                </a>
-              <?php endif; ?>
-            <?php endwhile; ?>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section-2">
-  <div class="outer full-height centered" id="partners">
-    <div class="inner transition">
-
-      <div class="who-we-are-members">
-
-        <?php $partners_intro = new WP_Query(array(
-            'post_type' => 'who_we_are',
-            'orderby' => 'menu_order'
-          )); ?>
-
-        <div class="group">
-          <div class="overview">
-            <h1 class="group-heading">Our president</h1>
+            <h1 class="group-heading">Honorary President</h1>
 
             <!-- fetch partners introduction text -->
             <?php $individual_profile = new WP_Query(array(
@@ -178,23 +72,19 @@ get_header(); ?>
 
                 <div class="member">
                   <h1 class="member__title">
-                  <span>
-                    <?php the_field('first_name'); ?>
-                    <?php the_field('last_name'); ?>
-                  </span>
+                    <a href="<?php the_permalink(); ?>">
+                      <span>
+                        <?php the_field('first_name'); ?>
+                        <?php the_field('last_name'); ?>
+                      </span>
                     <?php the_field('role'); ?>
+                    </a>
                   </h1>
                   <p class="member__excerpt">
                     <?php the_field('description'); ?>
                   </p>
                 </div>
 
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_field('first_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                </a>
               <?php endif; ?>
             <?php endwhile; ?>
 
@@ -205,8 +95,8 @@ get_header(); ?>
   </div>
 </section>
 
-<section class="section-2">
-  <div class="outer full-height centered" id="partners">
+<section class="section-3">
+  <div class="outer full-height centered" id="trustees">
     <div class="inner transition">
 
       <div class="who-we-are-members">
@@ -218,7 +108,54 @@ get_header(); ?>
 
         <div class="group">
           <div class="overview">
-            <h1 class="group-heading">Our staff</h1>
+            <h1 class="group-heading">Our Trustees</h1>
+
+            <!-- fetch partners introduction text -->
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
+            )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
+
+              <?php if (get_field('role') == 'trustee'): ?>
+
+                <div class="member">
+                  <h1 class="member__title">
+                  <a href="<?php the_permalink(); ?>">
+                    <span>
+                      <?php the_field('first_name'); ?>
+                      <?php the_field('last_name'); ?>
+                    </span>
+                      <?php the_field('role'); ?>
+                  </a>
+                  </h1>
+                  <p class="member__excerpt">
+                    <?php the_field('description'); ?>
+                  </p>
+                </div>
+              <?php endif; ?>
+            <?php endwhile; ?>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-4">
+  <div class="outer full-height centered" id="our-team">
+    <div class="inner transition">
+
+      <div class="who-we-are-members">
+
+        <?php $partners_intro = new WP_Query(array(
+            'post_type' => 'who_we_are',
+            'orderby' => 'menu_order'
+          )); ?>
+
+        <div class="group">
+          <div class="overview">
+            <h1 class="group-heading">Our Staff</h1>
 
             <!-- fetch partners introduction text -->
             <?php $individual_profile = new WP_Query(array(
@@ -233,23 +170,18 @@ get_header(); ?>
 
                 <div class="member">
                   <h1 class="member__title">
-                  <span>
-                    <?php the_field('first_name'); ?>
-                    <?php the_field('last_name'); ?>
-                  </span>
-                    <?php the_field('role'); ?>
+                  <a href="<?php the_permalink(); ?>">
+                    <span>
+                      <?php the_field('first_name'); ?>
+                      <?php the_field('last_name'); ?>
+                    </span>
+                      <?php the_field('role'); ?>
+                  </a>
                   </h1>
                   <p class="member__excerpt">
                     <?php the_field('description'); ?>
                   </p>
                 </div>
-
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_field('first_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                  <?php the_field('last_name'); ?>
-                </a>
               <?php endif; ?>
             <?php endwhile; ?>
 
@@ -259,6 +191,56 @@ get_header(); ?>
     </div>
   </div>
 </section>
+
+<section class="section-5">
+  <div class="outer full-height centered" id="partners">
+    <div class="inner transition">
+
+      <div class="who-we-are-members">
+
+        <?php $partners_intro = new WP_Query(array(
+            'post_type' => 'who_we_are',
+            'orderby' => 'menu_order'
+          )); ?>
+
+        <div class="group">
+          <div class="overview">
+            <h1 class="group-heading">Our Partners</h1>
+
+            <!-- fetch partners introduction text -->
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
+            )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
+
+              <?php if (get_field('role') == 'partner'): ?>
+
+                <div class="member">
+                  <h1 class="member__title">
+                  <a href="<?php the_permalink(); ?>">
+                    <span>
+                      <?php the_field('brand_name'); ?>
+                    </span>
+                      <?php the_field('role'); ?>
+                  </a>
+                  </h1>
+                  <p class="member__excerpt">
+                    <?php the_field('description'); ?>
+                  </p>
+                </div>
+              <?php endif; ?>
+            <?php endwhile; ?>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 
 <section class="section-6">
   <div class="outer full-height centered with-footer">
