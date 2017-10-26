@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-  <section class="section-2">
+  <section class="section-1">
     <div class="outer full-height centered" id="honorary-president">
       <div class="inner transition">
 
@@ -37,10 +37,9 @@ get_header(); ?>
               <p><?php the_field('description') ?></p>
               <p><?php the_field('location') ?></p>
               <p><?php the_field('twitter') ?></p>
-
+              <a href="/who-we-are" onclick="window.history.go(-1)"  class="button_transparent anchor">Back to Staff</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
