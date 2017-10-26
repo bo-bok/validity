@@ -53,16 +53,10 @@ get_header(); ?>
 
       <div class="who-we-are-members">
 
-        <?php $partners_intro = new WP_Query(array(
-            'post_type' => 'who_we_are',
-            'orderby' => 'menu_order'
-          )); ?>
-
         <div class="group">
           <div class="overview">
             <h1 class="group-heading">Honorary President</h1>
 
-            <!-- fetch partners introduction text -->
             <?php $individual_profile = new WP_Query(array(
               'post_type' => 'profile'
             )); ?>
@@ -77,7 +71,7 @@ get_header(); ?>
                         <?php the_field('first_name'); ?>
                         <?php the_field('last_name'); ?>
                       </span>
-                    <?php the_field('role'); ?>
+                      <?php the_field('individual_role'); ?>
                     </a>
                   </h1>
                   <p class="member__excerpt">
@@ -101,16 +95,10 @@ get_header(); ?>
 
       <div class="who-we-are-members">
 
-        <?php $partners_intro = new WP_Query(array(
-            'post_type' => 'who_we_are',
-            'orderby' => 'menu_order'
-          )); ?>
-
         <div class="group">
           <div class="overview">
             <h1 class="group-heading">Our Trustees</h1>
-
-            <!-- fetch partners introduction text -->
+          </div>
             <?php $individual_profile = new WP_Query(array(
               'post_type' => 'profile'
             )); ?>
@@ -125,7 +113,7 @@ get_header(); ?>
                       <?php the_field('first_name'); ?>
                       <?php the_field('last_name'); ?>
                     </span>
-                      <?php the_field('role'); ?>
+                    <?php the_field('individual_role'); ?>
                   </a>
                   </h1>
                   <p class="member__excerpt">
@@ -148,25 +136,17 @@ get_header(); ?>
 
       <div class="who-we-are-members">
 
-        <?php $partners_intro = new WP_Query(array(
-            'post_type' => 'who_we_are',
-            'orderby' => 'menu_order'
-          )); ?>
-
         <div class="group">
           <div class="overview">
             <h1 class="group-heading">Our Staff</h1>
+          </div>
 
-            <!-- fetch partners introduction text -->
             <?php $individual_profile = new WP_Query(array(
               'post_type' => 'profile'
             )); ?>
             <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
 
               <?php if (get_field('role') == 'staff'): ?>
-
-
-
 
                 <div class="member">
                   <h1 class="member__title">
@@ -175,7 +155,7 @@ get_header(); ?>
                       <?php the_field('first_name'); ?>
                       <?php the_field('last_name'); ?>
                     </span>
-                      <?php the_field('role'); ?>
+                    <?php the_field('individual_role'); ?>
                   </a>
                   </h1>
                   <p class="member__excerpt">
@@ -206,8 +186,12 @@ get_header(); ?>
         <div class="group">
           <div class="overview">
             <h1 class="group-heading">Our Partners</h1>
+            <?php while ($partners_intro->have_posts()) : $partners_intro->the_post(); ?>
 
-            <!-- fetch partners introduction text -->
+            <p><?php the_field('partners_introduction'); ?></p>
+            <?php endwhile; ?>
+          </div>
+
             <?php $individual_profile = new WP_Query(array(
               'post_type' => 'profile'
             )); ?>
@@ -221,7 +205,7 @@ get_header(); ?>
                     <span>
                       <?php the_field('brand_name'); ?>
                     </span>
-                      <?php the_field('role'); ?>
+                      <?php the_field('individual_role'); ?>
                   </a>
                   </h1>
                   <p class="member__excerpt">
