@@ -95,12 +95,22 @@ function remove_admin_login_header()
 add_action('get_header', 'remove_admin_login_header');
 
 
-// This function limits search results to posts (this does not include and therefore excludes custom post types, aka our site content)
-function searchfilter($query)
+
+
+// This function controls the dearch features
+// it filters by the country category and the content-type category
+// it limits search results to posts (this does not include and therefore excludes custom post types, aka our site content)
+
+function search_by_cat($query)
 {
-    if ($query->is_search && !is_admin()) {
+    if ($query->is_search && !is_admin())
+    {
+        $country = empty( $_GET['countries'] ) ? '' : (int) $_GET['countries'];
+        $contentType = empty( $_GET['content-type'] ) ? '' : (int) $_GET['content-type'];
+
+        $query->set('cat', array($country, $contentType));
         $query->set('post_type', array('post'));
     }
     return $query;
 }
-add_filter('pre_get_posts', 'searchfilter');
+add_action( 'pre_get_posts', 'search_by_cat' );

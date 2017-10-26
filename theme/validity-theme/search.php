@@ -24,9 +24,12 @@ get_header(); ?>
         <?php get_search_form(); ?>
       </div>
 
+
 	    <?php if (have_posts()) : ?>
+
         <div class="resources">
         <?php while (have_posts()) : the_post(); ?>
+
 
           <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="resource">
 
