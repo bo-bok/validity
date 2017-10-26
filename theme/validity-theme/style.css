@@ -1721,6 +1721,10 @@ section .outer {
   color: #b9cfc6;
 }
 
+.page-staff-profile .section-1 {
+  pointer-events: all;
+}
+
 /*
  * Components - social
  */
@@ -2042,7 +2046,16 @@ section .outer {
   background: #455f57;
 }
 
+.page-who-we-are .wrapper a {
+  text-decoration: none;
+}
+
+.page-who-we-are .wrapper a:hover {
+  text-decoration: underline;
+}
+
 .page-staff-profile .wrapper {
+  color: #bacfc6;
   background: #455f57;
 }
 

@@ -22,9 +22,16 @@
   }
 
   .page-who-we-are & {
+    & a {
+      text-decoration: none;
+    }
+    & a:hover {
+      text-decoration: underline;
+    }
     background: #455f57;
   }
   .page-staff-profile & {
+    color: #bacfc6;
     background: #455f57;
   }
   .page-take-action & {
