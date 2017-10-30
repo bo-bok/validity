@@ -14,19 +14,11 @@ get_header(); ?>
   <div class="wrapper">
   <?php get_sidebar(); ?> <!-- sidebar = nav -->
 
-
-
   <section class="section-1">
     <div class="outer full-height centered" id="honorary-president">
       <div class="inner transition">
 
         <div class="who-we-are-members">
-
-          <?php $partners_intro = new WP_Query(array(
-              'post_type' => 'who_we_are',
-              'orderby' => 'menu_order'
-            )); ?>
-
           <div class="group">
             <div class="overview">
               <h1 class="group-heading">
@@ -38,6 +30,7 @@ get_header(); ?>
               <p><?php the_field('location') ?></p>
               <p><?php the_field('twitter') ?></p>
               <a href="/who-we-are" onclick="window.history.go(-1)"  class="button_transparent anchor">Back to Staff</a>
+            </div>
           </div>
         </div>
       </div>
