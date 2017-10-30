@@ -7,6 +7,9 @@ note: if css isn't updating after this is setup, try using a hard refresh in bro
   https://atom.io/packages/sass-autocompile)
 
 
+For importing Custom Post
+http://www.wpbeginner.com/wp-tutorials/how-to-exportimport-custom-post-types-in-wordpress/
+
 For administration - setup
 For importing Custom Post
 http://www.wpbeginner.com/wp-tutorials/how-to-exportimport-custom-post-types-in-wordpress/
