@@ -522,6 +522,8 @@ button:focus {
   border-style: solid;
   border-color: inherit;
   border-top: none;
+  height: 150px;
+  overflow: auto;
 }
 
 .dropdown.active a {
@@ -1679,6 +1681,10 @@ section .outer {
   color: #fff;
 }
 
+.page-where-we-work .section-1 {
+  margin: 10rem 0 0 0;
+}
+
 .page-home .section-1 {
   color: #ffdc93;
   text-align: center;
@@ -2040,6 +2046,11 @@ section .outer {
   background: #575f70;
 }
 
+.page-where-we-work .wrapper {
+  color: #bacfc6;
+  background: #575f70;
+}
+
 .viewing-3 .wrapper {
   background: #071d27;
 }
@@ -2372,6 +2383,29 @@ section .outer {
   }
   .section-contact-address .address-container {
     margin: 0;
+  }
+}
+
+/*
+ * Components - where we work
+ */
+.filtered-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.map {
+  width: 75%;
+  margin-left: auto;
+}
+
+.dropdown-country-list {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .dropdown-country-list {
+    width: 30%;
   }
 }
 
