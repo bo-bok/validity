@@ -1580,6 +1580,13 @@ nav .primary-navigation li:nth-child(10) {
 
 .resources-intro form .search-filters {
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .resources-intro form .search-filters {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1606,6 +1613,12 @@ nav .primary-navigation li:nth-child(10) {
 
 .resources-intro form .search-submit {
   float: right;
+}
+
+@media (min-width: 768px) {
+  .resources-intro form .search-submit {
+    float: right;
+  }
 }
 
 /*
