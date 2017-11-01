@@ -2395,8 +2395,7 @@ section .outer {
 }
 
 .map {
-  width: 75%;
-  margin-left: auto;
+  width: 100%;
 }
 
 .dropdown-country-list {
@@ -2406,6 +2405,10 @@ section .outer {
 @media (min-width: 768px) {
   .dropdown-country-list {
     width: 30%;
+  }
+  .map {
+    width: 75%;
+    margin-left: auto;
   }
 }
 
