@@ -7,34 +7,34 @@ body {
   padding: 0;
   font-size: #{$base_font}px;
   font-family: 'editor-regular', serif;
-  color: #000;
+  color: #b9cfc6;
   background: #fff;
   overflow: hidden;
-  
+
   &.page-news {
     color: #b9cfc6;
   }
-  
+
   &.page-who-we-are {
     color: #bacfc6;
   }
-  
+
   &.page-take-action {
     color: #bacfc6;
   }
-  
+
   &.page-donate {
     color: #bacfc6;
   }
-  
+
   &.page-resources {
     color: #bacfc6;
   }
-  
+
   &.page-events {
     color: #bacfc6;
   }
-  
+
   &.page-our-impact {
     color: #bacfc6;
   }

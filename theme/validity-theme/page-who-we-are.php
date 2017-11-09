@@ -56,21 +56,33 @@ get_header(); ?>
         <div class="group">
           <div class="overview">
             <h1 class="group-heading">Honorary President</h1>
-          </div>
-          <div class="member">
-            <?php $pageContent = new WP_Query(array(
-                'post_type' => 'who_we_are'
-              )); ?>
 
-              <?php while ($pageContent->have_posts()) : $pageContent->the_post(); ?>
-            <h1 class="member__title"><span><?php the_field('honorary_president_name')?></span></h1>
-            <p class="member__excerpt">
-              <?php the_field('honorary_president_description') ?></p>
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
+            )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
+
+              <?php if (get_field('role') == 'honorary-president'): ?>
+
+                <div class="member">
+                  <h1 class="member__title">
+                    <a href="<?php the_permalink(); ?>">
+                      <span>
+                        <?php the_field('first_name'); ?>
+                        <?php the_field('last_name'); ?>
+                      </span>
+                      <?php the_field('individual_role'); ?>
+                    </a>
+                  </h1>
+                  <p class="member__excerpt">
+                    <?php the_field('description'); ?>
+                  </p>
+                </div>
+
+              <?php endif; ?>
             <?php endwhile; ?>
 
-          </div>
         </div>
-
       </div>
 
     </div>
@@ -85,26 +97,31 @@ get_header(); ?>
 
         <div class="group">
           <div class="overview">
-            <h1 class="group-heading">Trustees</h1>
+            <h1 class="group-heading">Our Trustees</h1>
           </div>
-          <?php $trustees = new WP_Query(array(
-              'post_type' => 'our_trustees',
-              'meta_key'    => 'trustee_lastname',
-                'orderby'        => 'meta_value',
-              'order' => 'ASC'
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
             )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
 
-          <?php while ($trustees->have_posts()) : $trustees->the_post(); ?>
-            <div class="member">
-              <h1 class="member__title">
-                <span>
-                  <?php the_field('trustee_firstname')?>  <?php the_field('trustee_lastname'); ?>
-                </span>
-                <?php the_field('trustee_role'); ?>
-              </h1>
-              <p class="member__excerpt"><?php the_field('trustee_description'); ?></p>
-              </div>
-          <?php endwhile; ?>
+              <?php if (get_field('role') == 'trustee'): ?>
+
+                <div class="member">
+                  <h1 class="member__title">
+                  <a href="<?php the_permalink(); ?>">
+                    <span>
+                      <?php the_field('first_name'); ?>
+                      <?php the_field('last_name'); ?>
+                    </span>
+                    <?php the_field('individual_role'); ?>
+                  </a>
+                  </h1>
+                  <p class="member__excerpt">
+                    <?php the_field('description'); ?>
+                  </p>
+                </div>
+              <?php endif; ?>
+            <?php endwhile; ?>
 
         </div>
       </div>
@@ -121,31 +138,35 @@ get_header(); ?>
 
         <div class="group">
           <div class="overview">
-            <h1 class="group-heading">Our team</h1>
+            <h1 class="group-heading">Our Staff</h1>
           </div>
-          <?php $teamMember = new WP_Query(array(
-              'post_type' => 'our_team',
-              'meta_key'    => 'team_member_lastname',
-              'orderby'        => 'meta_value',
-              'order' => 'ASC'
-            )); ?>
 
-            <?php while ($teamMember->have_posts()) : $teamMember->the_post(); ?>
-              <div class="member">
-                <h1 class="member__title">
-                <span>
-                  <?php the_field('team_member_firstname'); ?> 
-                  <?php the_field('team_member_lastname'); ?>
-                </span>
-                  <?php the_field('team_member_role'); ?>
-                </h1>
-                <p class="member__excerpt">
-                  <?php the_field('team_member_description'); ?>
-                </p>
-              </div>
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
+            )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
+
+              <?php if (get_field('role') == 'staff'): ?>
+
+                <div class="member">
+                  <h1 class="member__title">
+                  <a href="<?php the_permalink(); ?>">
+                    <span>
+                      <?php the_field('first_name'); ?>
+                      <?php the_field('last_name'); ?>
+                    </span>
+                    <?php the_field('individual_role'); ?>
+                  </a>
+                  </h1>
+                  <p class="member__excerpt">
+                    <?php the_field('description'); ?>
+                  </p>
+                </div>
+              <?php endif; ?>
             <?php endwhile; ?>
-          </div>
+
         </div>
+      </div>
 
     </div>
   </div>
@@ -164,33 +185,35 @@ get_header(); ?>
 
         <div class="group">
           <div class="overview">
-            <h1 class="group-heading">Our partners</h1>
-
-            <!-- fetch partners introduction text -->
+            <h1 class="group-heading">Our Partners</h1>
             <?php while ($partners_intro->have_posts()) : $partners_intro->the_post(); ?>
 
-
             <p><?php the_field('partners_introduction'); ?></p>
-          <?php endwhile; ?>
+            <?php endwhile; ?>
           </div>
 
-          <!-- fetch inidividual partners -->
-          <?php $partners = new WP_Query(array(
-              'post_type' => 'our_partners',
-              'orderby' => 'title',
-              'order' => 'ASC'
+            <?php $individual_profile = new WP_Query(array(
+              'post_type' => 'profile'
             )); ?>
+            <?php while ($individual_profile->have_posts()) : $individual_profile->the_post(); ?>
 
-          <?php while ($partners->have_posts()) : $partners->the_post(); ?>
-            <div class="member">
-              <h1 class="member__title">
-                <span><?php the_field('partner_name'); ?></span>
-              </h1>
-              <p class="member__excerpt">
-                <?php the_field('partner_description'); ?>
-              </p>
-            </div>
-          <?php endwhile; ?>
+              <?php if (get_field('role') == 'partner'): ?>
+
+                <div class="member">
+                  <h1 class="member__title">
+                  <a href="<?php the_permalink(); ?>">
+                    <span>
+                      <?php the_field('brand_name'); ?>
+                    </span>
+                      <?php the_field('individual_role'); ?>
+                  </a>
+                  </h1>
+                  <p class="member__excerpt">
+                    <?php the_field('description'); ?>
+                  </p>
+                </div>
+              <?php endif; ?>
+            <?php endwhile; ?>
 
         </div>
       </div>
@@ -198,6 +221,10 @@ get_header(); ?>
     </div>
   </div>
 </section>
+
+
+
+
 
 <section class="section-6">
   <div class="outer full-height centered with-footer">
@@ -218,11 +245,10 @@ get_header(); ?>
 
         <a href="index.php/donation" class="button_transparent">Donate</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
+
 <?php get_footer(); ?>
 </div>

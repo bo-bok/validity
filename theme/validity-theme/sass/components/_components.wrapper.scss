@@ -17,14 +17,30 @@
     background: #575f70;
   }
 
+  .page-where-we-work & {
+    color: #bacfc6;
+    background: #575f70;
+  }
+
   .viewing-3 & {
     background: #071d27;
   }
 
   .page-who-we-are & {
+    & a {
+      text-decoration: none;
+    }
+    & a:hover {
+      text-decoration: underline;
+    }
     background: #455f57;
   }
 
+  .page-generic-template &,
+  .page-staff-profile & {
+    color: #bacfc6;
+    background: #455f57;
+  }
   .page-take-action & {
     background: #081d27;
   }
@@ -43,6 +59,10 @@
 
   .page-our-impact & {
     background: #25213a;
+  }
+
+  .page-contact & {
+    background: #081d27;
   }
 }
 

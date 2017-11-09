@@ -522,6 +522,8 @@ button:focus {
   border-style: solid;
   border-color: inherit;
   border-top: none;
+  height: 150px;
+  overflow: auto;
 }
 
 .dropdown.active a {
@@ -1576,32 +1578,41 @@ nav .primary-navigation li:nth-child(10) {
   color: inherit;
 }
 
+.resources-intro form .search-filters {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 768px) {
-  .resources-intro form {
-    display: flex;
+  .resources-intro form .search-filters {
+    flex-direction: row;
   }
 }
 
 @media (min-width: 768px) {
-  .resources-intro form > * {
+  .resources-intro form .search-filters > * {
     margin: 0;
     padding: 0;
   }
-  .resources-intro form > *:nth-child(2) {
+  .resources-intro form .search-filters > *:nth-child(2) {
     margin: 0 calc((1 / 11) * 100%);
   }
 }
 
-.resources-intro form input {
+.resources-intro form .search-filters input {
   padding: 10px;
 }
 
-.resources-intro form select {
+.resources-intro form .search-filters select {
   padding: 10px;
 }
 
-.resources-intro form option {
+.resources-intro form .search-filters option {
   margin: 0;
+}
+
+.resources-intro form .search-submit {
+  float: right;
 }
 
 /*
@@ -1673,6 +1684,14 @@ section .outer {
   overflow: visible;
 }
 
+.page-contact .section-1 {
+  color: #fff;
+}
+
+.page-where-we-work .section-1 {
+  margin: 10rem 0 0 0;
+}
+
 .page-home .section-1 {
   color: #ffdc93;
   text-align: center;
@@ -1713,12 +1732,12 @@ section .outer {
   }
 }
 
-.section-news {
+.page-home .section-3 {
   color: #b9cfc6;
 }
 
-.page-home .section-3 {
-  color: #b9cfc6;
+.page-staff-profile .section-1 {
+  pointer-events: all;
 }
 
 /*
@@ -2034,11 +2053,30 @@ section .outer {
   background: #575f70;
 }
 
+.page-where-we-work .wrapper {
+  color: #bacfc6;
+  background: #575f70;
+}
+
 .viewing-3 .wrapper {
   background: #071d27;
 }
 
 .page-who-we-are .wrapper {
+  background: #455f57;
+}
+
+.page-who-we-are .wrapper a {
+  text-decoration: none;
+}
+
+.page-who-we-are .wrapper a:hover {
+  text-decoration: underline;
+}
+
+.page-generic-template .wrapper,
+.page-staff-profile .wrapper {
+  color: #bacfc6;
   background: #455f57;
 }
 
@@ -2060,6 +2098,10 @@ section .outer {
 
 .page-our-impact .wrapper {
   background: #25213a;
+}
+
+.page-contact .wrapper {
+  background: #081d27;
 }
 
 .bg {
@@ -2313,6 +2355,114 @@ section .outer {
     height: 100vh;
     margin: 0;
     pointer-events: none;
+  }
+}
+
+/*
+ * Components - contact
+ */
+.section-contact {
+  color: #b9cfc6;
+  width: 75%;
+}
+
+.section-contact-intro {
+  padding-bottom: 2rem;
+}
+
+.section-contact-address {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section-contact-address .address-container {
+  margin: 0 0 1rem 0;
+}
+
+.section-contact-address .address-info {
+  margin: 0;
+}
+
+@media (min-width: 767px) {
+  .section-contact-address {
+    flex-direction: row;
+  }
+  .section-contact-address .address-container {
+    margin: 0;
+  }
+}
+
+/*
+ * Components - where we work
+ */
+.filtered-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.map {
+  width: 100%;
+}
+
+.dropdown-country-list {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .dropdown-country-list {
+    width: 30%;
+  }
+  .map {
+    width: 75%;
+    margin-left: auto;
+  }
+}
+
+.generic-template-content {
+  margin: 0;
+  padding-top: 80px;
+}
+
+.generic-template-content-container {
+  flex-basis: 100%;
+}
+
+@media (min-width: 1024px) {
+  .generic-template-content-container {
+    margin-left: calc((1 / 12) * 100%);
+  }
+}
+
+.text-with-image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-with-image-container .text {
+  flex-basis: 100%;
+}
+
+.text-with-image-container .image-gen {
+  flex-basis: 100%;
+}
+
+.image-gen .poster {
+  background-size: contain;
+}
+
+@media (min-width: 1024px) {
+  .text-with-image-container {
+    flex-direction: row;
+  }
+  .text-with-image-container .text {
+    flex-basis: 60%;
+  }
+  .text-with-image-container .image-gen {
+    flex-basis: 40%;
+    margin-top: 0;
+    margin-left: 1rem;
   }
 }
 
@@ -2668,6 +2818,13 @@ section .outer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.outer.full-height.generic-poster {
+  margin: 0;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .outer.full-height.image {

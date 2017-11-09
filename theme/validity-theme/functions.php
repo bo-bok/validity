@@ -79,7 +79,7 @@ function validity_scripts()
     wp_enqueue_script('validity_app');
 
         // hides 'learn more' prompt on the pages which only occupy one screen (aka don't have scrollable content)
-    if (is_page('resources') || is_page('take-action')) {
+    if (is_page('resources') || is_page('take-action') || is_page('contact')) {
         wp_register_script('hide-hint', get_template_directory_uri() . '/js/hide-hint.js', 'validity_require');
         wp_enqueue_script('hide-hint');
     }
@@ -95,12 +95,106 @@ function remove_admin_login_header()
 add_action('get_header', 'remove_admin_login_header');
 
 
-// This function limits search results to posts (this does not include and therefore excludes custom post types, aka our site content)
-function searchfilter($query)
+
+
+// This function controls the dearch features
+// it filters by the country category and the content-type category
+// it limits search results to posts (this does not include and therefore excludes custom post types, aka our site content)
+
+function search_by_cat($query)
 {
-    if ($query->is_search && !is_admin()) {
-        $query->set('post_type', array('post'));
+    if ($query->is_search && !is_admin())
+    {
+        $country = empty( $_GET['countries'] ) ? '' : (int) $_GET['countries'];
+        $contentType = empty( $_GET['content-type'] ) ? '' : (int) $_GET['content-type'];
+        $taxquery = array(
+          array(
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => array( $country, $contentType ),
+            'operator'=> 'AND'
+          )
+        );
+
+        // $query->set('cat', array($country, $contentType));
+        // $query->set('post_type', array('post'));
+        $query->set( 'tax_query', $taxquery );
     }
     return $query;
 }
-add_filter('pre_get_posts', 'searchfilter');
+add_action( 'pre_get_posts', 'search_by_cat' );
+
+
+
+
+function my_load_ajax_content () {
+
+    $pid = $_POST['value'];
+
+    // if ($_POST['value'] = 'Czech Republic') {
+    //   $pid = 'czech-republic';
+    // } else {
+    //   $pid = $_POST['value'];
+    // }
+    $the_query  = new WP_Query(array('category_name' => $pid));
+    $img_url = get_template_directory_uri();
+
+    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . $pid . '.png"></img><div class="news-articles">';
+
+    if ($the_query->have_posts()) {
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+
+            $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0];
+
+            $data .= '
+            <div class="article">
+              <a href='.get_the_permalink().' title='.get_the_title().' class="article__image" data-layout="3x4" style="background-image: url('.$backgroundImg.');"></a>
+
+              <p class="article__title">
+                <a href='.get_the_permalink().' title='.get_the_title().'">
+                  '.get_the_title().'
+                </a>
+              </p>
+            </div>
+            ';
+
+        }
+    }
+    else {
+      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . $pid . '.png"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
+    }
+    wp_reset_postdata();
+
+
+    echo '<div id="postdata">'.$data.'</div></div>';
+    die();
+}
+
+add_action ( 'wp_ajax_nopriv_load-content', 'my_load_ajax_content' );
+add_action ( 'wp_ajax_load-content', 'my_load_ajax_content' );
+add_action( 'wp_ajax_my_load_ajax_content', 'my_load_ajax_content' );
+add_action( 'wp_ajax_nopriv_my_load_ajax_content', 'my_load_ajax_content' );
+
+
+
+function my_enqueue() {
+
+    wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/page-where-we-work.php', array('jquery') );
+
+    wp_localize_script( 'ajax-script', 'my_ajax_object',
+            array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueue' );
+
+
+
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
+}
+
+add_action ( 'wp_ajax_nopriv_load-content', 'my_load_ajax_content' );
+add_action ( 'wp_ajax_load-content', 'my_load_ajax_content' );
