@@ -107,9 +107,18 @@ function search_by_cat($query)
     {
         $country = empty( $_GET['countries'] ) ? '' : (int) $_GET['countries'];
         $contentType = empty( $_GET['content-type'] ) ? '' : (int) $_GET['content-type'];
+        $taxquery = array(
+          array(
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => array( $country, $contentType ),
+            'operator'=> 'AND'
+          )
+        );
 
-        $query->set('cat', array($country, $contentType));
-        $query->set('post_type', array('post'));
+        // $query->set('cat', array($country, $contentType));
+        // $query->set('post_type', array('post'));
+        $query->set( 'tax_query', $taxquery );
     }
     return $query;
 }

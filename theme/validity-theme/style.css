@@ -1580,6 +1580,13 @@ nav .primary-navigation li:nth-child(10) {
 
 .resources-intro form .search-filters {
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .resources-intro form .search-filters {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1606,6 +1613,12 @@ nav .primary-navigation li:nth-child(10) {
 
 .resources-intro form .search-submit {
   float: right;
+}
+
+@media (min-width: 768px) {
+  .resources-intro form .search-submit {
+    float: right;
+  }
 }
 
 /*
@@ -2395,8 +2408,7 @@ section .outer {
 }
 
 .map {
-  width: 75%;
-  margin-left: auto;
+  width: 100%;
 }
 
 .dropdown-country-list {
@@ -2406,6 +2418,10 @@ section .outer {
 @media (min-width: 768px) {
   .dropdown-country-list {
     width: 30%;
+  }
+  .map {
+    width: 75%;
+    margin-left: auto;
   }
 }
 
