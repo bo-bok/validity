@@ -40,8 +40,6 @@ get_header(); ?>
               endwhile; //resetting the page loop
               // wp_reset_query(); //resetting the page query
               ?>
-              <!-- WHAT A HREF TO PUT HERE -->
-            <a href="/who-we-are" onclick="window.history.go(-1)"  class="button_transparent anchor">Back</a>
           </div>
         </div>
       </div>
