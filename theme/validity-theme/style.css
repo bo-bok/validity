@@ -1615,12 +1615,6 @@ nav .primary-navigation li:nth-child(10) {
   float: right;
 }
 
-@media (min-width: 768px) {
-  .resources-intro form .search-submit {
-    float: right;
-  }
-}
-
 /*
  * Components - sections
  */
@@ -2080,6 +2074,7 @@ section .outer {
   text-decoration: underline;
 }
 
+.page-generic-template .wrapper,
 .page-staff-profile .wrapper {
   color: #bacfc6;
   background: #455f57;
@@ -2422,6 +2417,21 @@ section .outer {
   .map {
     width: 75%;
     margin-left: auto;
+  }
+}
+
+.generic-template-content {
+  margin: 0;
+  padding-top: 80px;
+}
+
+.generic-template-content-container {
+  flex-basis: 100%;
+}
+
+@media (min-width: 1024px) {
+  .generic-template-content-container {
+    margin-left: calc((1 / 12) * 100%);
   }
 }
 

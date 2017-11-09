@@ -1,0 +1,12 @@
+.generic-template-content {
+  margin: 0;
+  padding-top: 80px;
+}
+
+.generic-template-content-container {
+  flex-basis: 100%;
+
+  @media (min-width : 1024px) {
+    margin-left: calc((1 / 12) * 100%;
+  }  
+}
