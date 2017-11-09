@@ -2435,6 +2435,37 @@ section .outer {
   }
 }
 
+.text-with-image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-with-image-container .text {
+  flex-basis: 100%;
+}
+
+.text-with-image-container .image-gen {
+  flex-basis: 100%;
+}
+
+.image-gen .poster {
+  background-size: contain;
+}
+
+@media (min-width: 1024px) {
+  .text-with-image-container {
+    flex-direction: row;
+  }
+  .text-with-image-container .text {
+    flex-basis: 60%;
+  }
+  .text-with-image-container .image-gen {
+    flex-basis: 40%;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -2787,6 +2818,13 @@ section .outer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.outer.full-height.generic-poster {
+  margin: 0;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .outer.full-height.image {
