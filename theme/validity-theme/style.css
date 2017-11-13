@@ -598,10 +598,6 @@ button:focus {
 /*
  * Components - footer
  */
-footer {
-  background: url(assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
-}
-
 @media (min-width: 768px) {
   footer {
     background-position: 56px 50%;

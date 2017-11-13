@@ -2,36 +2,97 @@
  * Components - footer
  */
 
+// footer {
+//
+//   @media (min-width : 768px) {
+//     background-position: 56px 50%;
+//   }
+//
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     height: 1px;
+//     background: #bacfc6;
+//
+//     @media (min-width : 768px) {
+//       left: 56px;
+//     }
+//   }
+//
+//   p {
+//     margin-top: calc(33px - 1em);
+//
+//     @include font_size(10);
+//
+//     @media (min-width : 768px) {
+//       float: left;
+//
+//       @include font_size(14);
+//     }
+//   }
+// }
+
+// footer {
+//   .footer__container {
+//     background-color: red;
+//     display: flex;
+//   }
+//   div, ul {
+//     margin: 0;
+//   }
+//   img, ul {
+//     margin-right: 0.5rem;
+//   }
+//   img {
+//     flex-basis: 10%;
+//     background-color: pink;
+//   }
+//   div {
+//     flex-basis: 60%;
+//     background-color: yellow;
+//   }
+//   ul {
+//     flex-basis: 30%;
+//     background-color: orange;
+//   }
+//
+//   @media(min-width: 768px) {
+//
+//   }
+// }
+
 footer {
-  background: url(assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
-
-  @media (min-width : 768px) {
-    background-position: 56px 50%;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 1px;
-    background: #bacfc6;
 
     @media (min-width : 768px) {
-      left: 56px;
+      background-position: 56px 50%;
     }
-  }
 
-  p {
-    margin-top: calc(33px - 1em);
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: #bacfc6;
 
-    @include font_size(10);
-
-    @media (min-width : 768px) {
-      float: left;
-
-      @include font_size(14);
+      @media (min-width : 768px) {
+        left: 56px;
+      }
     }
-  }
+
+      p {
+        margin-top: calc(33px - 1em);
+
+        @include font_size(10);
+
+        @media (min-width : 768px) {
+          float: left;
+
+          @include font_size(14);
+        }
+      }
 }
