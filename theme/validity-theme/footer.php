@@ -20,20 +20,21 @@
         )); ?>
 
         <div class="footer__container">
-          <img src="assets/img/logo-footer.png" style="width: 20px; height: 20px"/>
+          <img class="footer__logo" src="<?php echo get_bloginfo('template_url') ?>/assets/img/logo-footer.png" style="width: 20px; height: 20px"/>
           <?php while ($footerContent->have_posts()) : $footerContent->the_post(); ?>
 
-          <ul>
-            <li class=""><a href="https://www.facebook.com/<?php the_field('facebook_url') ?>">Facebook</a></li>
-            <li class=""><a href="https://twitter.com/<?php the_field('twitter_url') ?>">Twitter</a></li>
-          </ul>
 
-          <div>
-            <p><?php the_field('info_line_1') ?></p>
-            <p><?php the_field('info_line_2') ?></p>
-            <p><?php the_field('info_line_3') ?></p>
+
+          <div class="footer__info">
+            <div><?php the_field('info_line_1') ?></div>
+            <div><?php the_field('info_line_2') ?></div>
+            <div><?php the_field('info_line_3') ?></div>
           </div>
 
+          <ul class="social">
+            <li class="social__item"><a href="https://www.facebook.com/<?php the_field('facebook_url') ?>">Facebook</a></li>
+            <li class="social__item"><a href="https://twitter.com/<?php the_field('twitter_url') ?>">Twitter</a></li>
+          </ul>
 
           <?php endwhile; ?>
         </div>

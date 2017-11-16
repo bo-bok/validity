@@ -600,6 +600,7 @@ button:focus {
  */
 @media (min-width: 768px) {
   footer {
+    background: url(assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
     background-position: 56px 50%;
   }
 }
@@ -620,15 +621,39 @@ footer:after {
   }
 }
 
-footer p {
-  margin-top: calc(33px - 1em);
+footer .footer__container {
+  display: table;
+}
+
+footer .footer__logo {
+  display: table-header-group;
+}
+
+footer .footer__info {
+  display: table-footer-group;
   font-size: 0.625em;
 }
 
+footer .social {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
-  footer p {
-    float: left;
-    font-size: 0.875em;
+  footer .footer__container {
+    display: flex;
+  }
+  footer .footer__logo {
+    display: none;
+  }
+  footer .footer__info {
+    flex-basis: 60%;
+  }
+  footer .footer__info div {
+    padding: 0.25rem;
+    margin-top: 0;
+  }
+  footer .social {
+    flex-basis: 40%;
   }
 }
 
@@ -1740,7 +1765,6 @@ section .outer {
  * Components - social
  */
 .social {
-  margin-right: 56px;
   padding: 0;
   list-style: none;
   overflow: hidden;
@@ -1760,11 +1784,8 @@ section .outer {
 
 @media (min-width: 768px) {
   .social__item {
-    float: left;
+    float: right;
     margin: 0 2em 0 0;
-  }
-  .social__item:last-child {
-    margin-right: 0;
   }
 }
 

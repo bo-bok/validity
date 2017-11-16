@@ -2,97 +2,68 @@
  * Components - footer
  */
 
-// footer {
-//
-//   @media (min-width : 768px) {
-//     background-position: 56px 50%;
-//   }
-//
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     left: 0;
-//     height: 1px;
-//     background: #bacfc6;
-//
-//     @media (min-width : 768px) {
-//       left: 56px;
-//     }
-//   }
-//
-//   p {
-//     margin-top: calc(33px - 1em);
-//
-//     @include font_size(10);
-//
-//     @media (min-width : 768px) {
-//       float: left;
-//
-//       @include font_size(14);
-//     }
-//   }
-// }
-
-// footer {
-//   .footer__container {
-//     background-color: red;
-//     display: flex;
-//   }
-//   div, ul {
-//     margin: 0;
-//   }
-//   img, ul {
-//     margin-right: 0.5rem;
-//   }
-//   img {
-//     flex-basis: 10%;
-//     background-color: pink;
-//   }
-//   div {
-//     flex-basis: 60%;
-//     background-color: yellow;
-//   }
-//   ul {
-//     flex-basis: 30%;
-//     background-color: orange;
-//   }
-//
-//   @media(min-width: 768px) {
-//
-//   }
-// }
-
 footer {
 
+
+  @media (min-width : 768px) {
+    background: url(assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
+    background-position: 56px 50%;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: #bacfc6;
+
     @media (min-width : 768px) {
-      background-position: 56px 50%;
+      left: 56px;
+    }
+  }
+
+  .footer__container {
+    display: table;
+  }
+
+  .footer__logo {
+    display: table-header-group;
+  }
+
+  .footer__info {
+    display: table-footer-group;
+    @include font-size(10);
+  }
+
+  .social {
+    margin-bottom: 1rem;
+  }
+
+
+
+  @media(min-width: 768px) {
+    .footer__container {
+      display: flex;
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background: #bacfc6;
+    .footer__logo {
+      display: none;
+    }
 
-      @media (min-width : 768px) {
-        left: 56px;
+    .footer__info {
+      flex-basis: 60%;
+
+      div {
+        padding: 0.25rem;
+        margin-top: 0;
       }
     }
 
-      p {
-        margin-top: calc(33px - 1em);
+    .social {
+      flex-basis: 40%;
+    }
+  }
 
-        @include font_size(10);
-
-        @media (min-width : 768px) {
-          float: left;
-
-          @include font_size(14);
-        }
-      }
 }
