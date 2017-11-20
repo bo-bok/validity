@@ -3,9 +3,10 @@
  */
 
 footer {
-  background: url(assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
+
 
   @media (min-width : 768px) {
+    background: url(assets/img/logo-footer.png) 1em calc(100% - 1em) no-repeat;
     background-position: 56px 50%;
   }
 
@@ -23,15 +24,46 @@ footer {
     }
   }
 
-  p {
-    margin-top: calc(33px - 1em);
+  .footer__container {
+    display: table;
+  }
 
-    @include font_size(10);
+  .footer__logo {
+    display: table-header-group;
+  }
 
-    @media (min-width : 768px) {
-      float: left;
+  .footer__info {
+    display: table-footer-group;
+    @include font-size(10);
+  }
 
-      @include font_size(14);
+  .social {
+    margin-bottom: 1rem;
+  }
+
+
+
+  @media(min-width: 768px) {
+    .footer__container {
+      display: flex;
+    }
+
+    .footer__logo {
+      display: none;
+    }
+
+    .footer__info {
+      flex-basis: 60%;
+
+      div {
+        padding: 0.25rem;
+        margin-top: 0;
+      }
+    }
+
+    .social {
+      flex-basis: 40%;
     }
   }
+
 }

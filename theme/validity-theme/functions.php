@@ -125,8 +125,6 @@ function search_by_cat($query)
 add_action( 'pre_get_posts', 'search_by_cat' );
 
 
-
-
 function my_load_ajax_content () {
 
     $pid = $_POST['value'];
@@ -139,17 +137,17 @@ function my_load_ajax_content () {
     $the_query  = new WP_Query(array('category_name' => $pid));
     $img_url = get_template_directory_uri();
 
-    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . $pid . '.png"></img><div class="news-articles">';
+    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($pid) . '.png"></img><div class="news-articles">';
 
     if ($the_query->have_posts()) {
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
 
-            $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0];
+            $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 
             $data .= '
             <div class="article">
-              <a href='.get_the_permalink().' title='.get_the_title().' class="article__image" data-layout="3x4" style="background-image: url('.$backgroundImg.');"></a>
+              <a href='.get_the_permalink().' title='.get_the_title().' class="article__image" data-layout="3x4" style="background-image: url('.$backgroundImg[0].');"></a>
 
               <p class="article__title">
                 <a href='.get_the_permalink().' title='.get_the_title().'">
@@ -162,7 +160,7 @@ function my_load_ajax_content () {
         }
     }
     else {
-      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . $pid . '.png"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
+      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($pid) . '.png"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
     }
     wp_reset_postdata();
 
@@ -170,6 +168,8 @@ function my_load_ajax_content () {
     echo '<div id="postdata">'.$data.'</div></div>';
     die();
 }
+
+
 
 add_action ( 'wp_ajax_nopriv_load-content', 'my_load_ajax_content' );
 add_action ( 'wp_ajax_load-content', 'my_load_ajax_content' );
