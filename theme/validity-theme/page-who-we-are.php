@@ -75,7 +75,7 @@ get_header(); ?>
                     </a>
                   </h1>
                   <p class="member__excerpt">
-                    <?php the_field('description'); ?>
+                    <?php echo custom_field_excerpt('description', 200); ?>
                   </p>
                 </div>
 
@@ -117,7 +117,7 @@ get_header(); ?>
                   </a>
                   </h1>
                   <p class="member__excerpt">
-                    <?php the_field('description'); ?>
+                    <?php echo custom_field_excerpt('description', 40); ?>
                   </p>
                 </div>
               <?php endif; ?>
@@ -149,6 +149,8 @@ get_header(); ?>
               <?php if (get_field('role') == 'staff'): ?>
 
                 <div class="member">
+                  <img src="<?php the_field('image') ?>" />
+
                   <h1 class="member__title">
                   <a href="<?php the_permalink(); ?>">
                     <span>
@@ -159,7 +161,7 @@ get_header(); ?>
                   </a>
                   </h1>
                   <p class="member__excerpt">
-                    <?php the_field('description'); ?>
+                    <?php echo custom_field_excerpt('description', 40); ?>
                   </p>
                 </div>
               <?php endif; ?>
@@ -209,7 +211,7 @@ get_header(); ?>
                   </a>
                   </h1>
                   <p class="member__excerpt">
-                    <?php the_field('description'); ?>
+                    <?php echo custom_field_excerpt('description', 40); ?>
                   </p>
                 </div>
               <?php endif; ?>

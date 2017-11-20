@@ -21,6 +21,7 @@ get_header(); ?>
         <div class="who-we-are-members">
           <div class="group">
             <div class="overview">
+              <img src="<?php the_field('image') ?>" />
               <h1 class="group-heading">
                 <?php the_field('first_name') ?>
                 <?php the_field('last_name') ?>
