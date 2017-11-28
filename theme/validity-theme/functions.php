@@ -199,6 +199,13 @@ function my_jquery_enqueue() {
 add_action ( 'wp_ajax_nopriv_load-content', 'my_load_ajax_content' );
 add_action ( 'wp_ajax_load-content', 'my_load_ajax_content' );
 
+/* Change default wordpress Excerpt length */
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
 
 // Custom Excerpt function for Advanced Custom Fields
 function custom_field_excerpt($fieldName, $excerptLength) {
