@@ -1181,9 +1181,6 @@ nav .primary-navigation li:nth-child(10) {
     width: calc(50% - 18px);
     margin: 30px 9px;
   }
-  .article:nth-child(2) .article__category {
-    margin-top: calc((((4 / 3) * 100%) - ((3.7 / 3) * 100%)) + 2em);
-  }
   .article:nth-child(2n + 1) {
     margin-left: 0;
   }
@@ -1233,6 +1230,7 @@ nav .primary-navigation li:nth-child(10) {
   max-width: 75%;
   margin: 2em 0 0;
   padding-top: 1em;
+  text-transform: capitalize;
   font-size: 0.875em;
   line-height: 1.57143em;
 }
