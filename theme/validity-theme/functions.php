@@ -94,30 +94,44 @@ function remove_admin_login_header()
 }
 add_action('get_header', 'remove_admin_login_header');
 
-
-
-
-// This function controls the dearch features
-// it filters by the country category and the content-type category
-// it limits search results to posts (this does not include and therefore excludes custom post types, aka our site content)
-
 function search_by_cat($query)
 {
     if ($query->is_search && !is_admin())
     {
         $country = empty( $_GET['countries'] ) ? '' : (int) $_GET['countries'];
         $contentType = empty( $_GET['content-type'] ) ? '' : (int) $_GET['content-type'];
-        $taxquery = array(
-          array(
-            'taxonomy' => 'category',
-            'field' => 'id',
-            'terms' => array( $country, $contentType ),
-            'operator'=> 'AND'
-          )
-        );
+        $searchQuery = empty(get_search_query()) ? '' : get_search_query();
 
-        // $query->set('cat', array($country, $contentType));
-        // $query->set('post_type', array('post'));
+        $termsParams = array();
+        $operator = 'OR';
+
+
+          // if only criteria for country query is set
+          // if the free text field and country field have been used, display any results which are of both the free text search and of that country
+          if ($country != -1 && $contentType == -1) {
+            array_push($termsParams, $country);
+            $operator = 'AND';
+            // if only criteria for contentType query is set
+            // if the free text field and content type field have been used, display results which are of the both free text search and of that content types
+          } elseif ($country == -1 && $contentType != -1) {
+            array_push($termsParams, $contentType);
+            $operator = 'AND';
+          } elseif ($country != -1 && $contentType != -1) {
+            array_push($termsParams, $contentType, $country);
+            $operator = 'AND';
+          }
+
+          $taxquery = array(
+            array(
+              'taxonomy' => 'category',
+              'field' => 'id',
+              // 'terms' => $termsParams,
+              'terms' => $termsParams,
+              'operator'=> $operator
+            )
+          );
+
+        $query->set('post_type', array('post'));
         $query->set( 'tax_query', $taxquery );
     }
     return $query;
