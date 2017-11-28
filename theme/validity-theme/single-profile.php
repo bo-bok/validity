@@ -15,14 +15,14 @@ get_header(); ?>
   <?php get_sidebar(); ?> <!-- sidebar = nav -->
 
   <section class="section-1">
-    <div class="outer full-height centered" id="honorary-president">
+    <div class="outer full-height centered">
       <div class="inner transition">
 
-        <div class="who-we-are-members">
-          <div class="group">
-            <div class="overview">
-              <img src="<?php the_field('image') ?>" />
-              <h1 class="group-heading">
+        <?php if (get_field('image')): ?>
+          <div class="profile-with-image">
+
+            <div class="profile-text-container">
+              <h1 class="profile-heading">
                 <?php the_field('first_name') ?>
                 <?php the_field('last_name') ?>
               </h1>
@@ -32,8 +32,26 @@ get_header(); ?>
               <p><?php the_field('twitter') ?></p>
               <a href="/who-we-are" onclick="window.history.go(-1)"  class="button_transparent anchor">Back to Staff</a>
             </div>
+
+            <div class="profile-image-container">
+              <img src="<?php the_field('image') ?>" class="profile-image"/>
+            </div>
           </div>
-        </div>
+
+        <?php else: ?>
+          <section>
+            <h1 class="profile-heading">
+              <?php the_field('first_name') ?>
+              <?php the_field('last_name') ?>
+            </h1>
+
+            <p><?php the_field('description') ?></p>
+            <p><?php the_field('location') ?></p>
+            <p><?php the_field('twitter') ?></p>
+            <a href="/who-we-are" onclick="window.history.go(-1)"  class="button_transparent anchor">Back to Staff</a>
+          </section>
+        <?php endif ?>
+
       </div>
     </div>
   </section>
