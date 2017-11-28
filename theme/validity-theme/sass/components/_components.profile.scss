@@ -1,0 +1,60 @@
+/*
+ * Components - profile
+ */
+
+.profile-heading {
+  @include font_size(16, 22);
+  margin-top: 1em;
+}
+
+.profile-with-image {
+  display: table;
+  padding-top: 80px;
+}
+
+.profile-image-container {
+  display: table-header-group;
+  margin-top: 0;
+}
+
+.profile-text-container {
+  display: table-footer-group;
+}
+
+.profile-text-container a {
+  margin-bottom: 3em;
+}
+
+.profile-image-container {
+  flex-basis: 35%;
+}
+
+.profile-image {
+  width: 100%;
+}
+
+@media(min-width: 768px) {
+  .profile-heading {
+    @include font_size(16, 22);
+    margin-top: 0;
+  }
+
+  .profile-with-image {
+    display: flex;
+    margin: 6em 0 3em 0;
+  }
+
+  .profile-text-container {
+    flex-basis: 75%;
+    padding-right: 2rem;
+    margin-top: 0;
+  }
+
+  .profile-text-container a {
+    margin-bottom: 0;
+  }
+
+  .profile-image-container {
+    flex-basis: 35%;
+  }
+}

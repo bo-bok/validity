@@ -33,6 +33,7 @@ get_header(); ?>
 
           <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="resource">
 
+            <?php the_post_thumbnail(array( 223, 148 )) ?>
             <h1 class="resource__title"><?php the_title(); ?></h1>
             <p class="resource__excerpt"><?php the_excerpt(); ?></p>
           </a>
