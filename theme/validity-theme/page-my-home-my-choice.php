@@ -67,18 +67,16 @@ get_header(); ?>
           <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="article__image" data-layout="3x4" style="background-image: url('<?php echo $backgroundImg[0]; ?>');"></a>
 
           <h1 class="article__category">
-              <?php
-                foreach ((get_the_category()) as $category) {
-                    echo $category->cat_name . ' ';
-                }
-              ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+              <?php the_title(); ?>
+            </a>
           </h1>
 
           <p class="article__title">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
-              <?php the_title();?>
-            </a>
+            <!-- content would be called here if added in future -->
           </p>
+
+
 
         </div>
 

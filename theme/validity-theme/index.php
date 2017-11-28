@@ -104,11 +104,10 @@ get_header(); ?><!DOCTYPE html>
 
 
 			        <h1 class="article__category">
-			            <?php
-		                       foreach ((get_the_category()) as $category) {
-		                           echo $category->cat_name . ' ';
-		                       }
-		                ?>
+		            <?php foreach ((get_the_category()) as $category) {
+                   echo $category->cat_name . ' ';
+                   }
+                ?>
 			        </h1>
 
 			        <p class="article__title">
