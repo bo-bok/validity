@@ -32,8 +32,8 @@ get_header(); ?>
 
 
           <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="resource">
-            <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-            <div class="outer full-height poster" style="background-image: url('<?php echo $backgroundImg[0]; ?>')"></div>
+
+            <?php the_post_thumbnail(array( 223, 148 )) ?>
             <h1 class="resource__title"><?php the_title(); ?></h1>
             <p class="resource__excerpt"><?php the_excerpt(); ?></p>
           </a>
