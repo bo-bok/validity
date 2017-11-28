@@ -149,7 +149,7 @@ get_header(); ?>
               <?php if (get_field('role') == 'staff'): ?>
 
                 <div class="member">
-                  <img src="<?php the_field('image') ?>" />
+                  <!-- <img src="<?php the_field('image') ?>" /> -->
 
                   <h1 class="member__title">
                   <a href="<?php the_permalink(); ?>">
