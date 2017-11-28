@@ -143,11 +143,6 @@ function my_load_ajax_content () {
 
     $pid = $_POST['value'];
 
-    // if ($_POST['value'] = 'Czech Republic') {
-    //   $pid = 'czech-republic';
-    // } else {
-    //   $pid = $_POST['value'];
-    // }
     $the_query  = new WP_Query(array('category_name' => $pid));
     $img_url = get_template_directory_uri();
 
