@@ -8,24 +8,24 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  
+
   @media (min-width : 1024px) {
     width: calc((8 / 12) * 100%);
   }
-  
+
   @media (min-width : 1600px) {
     width: calc((10 / 12) * 100%);
     max-width: 1600px;
     padding: 0 calc((1 / 12) * 100%) 0 calc(((1 / 12) * 100%) + 9px);
   }
-  
+
   .page-home & {
     margin-bottom: 100px;
   }
-  
+
   .button {
     flex-grow: 1;
-    
+
     @media (min-width : 768px) {
       flex-grow: 0;
       position: absolute;
@@ -39,41 +39,41 @@
   flex-grow: 1;
   width: calc(100% - 3em);
   margin: 30px 0;
-  
+
   @include article_transition();
-  
+
   &:hover {
     text-decoration: none;
-    
+
     .article__category:after {
       width: 100%;
     }
-  
+
     .article__image {
       opacity: 1;
     }
   }
-  
+
   @media (min-width : 768px) {
     width: calc(50% - 18px);
     margin: 30px 9px;
-    
-    &:nth-child(2) {
-      
-      .article__category {
-        margin-top: calc((((4 / 3) * 100%) - ((3.7 / 3) * 100%)) + 2em);
-      }
-    }
-  
+
+    // &:nth-child(2) {
+    //
+    //   .article__category {
+    //     // margin-top: calc((((4 / 3) * 100%) - ((3.7 / 3) * 100%)) + 2em);
+    //   }
+    // }
+
     &:nth-child(2n + 1) {
       margin-left: 0;
     }
-    
+
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
-  
+
   a {
     text-decoration: none;
   }
@@ -88,21 +88,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.95;
-  
+
   @include transition(opacity 300ms);
-  
+
   &[data-layout="3x4"] {
     padding-bottom: #{(4 / 3) * 100%};
   }
-  
+
   &[data-layout="3x3.7"] {
     padding-bottom: #{(3.7 / 3) * 100%};
   }
-  
+
   &[data-layout="3x5.5"] {
     padding-bottom: #{(5.5 / 3) * 100%};
   }
-  
+
   &[data-layout="3x2.5"] {
     padding-bottom: #{(2.5 / 3) * 100%};
   }
@@ -114,14 +114,15 @@
   max-width: 75%;
   margin: 2em 0 0;
   padding-top: 1em;
-    
+  text-transform: capitalize;
+
   @include font_size(14, 22);
 
   @media (min-width : 768px) {
-  
+
     @include font_size(18, 22);
   }
-  
+
   &:after {
     content: '';
     position: absolute;
@@ -130,9 +131,9 @@
     width: 50px;
     height: 2px;
     background: #242139;
-    
+
     @include transition(width 300ms);
-    
+
     .page-our-impact & {
       background: $yellow;
     }
