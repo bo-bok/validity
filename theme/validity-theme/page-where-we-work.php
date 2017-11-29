@@ -20,20 +20,12 @@ get_header(); ?>
     <div class="outer full-height centered with-footer">
       <div class="inner transition">
 
-        <!-- This paragraph will be replaced by coutnry name, if country is selected -->
-        <p>When society decides that you have a learning disability or a
-        mental health issue, the odds are stacked against you.</p>
-
-        <!-- description here -->
-        <p> We fearlessly represent people through the courts.
-         We give them a voice to demand that their governments change unjust
-         laws. We won’t stop until those voices are heard. Equality and inclusion
-         are not abstract concepts. They are tangible realities. They are rights
-         that can be achieved...but they have to be fought for.
-        </p>
-        <!-- dropdown here -->
-        <!-- country map here -->
-
+        <?php $blurb = new WP_Query(array(
+          'post_type' => 'where_we_work_blurb'
+        )); ?>
+        <?php while ($blurb->have_posts()) : $blurb->the_post(); ?>
+          <?php the_field('where_we_work_blurb_text'); ?>
+        <?php endwhile; ?>
 
 								<div class="dropdown dropdown-country-list">
 									<span>Country</span>
