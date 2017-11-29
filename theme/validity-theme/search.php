@@ -19,7 +19,16 @@ get_header(); ?>
 
       <div class="resources-intro">
         <h1 class="page-heading">Resources</h1>
-        <p>We want to share our resources with anyone that is going to help with the fight to end descrimination against mental health.</p>
+
+        <?php $resource_blurb = new WP_Query(array(
+          'post_type' => 'resource_blurb'
+        )); ?>
+        <?php while ($resource_blurb->have_posts()) : $resource_blurb->the_post(); ?>
+
+        <?php the_field('resource_blurb_text'); ?>
+
+        <?php endwhile; ?>
+
         <h2>Resources</h2>
         <?php get_search_form(); ?>
       </div>

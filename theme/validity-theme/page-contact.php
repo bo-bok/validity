@@ -25,16 +25,27 @@ get_header(); ?>
       <div class="outer full-height centered with-footer">
         <div class="inner transition">
 
-          <?php $address = new WP_Query(array(
-            'post_type' => 'contact_us',
-            'order' => 'ASC',
-            'orderby' => 'ID'
-          ))?>
+
 
       <div class="section-contact">
-        <p class="section-contact-intro">We are based in London and Budapest <br />
-        Feel free to contact us:</p>
+        <p class="section-contact-intro">
+          <?php $contact_blurb = new WP_Query(array(
+            'post_type' => 'contact_page'
+          )); ?>
+          <?php while ($contact_blurb->have_posts()) : $contact_blurb->the_post(); ?>
+
+          <?php the_field('contact_blurb') ?>
+          
+          <?php endwhile; ?>
+
           <main class="section-contact-address">
+
+            <?php $address = new WP_Query(array(
+              'post_type' => 'contact_us',
+              'order' => 'ASC',
+              'orderby' => 'ID'
+            ))?>
+
             <?php while ($address->have_posts()) : $address->the_post();?>
               <div class="address-container">
                 <p class="address-info"><?php the_field('address_line_1') ?></p>

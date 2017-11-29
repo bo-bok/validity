@@ -1631,7 +1631,8 @@ nav .primary-navigation li:nth-child(10) {
 }
 
 .resources-intro form .search-submit {
-  float: right;
+  width: 100%;
+  text-align: right;
 }
 
 /*
