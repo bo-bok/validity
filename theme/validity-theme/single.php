@@ -46,6 +46,7 @@ get_header(); ?>
           </div>
 
           <!-- <div onclick="goBack()" class="back">Go Back</div> -->
+          <!-- <a href="news.html" class="back">Back</a> -->
 
         </div>
 

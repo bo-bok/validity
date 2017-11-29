@@ -41,7 +41,6 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
 <?php
 get_footer();?>
 </div>
