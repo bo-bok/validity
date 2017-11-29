@@ -3,12 +3,7 @@
   Template Name: Contact Page
 */
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * The template for displaying the Contact Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -35,7 +30,7 @@ get_header(); ?>
           <?php while ($contact_blurb->have_posts()) : $contact_blurb->the_post(); ?>
 
           <?php the_field('contact_blurb') ?>
-          
+
           <?php endwhile; ?>
 
           <main class="section-contact-address">

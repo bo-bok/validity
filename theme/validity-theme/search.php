@@ -1,6 +1,11 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template which provides custom search functionality
+ *
+ * This page displays the searchform defined in searchbar.php
+ * It then executes the custom search by keyword, country and resource type
+ * Search function is defined in functions.php, and is called $search_by_cat
+ * Displays results
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *

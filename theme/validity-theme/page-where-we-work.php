@@ -3,7 +3,8 @@
   Template Name: Where We Work Page
 */
 /**
- * The template for displaying
+ * The template for displaying the Where We Work Page
+ *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package validity
