@@ -9,6 +9,21 @@
 
 get_header(); ?>
 
-	<h1>404</h1>
+
+<body class="page-staff-profile">
+  <div class="wrapper">
+  <?php get_sidebar(); ?> <!-- sidebar = nav -->
+
+  <section class="section-1">
+    <div class="outer full-height centered">
+      <div class="inner transition">
+
+				<h1>Sorry, the page you were looking for was not found.</h1>
+				<p>Why not visit our <a href="<?php echo esc_url(home_url("/"))?>" class="">homepage</a>.</p>
+
+      </div>
+    </div>
+  </section>
+
 <?php
 get_footer();
