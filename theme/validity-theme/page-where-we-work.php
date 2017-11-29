@@ -46,10 +46,11 @@ get_header(); ?>
                     <a class="dropdown-country" href="#">Kenya</a>
                     <a class="dropdown-country" href="#">Latvia</a>
                     <a class="dropdown-country" href="#">Lithuania</a>
+                    <a class="dropdown-country" href="#">Moldova</a>
                     <a class="dropdown-country" href="#">Montenegro</a>
                     <a class="dropdown-country" href="#">Poland</a>
+                    <a class="dropdown-country" href="#">Romania</a>
                     <a class="dropdown-country" href="#">Russia</a>
-										<a class="dropdown-country" href="#">Romania</a>
                     <a class="dropdown-country" href="#">Slovakia</a>
                     <a class="dropdown-country" href="#">Slovenia</a>
 										<a class="dropdown-country" href="#">Uganda</a>
