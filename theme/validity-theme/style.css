@@ -1069,11 +1069,11 @@ nav .primary-navigation li:nth-child(10) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 @media (min-width: 1024px) {
   .news-articles {
+    margin: 0 auto;
     width: calc((8 / 12) * 100%);
   }
 }
@@ -1631,7 +1631,8 @@ nav .primary-navigation li:nth-child(10) {
 }
 
 .resources-intro form .search-submit {
-  float: right;
+  width: 100%;
+  text-align: right;
 }
 
 /*

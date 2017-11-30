@@ -100,7 +100,6 @@ function search_by_cat($query)
     {
         $country = empty( $_GET['countries'] ) ? '' : (int) $_GET['countries'];
         $contentType = empty( $_GET['content-type'] ) ? '' : (int) $_GET['content-type'];
-        $searchQuery = empty(get_search_query()) ? '' : get_search_query();
 
         $termsParams = array();
         $operator = 'OR';
@@ -130,7 +129,7 @@ function search_by_cat($query)
               'operator'=> $operator
             )
           );
-
+        $query->query_vars['posts_per_page'] = 50; // Change 10 to the number of posts you would like to show
         $query->set('post_type', array('post'));
         $query->set( 'tax_query', $taxquery );
     }
@@ -142,11 +141,12 @@ add_action( 'pre_get_posts', 'search_by_cat' );
 function my_load_ajax_content () {
 
     $pid = $_POST['value'];
+    $country = preg_replace("/[\s_]/", "-", $pid);
 
-    $the_query  = new WP_Query(array('category_name' => $pid));
+    $the_query  = new WP_Query(array('category_name' => $country));
     $img_url = get_template_directory_uri();
 
-    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($pid) . '.png"></img><div class="news-articles">';
+    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($country) . '.jpg"></img><div class="news-articles">';
 
     if ($the_query->have_posts()) {
         while ( $the_query->have_posts() ) {
@@ -169,7 +169,7 @@ function my_load_ajax_content () {
         }
     }
     else {
-      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($pid) . '.png"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
+      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($country) . '.jpg"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
     }
     wp_reset_postdata();
 

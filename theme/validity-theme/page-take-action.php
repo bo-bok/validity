@@ -3,7 +3,8 @@
   Template Name: Take Action Page
 */
 /**
- * The template for displaying
+ * The template for displaying the Take Action Page
+ *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package validity
@@ -41,7 +42,6 @@ get_header(); ?>
   </div>
 </section>
 
-<!-- get_sidebar(); -->
 <?php
 get_footer();?>
 </div>

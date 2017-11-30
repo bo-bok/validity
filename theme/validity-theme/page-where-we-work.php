@@ -3,7 +3,8 @@
   Template Name: Where We Work Page
 */
 /**
- * The template for displaying
+ * The template for displaying the Where We Work Page
+ *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package validity
@@ -20,20 +21,12 @@ get_header(); ?>
     <div class="outer full-height centered with-footer">
       <div class="inner transition">
 
-        <!-- This paragraph will be replaced by coutnry name, if country is selected -->
-        <p>When society decides that you have a learning disability or a
-        mental health issue, the odds are stacked against you.</p>
-
-        <!-- description here -->
-        <p> We fearlessly represent people through the courts.
-         We give them a voice to demand that their governments change unjust
-         laws. We won’t stop until those voices are heard. Equality and inclusion
-         are not abstract concepts. They are tangible realities. They are rights
-         that can be achieved...but they have to be fought for.
-        </p>
-        <!-- dropdown here -->
-        <!-- country map here -->
-
+        <?php $blurb = new WP_Query(array(
+          'post_type' => 'where_we_work_blurb'
+        )); ?>
+        <?php while ($blurb->have_posts()) : $blurb->the_post(); ?>
+          <?php the_field('where_we_work_blurb_text'); ?>
+        <?php endwhile; ?>
 
 								<div class="dropdown dropdown-country-list">
 									<span>Country</span>
@@ -46,10 +39,11 @@ get_header(); ?>
                     <a class="dropdown-country" href="#">Kenya</a>
                     <a class="dropdown-country" href="#">Latvia</a>
                     <a class="dropdown-country" href="#">Lithuania</a>
+                    <a class="dropdown-country" href="#">Moldova</a>
                     <a class="dropdown-country" href="#">Montenegro</a>
                     <a class="dropdown-country" href="#">Poland</a>
+                    <a class="dropdown-country" href="#">Romania</a>
                     <a class="dropdown-country" href="#">Russia</a>
-										<a class="dropdown-country" href="#">Romania</a>
                     <a class="dropdown-country" href="#">Slovakia</a>
                     <a class="dropdown-country" href="#">Slovenia</a>
 										<a class="dropdown-country" href="#">Uganda</a>
@@ -60,7 +54,7 @@ get_header(); ?>
 
       </div>
       <div class="filtered-posts">
-        <img class="map" src="<?= get_template_directory_uri()?>/assets/img/countries/plain.png"></img>
+        <img class="map" src="<?= get_template_directory_uri()?>/assets/img/countries/plain.jpg"></img>
       </div>
     </div>
   </section>

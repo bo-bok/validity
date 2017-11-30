@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all single posts (aka articles)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -46,6 +46,7 @@ get_header(); ?>
           </div>
 
           <!-- <div onclick="goBack()" class="back">Go Back</div> -->
+          <!-- <a href="news.html" class="back">Back</a> -->
 
         </div>
 
