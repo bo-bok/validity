@@ -146,7 +146,7 @@ function my_load_ajax_content () {
     $the_query  = new WP_Query(array('category_name' => $country));
     $img_url = get_template_directory_uri();
 
-    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($country) . '.png"></img><div class="news-articles">';
+    $data = '<img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($country) . '.jpg"></img><div class="news-articles">';
 
     if ($the_query->have_posts()) {
         while ( $the_query->have_posts() ) {
@@ -169,7 +169,7 @@ function my_load_ajax_content () {
         }
     }
     else {
-      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($country) . '.png"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
+      echo '<div id="postdata"><img class="map" src="' . $img_url . '/assets/img/countries/' . strtolower($country) . '.jpg"></img>'.__('No resources were found for this country', THEME_NAME) . '</div>';
     }
     wp_reset_postdata();
 

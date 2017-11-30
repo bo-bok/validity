@@ -54,7 +54,7 @@ get_header(); ?>
 
       </div>
       <div class="filtered-posts">
-        <img class="map" src="<?= get_template_directory_uri()?>/assets/img/countries/plain.png"></img>
+        <img class="map" src="<?= get_template_directory_uri()?>/assets/img/countries/plain.jpg"></img>
       </div>
     </div>
   </section>
