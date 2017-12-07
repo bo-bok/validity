@@ -66,7 +66,6 @@ get_header(); ?>
                         <?php the_field('first_name'); ?>
                         <?php the_field('last_name'); ?>
                       </span>
-                      <?php the_field('individual_role'); ?>
                     </a>
                   </h1>
                   <p class="member__excerpt">
