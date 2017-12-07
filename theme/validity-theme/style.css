@@ -775,6 +775,15 @@ h1.group-heading {
   color: #ffdd94;
 }
 
+@media (min-width: 1024px) {
+  #honorary-president .member {
+    background-color: red;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+}
+
 .member__title {
   position: relative;
   margin-top: 1.5em;

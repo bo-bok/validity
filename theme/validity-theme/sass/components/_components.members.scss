@@ -41,7 +41,7 @@ h1.group-heading {
     max-width: 50%;
     margin: 30px 9px;
     padding-left: calc((1 / 12) * 100%;
-    
+
 
     &:nth-child(2n + 1) {
       margin-top: 80px;
@@ -58,6 +58,14 @@ h1.group-heading {
     .member__title {
       color: #ffdd94;
     }
+  }
+}
+
+@media(min-width: 1024px) {
+  #honorary-president .member {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
   }
 }
 
