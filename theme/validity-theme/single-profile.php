@@ -39,7 +39,7 @@ get_header(); ?>
           </div>
 
         <?php else: ?>
-          <section>
+          <div>
             <h1 class="profile-heading">
               <?php the_field('first_name') ?>
               <?php the_field('last_name') ?>
@@ -49,7 +49,7 @@ get_header(); ?>
             <p><?php the_field('location') ?></p>
             <p><?php the_field('twitter') ?></p>
             <a href="/who-we-are" onclick="window.history.go(-1)"  class="button_transparent anchor">Back to Staff</a>
-          </section>
+          </div>
         <?php endif ?>
 
       </div>
