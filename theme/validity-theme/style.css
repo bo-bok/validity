@@ -1636,6 +1636,7 @@ nav .primary-navigation li:nth-child(10) {
 
 .resources-intro form .search-filters option {
   margin: 0;
+  color: black;
 }
 
 .resources-intro form .search-submit {
