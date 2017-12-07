@@ -69,7 +69,7 @@ get_header(); ?>
                     </a>
                   </h1>
                   <p class="member__excerpt">
-                    <?php echo custom_field_excerpt('description', 200); ?>
+                    <?php echo custom_field_excerpt('description', 100); ?>
                   </p>
                 </div>
 
